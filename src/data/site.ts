@@ -17,6 +17,7 @@ export const business = {
   social: {
     instagram: 'https://www.instagram.com/tcdecks/',
     youtube: 'https://www.youtube.com/@TCDecksUtah',
+    google: 'https://maps.app.goo.gl/1W1stqWWx51keaLo8',
   },
 };
 

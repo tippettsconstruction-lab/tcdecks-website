@@ -4,6 +4,7 @@ import { reviews, business } from '../data/site';
 <div class="rating">
   <span class="stars" aria-hidden="true">★★★★★</span>
   <strong>{business.rating.value} on Google</strong> from {business.rating.count} reviews
+  <a class="gmb" href={business.social.google} target="_blank" rel="noopener">Read all reviews on Google</a>
 </div>
 <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Google reviews">
   <button class="nav prev" type="button" aria-label="Previous review">‹</button>
@@ -20,6 +21,7 @@ import { reviews, business } from '../data/site';
 </div>
 <style>
   .rating { margin-bottom: 18px; font-size: 1.05rem; }
+  .gmb { margin-left: 10px; font-weight: 700; white-space: nowrap; }
   .stars { color: #d49a1c; letter-spacing: 2px; margin-right: 6px; }
   .carousel { position: relative; }
   .track { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 8px; }
