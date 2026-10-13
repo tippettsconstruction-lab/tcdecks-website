@@ -16,6 +16,7 @@ const more = p('more-builds');
 const brown = p('saratoga-springs-brownstone-covered');
 const cocoa = p('saratoga-springs-dark-cocoa');
 const hl = p('highland-english-walnut-hideaway');
+const pecan = p('highland-legacy-pecan-covered');
 
 export const projects: Project[] = [
   {
@@ -49,6 +50,19 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'highland-legacy-pecan-covered',
+    title: 'Highland: covered deck in TimberTech Legacy Pecan',
+    summary: 'A covered deck on a new Highland home in TimberTech Legacy in Pecan. A vaulted gable roof sits on rough-sawn cedar beams and stone columns, with recessed lights in the ceiling, black metal railing and a wide run of steps down to the yard. The mountains are framed by the open side.',
+    photos: [
+      pecan('highland-covered-deck-timbertech-legacy-pecan-gable-roof', 'Covered deck with a gable roof, cedar beams and stone columns on a Highland, Utah home'),
+      pecan('timbertech-legacy-pecan-covered-deck-wide-steps', 'Wide TimberTech Legacy Pecan steps leading up to a covered deck with black railing'),
+      pecan('covered-deck-vaulted-ceiling-stone-columns', 'Vaulted ceiling with recessed lights over a TimberTech Legacy Pecan deck'),
+      pecan('legacy-pecan-deck-mountain-view-black-railing', 'TimberTech Legacy Pecan deck with black railing and a view of the mountains'),
+      pecan('timbertech-legacy-pecan-deck-boards-low-angle', 'Low view across TimberTech Legacy Pecan deck boards toward sliding doors'),
+      pecan('timbertech-legacy-pecan-board-texture-closeup', 'Close-up of TimberTech Legacy Pecan board texture'),
     ],
   },
   {
