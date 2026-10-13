@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Faqs from '../components/Faqs.astro';
+import { business } from '../data/site';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const brands = [
+  { name: 'TimberTech', text: 'Our top pick for decking. TimberTech Advanced PVC and composite boards in every price range, from Prime+ to Legacy and Vintage.', link: '/design-ideas/decking-colors' },
+  { name: 'Fortress Building Products', text: 'Fortress FE26 aluminum railing in Black Sand is our go-to railing, and Fortress Evolution steel framing is our upgrade for decks that will never rot or warp.', link: '/design-ideas/railings' },
+  { name: 'Trex', text: 'Trex composite decking and railing, plus Trex RainEscape to keep the space under a second-story deck dry.', link: '/composite-decks' },
+  { name: 'Deckorators', text: 'Deckorators decking, railing and lighting, with styles and colors you won't find from other brands.', link: '/composite-decks' },
+];
+
+const faqs = [
+  { q: 'What is a Pro Installer?', a: 'TimberTech, Trex, Deckorators and Fortress each certify contractors who are trained on their products and have a record of installing them correctly. TC Decks is a certified Pro Installer for all four.' },
+  { q: 'What does that mean for my warranty?', a: 'Because we are Pro Installers, we can offer labor and material warranty coverage backed by the manufacturer. If a covered product fails, the warranty can cover the labor to replace it as well as the material. A homeowner who buys boards from a big-box store and installs them, or uses an uncertified contractor, usually gets a material-only warranty.' },
+  { q: 'Does this replace your own warranty?', a: 'No. You get the manufacturer coverage on top of our own 7-year workmanship warranty.' },
+  { q: 'Can I pick any brand?', a: 'Yes. We will tell you what we would choose for your project and why, but we install all four brands and will help you compare them.' },
+];
+---
+<Base
+  title="Certified Pro Installer: TimberTech, Trex, Deckorators & Fortress | TC Decks"
+  description="TC Decks is a certified Pro Installer for TimberTech, Trex, Deckorators and Fortress Railing, so we can offer manufacturer-backed labor and material warranties on decks in Utah County."
+  schema={[breadcrumbSchema([{ name: 'Certified Pro Installer', path: '/certified-pro-installer' }]), faqSchema(faqs)]}
+>
+  <PageHero eyebrow="Certified Pro Installer" title="Certified by the brands we build with" lead="TC Decks is a certified Pro Installer for TimberTech, Trex, Deckorators and Fortress Railing. That lets us back your deck with labor and material warranty coverage, not just material." crumbs={[{ name: 'Certified Pro Installer', path: '/certified-pro-installer' }]} />
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="prose">
+        <h2>Why it matters: labor and material coverage</h2>
+        <p>Most decking warranties only cover the boards themselves. If something fails, you get replacement material and pay someone to tear out and reinstall it. When a certified Pro Installer builds the deck, the manufacturer can cover the <strong>labor and the material</strong>.</p>
+        <ul class="check-list">
+          <li>Manufacturer-backed labor and material warranty coverage</li>
+          <li>Installed to each manufacturer's specifications, so your warranty stays valid</li>
+          <li>Our own 7-year workmanship warranty on top</li>
+          <li>A crew trained on the specific products on your deck</li>
+        </ul>
+        <p>We are also an <a href="/owens-corning">Owens Corning certified partner</a> for covered deck roofs.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/contact">Get a free estimate</a>
+          <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+        </div>
+      </div>
+      <Photo src="/images/projects/saratoga-springs-french-white-oak/timbertech-french-white-oak-american-walnut-steps" alt="TimberTech deck in French White Oak and American Walnut built by a certified Pro Installer" />
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Brands we're certified to install</h2>
+      <div class="grid grid-2">
+        {brands.map((b) => (
+          <div class="card">
+            <h3>{b.name}</h3>
+            <p>{b.text}</p>
+            <p><a href={b.link}>See examples</a></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section"><div class="wrap"><Faqs faqs={faqs} /></div></section>
+</Base>
