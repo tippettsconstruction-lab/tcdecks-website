@@ -17,6 +17,7 @@ const brown = p('saratoga-springs-brownstone-covered');
 const cocoa = p('saratoga-springs-dark-cocoa');
 const hl = p('highland-english-walnut-hideaway');
 const pecan = p('highland-legacy-pecan-covered');
+const draper = p('draper-brownstone-slate-gray');
 
 export const projects: Project[] = [
   {
@@ -50,6 +51,18 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'draper-brownstone-slate-gray',
+    title: 'Draper: TimberTech Slate Gray and Brownstone with a built-in bench',
+    summary: 'A raised two-tone deck in Draper with TimberTech Slate Gray field boards and a Brownstone picture-frame border, stairs and fascia. Black aluminum cable railing keeps the mountain view open, and a Brownstone bench is built right into the rail line.',
+    photos: [
+      draper('draper-timbertech-brownstone-slate-gray-deck-built-in-bench', 'Two-tone TimberTech deck with a built-in bench and black cable railing in Draper, Utah'),
+      draper('two-tone-timbertech-deck-cable-railing-mountain-view', 'TimberTech Slate Gray deck with a Brownstone border and cable railing below the mountains'),
+      draper('built-in-deck-bench-black-posts', 'Built-in Brownstone deck bench on black posts along the railing'),
+      draper('slate-gray-deck-brownstone-picture-frame-cable-rail', 'Slate Gray deck boards with a Brownstone picture frame and black cable railing'),
+      draper('brownstone-deck-stairs-cable-railing', 'TimberTech Brownstone stairs with black aluminum cable stair railing'),
     ],
   },
   {
