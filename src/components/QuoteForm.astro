@@ -1,7 +1,7 @@
 ---
 import { cities } from '../data/site';
 ---
-<form name="estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" class="card">
+<form name="estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data" class="card">
   <input type="hidden" name="form-name" value="estimate" />
   <p class="hidden"><label>Leave blank <input name="company" /></label></p>
   <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
@@ -24,6 +24,45 @@ import { cities } from '../data/site';
       <option>Not sure yet</option>
     </select>
   </div>
-  <div class="field"><label for="f-msg">Tell us about it</label><textarea id="f-msg" name="message" placeholder="Rough size, materials you like, timing…"></textarea></div>
+  <fieldset class="details">
+    <legend>Project details <span class="opt">(optional, but it helps us quote by phone)</span></legend>
+    <div class="row">
+      <div class="field"><label for="f-size">Approximate size</label><input id="f-size" name="dimensions" placeholder="e.g. 16 x 20 ft" /></div>
+      <div class="field"><label for="f-height">Height off the ground</label><input id="f-height" name="height" placeholder="e.g. ground level, 3 ft, second story" /></div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="f-steps">Stairs / steps</label><input id="f-steps" name="steps" placeholder="e.g. one set, about 8 steps" /></div>
+      <div class="field"><label for="f-material">Material or color you like</label><input id="f-material" name="material" placeholder="e.g. TimberTech, gray, not sure" /></div>
+    </div>
+    <div class="field"><label for="f-msg">Description</label><textarea id="f-msg" name="message" placeholder="What you want to build, railing, roof or pergola, lighting, hot tub, timing…"></textarea></div>
+  </fieldset>
+  <fieldset class="details">
+    <legend>Photos or plans <span class="opt">(optional)</span></legend>
+    <p class="small">Add photos of your yard or existing deck, or a drawing or plan. Up to 3 files, 8 MB total.</p>
+    <div class="field"><input name="photo1" type="file" accept="image/*,.pdf" aria-label="Photo or plan 1" /></div>
+    <div class="field"><input name="photo2" type="file" accept="image/*,.pdf" aria-label="Photo or plan 2" /></div>
+    <div class="field"><input name="photo3" type="file" accept="image/*,.pdf" aria-label="Photo or plan 3" /></div>
+    <p class="small file-warn" hidden>Those files are over 8 MB together. Try smaller photos, or text them to us after you submit.</p>
+  </fieldset>
   <button class="btn btn-primary" type="submit">Request My Free Estimate</button>
 </form>
+
+<style>
+  .details { border: 1px solid var(--line, #d8dbe0); border-radius: 10px; padding: 14px 16px 4px; margin: 0 0 16px; min-width: 0; }
+  .details legend { font-weight: 700; padding: 0 6px; }
+  .opt { font-weight: 400; color: var(--ink-soft); font-size: 0.9rem; }
+  .row { display: grid; gap: 0 14px; }
+  @media (min-width: 640px) { .row { grid-template-columns: 1fr 1fr; } }
+  input[type='file'] { width: 100%; max-width: 100%; }
+</style>
+
+<script>
+  // Netlify Forms accepts up to 8 MB per submission; warn before a failed upload.
+  document.querySelectorAll<HTMLFormElement>('form[name="estimate"]').forEach((form) => {
+    const files = form.querySelectorAll<HTMLInputElement>('input[type="file"]');
+    const warn = form.querySelector<HTMLElement>('.file-warn');
+    const total = () => [...files].reduce((n, i) => n + (i.files?.[0]?.size ?? 0), 0);
+    files.forEach((i) => i.addEventListener('change', () => { if (warn) warn.hidden = total() <= 8 * 1024 * 1024; }));
+    form.addEventListener('submit', (e) => { if (total() > 8 * 1024 * 1024) { e.preventDefault(); if (warn) warn.hidden = false; } });
+  });
+</script>
