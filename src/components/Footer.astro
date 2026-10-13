@@ -7,7 +7,7 @@ const year = new Date().getFullYear();
     <h2>Ready to plan your deck?</h2>
     <p>Free estimates over the phone. Call Levi or send a few details and we'll get back to you with a ballpark.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+      <a class="btn btn-dark" href="/contact">Get a Free Estimate</a>
       <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
     </div>
   </div>
@@ -50,10 +50,10 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-  .cta-band { background: var(--green); color: #fff; padding: 56px 0; }
+  .cta-band { background: var(--accent); color: #fff; padding: 56px 0; }
   .cta-band h2 { color: #fff; }
-  .cta-band p { color: #dfe7e1; max-width: 40rem; }
-  .site-footer { background: #1b1f1c; color: #c9cfca; padding: 48px 0 24px; font-size: 0.95rem; }
+  .cta-band p { color: #fde8e9; max-width: 40rem; }
+  .site-footer { border-top: 3px solid var(--silver); background: var(--dark); color: var(--silver); padding: 48px 0 24px; font-size: 0.95rem; }
   .site-footer a { color: #e9ece9; text-decoration: none; }
   .cols { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
   .brand { font-weight: 800; font-size: 1.3rem; color: #fff; }
@@ -61,5 +61,5 @@ const year = new Date().getFullYear();
   ul { list-style: none; padding: 0; margin: 0 0 0.6rem; display: grid; gap: 6px; }
   ul.two { grid-template-columns: 1fr 1fr; }
   .small { font-size: 0.85rem; }
-  .legal { border-top: 1px solid #333a35; margin-top: 28px; padding-top: 16px; font-size: 0.85rem; }
+  .legal { border-top: 1px solid #2c2f33; margin-top: 28px; padding-top: 16px; font-size: 0.85rem; }
 </style>

@@ -32,18 +32,19 @@ const nav = [
 </header>
 
 <style>
-  .site-header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+  .site-header { background: var(--dark); border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 50; }
   .bar { display: flex; align-items: center; gap: 16px; min-height: 68px; }
-  .logo { display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--ink); }
-  .mark { background: var(--wood); color: #fff; border-radius: 6px; padding: 2px 7px; }
-  .phone { margin-left: auto; font-weight: 800; text-decoration: none; color: var(--green); white-space: nowrap; }
+  .logo { display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 1.3rem; text-decoration: none; color: #fff; }
+  .mark { background: var(--chrome); color: var(--dark); border: 1px solid #8d9399; border-radius: 6px; padding: 2px 7px; }
+  .phone { margin-left: auto; font-weight: 800; text-decoration: none; color: var(--silver); white-space: nowrap; }
   .menu { order: 3; }
-  .menu summary { list-style: none; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; }
+  .menu summary { list-style: none; color: #fff; border: 1px solid #555a60; border-radius: 8px; padding: 6px 12px; }
   .menu summary::-webkit-details-marker { display: none; }
-  .menu nav { position: absolute; left: 0; right: 0; top: 68px; background: #fff; border-bottom: 1px solid var(--line); padding: 12px 16px 20px; display: flex; flex-direction: column; gap: 10px; }
-  nav a { text-decoration: none; color: var(--ink); font-weight: 600; }
+  .menu nav { position: absolute; left: 0; right: 0; top: 71px; background: var(--dark); border-bottom: 3px solid var(--accent); padding: 12px 16px 20px; display: flex; flex-direction: column; gap: 10px; }
+  nav a { text-decoration: none; color: #fff; font-weight: 600; }
+  nav a:hover { color: var(--silver); }
   nav a.cta { color: #fff; text-align: center; }
-  .dd-label { font-weight: 700; color: var(--wood); font-size: 0.85rem; text-transform: uppercase; }
+  .dd-label { font-weight: 700; color: var(--silver); font-size: 0.85rem; text-transform: uppercase; }
   .dropdown ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 8px; }
 
   @media (min-width: 980px) {
@@ -52,8 +53,8 @@ const nav = [
     .menu nav { position: static; flex-direction: row; align-items: center; gap: 22px; padding: 0; border: 0; }
     .phone { margin-left: 8px; }
     .dropdown { position: relative; }
-    .dd-label { color: var(--ink); text-transform: none; font-size: 1rem; font-weight: 600; cursor: default; }
-    .dropdown ul { display: none; position: absolute; top: 100%; left: -16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; min-width: 240px; box-shadow: var(--shadow); }
+    .dd-label { color: #fff; text-transform: none; font-size: 1rem; font-weight: 600; cursor: default; }
+    .dropdown ul { display: none; position: absolute; top: 100%; left: -16px; background: var(--dark); border: 1px solid #33373b; border-top: 3px solid var(--accent); border-radius: 8px; padding: 12px 16px; min-width: 240px; box-shadow: var(--shadow); }
     .dropdown:hover ul, .dropdown:focus-within ul { display: grid; }
   }
 </style>
