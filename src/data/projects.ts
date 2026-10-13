@@ -30,6 +30,7 @@ const lehi = p('lehi-covered-deck-fireplace');
 const af = p('american-fork-second-story-lit-stairs');
 const lam = p('lehi-american-fork-decks');
 const sj = p('south-jordan-fiber-optic-privacy');
+const provo = p('provo-decks');
 
 export const projects: Project[] = [
   {
@@ -45,10 +46,24 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'south-jordan-fiber-optic-privacy',
-    title: 'South Jordan: second-story deck with privacy railing and fiber optic lights',
-    summary: 'A second-story deck with black privacy railing panels and blue fiber optic lights set into the underside, so the patio and hot tub below glow at night like a starry sky.',
+    slug: 'provo-decks',
+    title: 'Provo: rooftop deck with geometric white railing, plus more Provo builds',
+    summary: 'A rooftop deck on a Provo pool house with composite decking and custom white railing in a geometric pattern, overlooking Utah Valley. Below are two more Provo decks: a dark composite deck with white posts and a mountain view, and a long composite stair with step lights.',
     photos: [
+      provo('provo-pool-house-rooftop-deck-geometric-white-railing', 'Rooftop deck with geometric white railing on a pool house in Provo, Utah'),
+      provo('rooftop-composite-deck-utah-valley-view', 'Rooftop composite deck overlooking Utah Valley'),
+      provo('dark-composite-deck-stairs-mountain-view-provo', 'Dark composite deck and stairs with white railing and a mountain view in Provo'),
+      provo('composite-deck-stairs-white-posts-step-lights', 'Composite deck stairs with white posts, black balusters and step lights'),
+    ],
+  },
+  {
+    slug: 'south-jordan-fiber-optic-privacy',
+    title: 'South Jordan: covered deck with black privacy railing and turquoise lighting',
+    summary: 'A covered second-story deck with black privacy railing panels, turquoise accent lights on the posts and stairs, and fiber optic lights set into the underside, so the patio and hot tub below glow at night like a starry sky.',
+    photos: [
+      sj('privacy-railing-turquoise-accent-lights', 'Covered second-story deck with black privacy railing and turquoise stair lights in South Jordan, Utah'),
+      sj('south-jordan-covered-deck-privacy-railing-turquoise-lights', 'Covered deck with black privacy panels and turquoise post lights'),
+      sj('covered-deck-black-privacy-panels-post-lights', 'Black privacy railing panels and post lights on a covered deck'),
       sj('south-jordan-deck-fiber-optic-lights-privacy-railing', 'Second-story deck with black privacy railing and blue fiber optic lights underneath in South Jordan, Utah'),
       sj('second-story-deck-black-privacy-railing', 'Second-story deck with black privacy railing panels over a hot tub patio'),
     ],
