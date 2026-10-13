@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Reviews from '../components/Reviews.astro';
+import { breadcrumbSchema } from '../lib/schema';
+---
+<Base
+  title="TC Decks Reviews | 4.9 Stars on Google | Utah County Deck Builder"
+  description="Read reviews from Utah County homeowners who had their decks built by TC Decks. Rated 4.9 stars from 34 Google reviews."
+  schema={[breadcrumbSchema([{ name: 'Reviews', path: '/testimonials' }])]}
+>
+  <PageHero eyebrow="Reviews" title="What our customers say" lead="We're proud of our 4.9-star rating on Google. Here's what homeowners say about working with TC Decks." crumbs={[{ name: 'Reviews', path: '/testimonials' }]} />
+  <section class="section"><div class="wrap"><Reviews />
+    <p style="margin-top:24px">Worked with us? <a href="https://www.google.com/search?q=TC+Decks+Saratoga+Springs+reviews" rel="noopener">Leave a Google review</a>. It helps a small business a lot.</p>
+  </div></section>
+</Base>

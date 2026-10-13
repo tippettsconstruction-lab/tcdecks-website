@@ -1,0 +1,51 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'How long does it take to build a deck?', a: 'Most decks take one to three weeks of construction once the permit is approved. Permit review times vary by city, so we give you a realistic schedule with your quote.' },
+  { q: 'Do I need a permit for a deck in Utah County?', a: 'Most cities require a permit for decks that are attached to the house or more than 30 inches above grade. We prepare the drawings, pull the permit and schedule inspections.' },
+  { q: 'Wood or composite?', a: 'Pressure-treated wood costs less up front but needs staining and sealing every few years in Utah sun and snow. Composite costs more to install but needs only occasional washing and carries a 25+ year manufacturer warranty.' },
+  { q: 'Can you replace my deck boards and keep the frame?', a: 'Sometimes. If the framing and footings are sound and meet current code, we can resurface with new decking and railing, which saves money. We inspect the structure first and tell you honestly.' },
+];
+---
+<Service
+  slug="custom-deck-design-construction"
+  name="Custom Decks"
+  title="Custom Deck Design & Construction in Utah County | TC Decks"
+  description="Custom deck design and construction in Saratoga Springs, Lehi and Utah County. 3D design, permits handled, composite or wood, one-year workmanship warranty. Free estimate."
+  h1="Custom deck design and construction"
+  lead="From a simple ground-level deck to a two-story deck with stairs, pergola and lighting, we design it around your home and build it to last through Utah winters."
+  faqs={faqs}
+>
+  <h2>See it in 3D before we build</h2>
+  <p>After we measure your home and yard, we build a 3D model of the deck on your house. You can try different sizes, stair locations, decking colors and railing styles before anything is ordered, so there are no surprises when it's finished.</p>
+  <Photo alt="3D rendering of a custom deck design" label="Photo: 3D design vs. finished deck" />
+
+  <h2>Built right from the ground up</h2>
+  <ul class="check-list">
+    <li><strong>Footings sized for your soil and height.</strong> Concrete piers or helical ground screws, which can be installed in a day with no concrete cure time.</li>
+    <li><strong>Framing protected for the long term.</strong> Joist tape on framing to keep water out of fastener holes and extend the life of the structure.</li>
+    <li><strong>Hidden fasteners</strong> for a clean surface with no exposed screw heads on composite boards.</li>
+    <li><strong>Under-deck drainage</strong> with Trex RainEscape to keep the space under a second-story deck dry for storage or a patio.</li>
+    <li><strong>Built to code</strong> and inspected by your city, with NADRA deck safety guidelines followed.</li>
+  </ul>
+
+  <h2>Popular add-ons</h2>
+  <ul class="check-list">
+    <li>Pergolas and covered sections for shade</li>
+    <li>Low-voltage post, stair and rail lighting</li>
+    <li>Built-in benches, planters and drink rails</li>
+    <li>Hot tub surrounds and reinforced framing</li>
+    <li>Wide stairs, landings and multi-level layouts</li>
+  </ul>
+
+  <h2>Our process</h2>
+  <ol>
+    <li><strong>Consultation:</strong> we visit, measure and talk about how you'll use the deck, your budget and timing.</li>
+    <li><strong>3D design and itemized quote.</strong></li>
+    <li><strong>Permit:</strong> we draw plans and submit to your city.</li>
+    <li><strong>Construction:</strong> demolition if needed, footings, framing, decking, railing and finish work.</li>
+    <li><strong>Walkthrough:</strong> final inspection, cleanup and warranty paperwork.</li>
+  </ol>
+</Service>

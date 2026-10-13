@@ -1,0 +1,45 @@
+---
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Faqs from '../components/Faqs.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import Reviews from '../components/Reviews.astro';
+import { faqSchema, breadcrumbSchema, serviceSchema, type Faq } from '../lib/schema';
+import { business } from '../data/site';
+
+interface Props {
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  h1: string;
+  lead: string;
+  faqs: Faq[];
+}
+const { slug, name, title, description, h1, lead, faqs } = Astro.props;
+const path = `/${slug}`;
+---
+<Base
+  title={title}
+  description={description}
+  schema={[serviceSchema(name, description, path), faqSchema(faqs), breadcrumbSchema([{ name, path }])]}
+>
+  <PageHero eyebrow="Services" title={h1} lead={lead} crumbs={[{ name, path }]}>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+      <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+    </div>
+  </PageHero>
+  <section class="section">
+    <div class="wrap prose"><slot /></div>
+  </section>
+  <section class="section alt">
+    <div class="wrap"><h2>What homeowners say</h2><Reviews /></div>
+  </section>
+  <section class="section">
+    <div class="wrap prose"><Faqs faqs={faqs} /></div>
+  </section>
+  <section class="section alt">
+    <div class="wrap"><h2>Other services</h2><ServiceCards exclude={slug} /></div>
+  </section>
+</Base>

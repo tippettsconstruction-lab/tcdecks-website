@@ -1,0 +1,68 @@
+---
+import { business, services } from '../data/site';
+const nav = [
+  { href: '/project-showcase', label: 'Projects' },
+  { href: '/how-much-does-a-deck-cost-in-utah', label: 'Deck Costs' },
+  { href: '/service-areas', label: 'Service Areas' },
+  { href: '/testimonials', label: 'Reviews' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
+];
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="/" class="logo" aria-label="TC Decks home">
+      <span class="mark">TC</span><span>Decks</span>
+    </a>
+    <details class="menu">
+      <summary aria-label="Menu">Menu</summary>
+      <nav aria-label="Main">
+        <div class="dropdown">
+          <span class="dd-label">Services</span>
+          <ul>
+            {services.map((s) => <li><a href={`/${s.slug}`}>{s.name}</a></li>)}
+          </ul>
+        </div>
+        {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        <a class="btn btn-primary cta" href="/contact">Free Estimate</a>
+      </nav>
+    </details>
+    <a class="phone" href={business.phoneHref}>{business.phone}</a>
+  </div>
+</header>
+
+<style>
+  .site-header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+  .bar { display: flex; align-items: center; gap: 16px; min-height: 68px; }
+  .logo { display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--ink); }
+  .mark { background: var(--wood); color: #fff; border-radius: 6px; padding: 2px 7px; }
+  .phone { margin-left: auto; font-weight: 800; text-decoration: none; color: var(--green); white-space: nowrap; }
+  .menu { order: 3; }
+  .menu summary { list-style: none; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu nav { position: absolute; left: 0; right: 0; top: 68px; background: #fff; border-bottom: 1px solid var(--line); padding: 12px 16px 20px; display: flex; flex-direction: column; gap: 10px; }
+  nav a { text-decoration: none; color: var(--ink); font-weight: 600; }
+  nav a.cta { color: #fff; text-align: center; }
+  .dd-label { font-weight: 700; color: var(--wood); font-size: 0.85rem; text-transform: uppercase; }
+  .dropdown ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 8px; }
+
+  @media (min-width: 980px) {
+    .menu { order: 0; margin-left: auto; }
+    .menu summary { display: none; }
+    .menu nav { position: static; flex-direction: row; align-items: center; gap: 22px; padding: 0; border: 0; }
+    .phone { margin-left: 8px; }
+    .dropdown { position: relative; }
+    .dd-label { color: var(--ink); text-transform: none; font-size: 1rem; font-weight: 600; cursor: default; }
+    .dropdown ul { display: none; position: absolute; top: 100%; left: -16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; min-width: 240px; box-shadow: var(--shadow); }
+    .dropdown:hover ul, .dropdown:focus-within ul { display: grid; }
+  }
+</style>
+
+<script>
+  // Desktop: keep nav open; the <details> toggle is only for mobile.
+  const menu = document.querySelector('.menu') as HTMLDetailsElement | null;
+  const mq = window.matchMedia('(min-width: 980px)');
+  const sync = () => { if (menu) menu.open = mq.matches; };
+  sync();
+  mq.addEventListener('change', sync);
+</script>

@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { business } from '../data/site';
+---
+<Base title="Privacy Policy | TC Decks" description="How TC Decks handles information you send through this website.">
+  <PageHero title="Privacy policy" />
+  <section class="section"><div class="wrap prose">
+    <p>When you send an estimate request, we receive the name, phone, email, city and project details you enter. We use them only to respond to you about your project. We don't sell or share your information.</p>
+    <p>This site may use basic, privacy-friendly analytics to count visits. Questions? Email <a href={`mailto:${business.email}`}>{business.email}</a>.</p>
+  </div></section>
+</Base>

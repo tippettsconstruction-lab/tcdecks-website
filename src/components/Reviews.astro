@@ -1,0 +1,22 @@
+---
+import { reviews, business } from '../data/site';
+---
+<div class="rating">
+  <span class="stars" aria-hidden="true">★★★★★</span>
+  <strong>{business.rating.value} on Google</strong> from {business.rating.count} reviews
+</div>
+<div class="grid grid-3">
+  {reviews.map((r) => (
+    <figure class="card">
+      <blockquote>“{r.text}”</blockquote>
+      <figcaption>{r.author}</figcaption>
+    </figure>
+  ))}
+</div>
+<style>
+  .rating { margin-bottom: 18px; font-size: 1.05rem; }
+  .stars { color: #d49a1c; letter-spacing: 2px; margin-right: 6px; }
+  figure { margin: 0; }
+  blockquote { margin: 0 0 12px; font-size: 1.02rem; }
+  figcaption { color: var(--ink-soft); font-size: 0.9rem; font-weight: 600; }
+</style>

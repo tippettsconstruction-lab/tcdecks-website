@@ -1,0 +1,39 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'What railing styles do you install?', a: 'Composite, aluminum (including Fortress and Trex Signature), cable, and vinyl railing. Each has a different look, price and level of view-through.' },
+  { q: 'How tall does a deck railing need to be?', a: 'Residential code generally requires guards at least 36 inches tall on decks more than 30 inches above grade, with openings smaller than 4 inches. We build to your city’s code.' },
+  { q: 'Can you replace just my railing?', a: 'Yes. Railing replacement is a quick way to modernize an older deck, as long as the posts and framing are sound.' },
+];
+---
+<Service
+  slug="porches-railings"
+  name="Porches & Railings"
+  title="Front Porch & Deck Railing Installation in Utah County | TC Decks"
+  description="Front porches, stairs and deck railing in Saratoga Springs and Utah County. Aluminum, cable, composite and vinyl railing from Fortress and Trex. Free estimate."
+  h1="Front porches and deck railings"
+  lead="A new front porch adds curb appeal and a place to sit, and the right railing can change the whole look of a deck. We build both."
+  faqs={faqs}
+>
+  <h2>Front porches</h2>
+  <p>We build and extend front porches with composite decking, wide stairs and railing that match your home. Expanding a narrow builder porch is one of the most noticeable upgrades you can make to the front of a house.</p>
+  <Photo alt="Front porch with composite decking and white railing" label="Photo: front porch project" />
+
+  <h2>Railing options</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Style</th><th>Look</th><th>Good for</th></tr></thead>
+      <tbody>
+        <tr><td>Aluminum (Fortress, Trex Signature)</td><td>Slim, modern, black or bronze</td><td>Durability, clean lines</td></tr>
+        <tr><td>Cable</td><td>Nearly invisible</td><td>Mountain and lake views</td></tr>
+        <tr><td>Composite</td><td>Matches composite decking</td><td>A coordinated look</td></tr>
+        <tr><td>Vinyl</td><td>Classic white</td><td>Traditional homes, budget</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Stairs</h2>
+  <p>Wide landings, picture-framed treads and stair lighting make stairs safer and better looking. We build stairs to code with proper rise, run and graspable handrails.</p>
+</Service>

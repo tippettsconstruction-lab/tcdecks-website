@@ -1,0 +1,8 @@
+---
+// Shows a real photo when `src` is given; otherwise a labeled placeholder until project photos arrive.
+interface Props { src?: string; alt: string; label?: string; }
+const { src, alt, label } = Astro.props;
+---
+<div class="photo">
+  {src ? <img src={src} alt={alt} loading="lazy" decoding="async" /> : <span>{label ?? alt}</span>}
+</div>

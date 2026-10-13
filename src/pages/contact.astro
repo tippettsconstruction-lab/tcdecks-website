@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { business } from '../data/site';
+import { breadcrumbSchema } from '../lib/schema';
+---
+<Base
+  title="Get a Free Deck Estimate | Contact TC Decks | 801-472-8939"
+  description="Request a free deck estimate and 3D design from TC Decks in Saratoga Springs, Utah. Call 801-472-8939 or send us your project details."
+  schema={[breadcrumbSchema([{ name: 'Contact', path: '/contact' }])]}
+>
+  <PageHero eyebrow="Contact" title="Get a free estimate" lead="Tell us a little about your project and we'll set up a time to visit, measure and talk through ideas." crumbs={[{ name: 'Contact', path: '/contact' }]} />
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <QuoteForm />
+      <div>
+        <h2>Prefer to call?</h2>
+        <p class="big"><a href={business.phoneHref}>{business.phone}</a></p>
+        <p><strong>Email:</strong> <a href={`mailto:${business.email}`}>{business.email}</a></p>
+        <p><strong>Hours:</strong> {business.hours}</p>
+        <p><strong>Based in:</strong> Saratoga Springs, UT, serving Utah County. See our <a href="/service-areas">service areas</a>.</p>
+        <p class="small">Utah Contractor License #{business.license} · Licensed &amp; insured</p>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>.big { font-size: 1.8rem; font-weight: 800; } .big a { text-decoration: none; color: var(--green); } .small { font-size: .9rem; color: var(--ink-soft); }</style>

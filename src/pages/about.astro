@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Reviews from '../components/Reviews.astro';
+import { business, yearsInBusiness } from '../data/site';
+import { breadcrumbSchema } from '../lib/schema';
+---
+<Base
+  title="About TC Decks | Levi Tippetts, Utah County Deck Builder Since 2005"
+  description={`TC Decks is a family-owned deck builder in Saratoga Springs, Utah, run by Levi Tippetts since ${business.founded}. Licensed & insured, Utah contractor license #${business.license}.`}
+  schema={[breadcrumbSchema([{ name: 'About', path: '/about' }])]}
+>
+  <PageHero eyebrow="About us" title="A local, family-owned deck builder" lead={`Levi Tippetts started TC Decks in ${business.founded}. ${yearsInBusiness} years later, we're still a small Saratoga Springs company where the owner designs your deck and stays involved until it's done.`} crumbs={[{ name: 'About', path: '/about' }]} />
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="prose">
+        <h2>Meet Levi</h2>
+        <p>Homeowners mention Levi by name in review after review, for his attention to detail, fast communication and patience while they figure out exactly what they want. That's how TC Decks works: you deal with the person responsible for your project from the first visit to the final walkthrough.</p>
+        <h2>What you can expect</h2>
+        <ul class="check-list">
+          <li>A free on-site visit and 3D design of your deck</li>
+          <li>Itemized, written quotes with no surprise charges</li>
+          <li>Permits, inspections and cleanup handled for you</li>
+          <li>Regular updates, including when suppliers cause delays</li>
+          <li>A one-year workmanship warranty plus manufacturer material warranties</li>
+        </ul>
+        <h2>Credentials</h2>
+        <ul class="check-list">
+          <li>Utah Contractor License #{business.license}</li>
+          <li>Licensed and insured</li>
+          <li>Member of the North American Deck and Railing Association (NADRA), the NAHB and the local Home Builders Association</li>
+        </ul>
+      </div>
+      <Photo alt="Levi Tippetts, owner of TC Decks" label="Photo: Levi on a job site" />
+    </div>
+  </section>
+  <section class="section alt"><div class="wrap"><h2>What customers say about Levi</h2><Reviews /></div></section>
+</Base>

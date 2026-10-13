@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+// Replace with real projects (photos, city, materials) as the owner sends them.
+const projects = [
+  { title: 'Trex Transcend deck in Lava Rock', detail: 'Hidden fasteners, matching patio' },
+  { title: 'Custom stairs in Trex Transcend Spiced Rum', detail: 'Wide treads with picture-frame borders' },
+  { title: 'Composite deck in Trex Transcend Havana Gold', detail: 'Deck and patio combination' },
+  { title: 'Provo deck remodel', detail: 'Pebble Grey Trex with white vinyl railing' },
+  { title: 'Pebble Grey deck with Trex Signature aluminum railing', detail: 'Railing and stairs' },
+  { title: 'Under-deck drainage with Trex RainEscape', detail: 'Dry patio under a second-story deck' },
+];
+---
+<Base
+  title="Deck Projects & Photo Gallery | Utah County | TC Decks"
+  description="See composite decks, pergolas, stairs and railings built by TC Decks in Saratoga Springs, Lehi, Provo and across Utah County."
+  schema={[breadcrumbSchema([{ name: 'Projects', path: '/project-showcase' }])]}
+>
+  <PageHero eyebrow="Our work" title="Deck projects across Utah County" lead="A few recent builds. Ask us for addresses of finished decks near you that you can drive by." crumbs={[{ name: 'Projects', path: '/project-showcase' }]} />
+  <section class="section">
+    <div class="wrap grid grid-3">
+      {projects.map((p) => (
+        <figure class="proj">
+          <Photo alt={p.title} label={p.title} />
+          <figcaption><strong>{p.title}</strong><br />{p.detail}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</Base>
+<style>.proj { margin: 0; } figcaption { margin-top: 8px; color: var(--ink-soft); }</style>

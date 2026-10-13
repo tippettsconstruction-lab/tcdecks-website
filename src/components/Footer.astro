@@ -1,0 +1,65 @@
+---
+import { business, services, cities } from '../data/site';
+const year = new Date().getFullYear();
+---
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to plan your deck?</h2>
+    <p>Free on-site estimate and 3D design. Call Levi or send a few details and we'll get back to you.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+      <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <p class="brand">TC Decks</p>
+      <p>Custom deck builder serving Utah County since {business.founded}. Owned by {business.owner}.</p>
+      <p>
+        <a href={business.phoneHref}>{business.phone}</a><br />
+        <a href={`mailto:${business.email}`}>{business.email}</a><br />
+        {business.hours}
+      </p>
+      <p class="small">Utah Contractor License #{business.license}<br />Licensed &amp; insured</p>
+    </div>
+    <div>
+      <p class="head">Services</p>
+      <ul>{services.map((s) => <li><a href={`/${s.slug}`}>{s.name}</a></li>)}</ul>
+      <ul><li><a href="/how-much-does-a-deck-cost-in-utah">Deck Costs in Utah</a></li></ul>
+    </div>
+    <div>
+      <p class="head">Service Areas</p>
+      <ul class="two">{cities.map((c) => <li><a href={`/service-areas/${c.slug}`}>{c.name}</a></li>)}</ul>
+    </div>
+    <div>
+      <p class="head">Company</p>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/project-showcase">Projects</a></li>
+        <li><a href="/testimonials">Reviews</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href={business.social.instagram} rel="noopener">Instagram</a></li>
+        <li><a href={business.social.youtube} rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">© {year} TC Decks · Tippetts Construction · <a href="/privacy">Privacy</a></div>
+</footer>
+
+<style>
+  .cta-band { background: var(--green); color: #fff; padding: 56px 0; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: #dfe7e1; max-width: 40rem; }
+  .site-footer { background: #1b1f1c; color: #c9cfca; padding: 48px 0 24px; font-size: 0.95rem; }
+  .site-footer a { color: #e9ece9; text-decoration: none; }
+  .cols { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .brand { font-weight: 800; font-size: 1.3rem; color: #fff; }
+  .head { font-weight: 700; color: #fff; }
+  ul { list-style: none; padding: 0; margin: 0 0 0.6rem; display: grid; gap: 6px; }
+  ul.two { grid-template-columns: 1fr 1fr; }
+  .small { font-size: 0.85rem; }
+  .legal { border-top: 1px solid #333a35; margin-top: 28px; padding-top: 16px; font-size: 0.85rem; }
+</style>

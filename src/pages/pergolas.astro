@@ -1,0 +1,34 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'What is the difference between a pergola and a covered patio?', a: 'A pergola has an open slatted roof that gives filtered shade. A covered patio or covered deck has a solid roof that blocks sun and rain completely. We build both and can add louvers or shade panels to a pergola.' },
+  { q: 'Can you add a pergola to my existing deck?', a: 'Usually, yes. We check that the deck framing and footings can carry the load and wind uplift, and reinforce them if needed.' },
+  { q: 'Do I need a permit for a pergola?', a: 'It depends on the city, size and whether it is attached to the house. We check the requirements and handle the permit when one is needed.' },
+];
+---
+<Service
+  slug="pergolas"
+  name="Pergolas & Covered Patios"
+  title="Pergola & Covered Patio Builder in Utah County | TC Decks"
+  description="Custom pergolas, covered decks and trellises in Saratoga Springs, Lehi and Utah County. Wood, composite-wrapped and aluminum options, built to handle Utah wind and snow."
+  h1="Pergolas and covered patios"
+  lead="Utah summer sun can make an open deck too hot to use by mid-afternoon. A pergola or covered section turns it into an outdoor room you'll actually use from May through October."
+  faqs={faqs}
+>
+  <h2>Options we build</h2>
+  <ul class="check-list">
+    <li><strong>Freestanding pergolas</strong> over a patio, hot tub or yard.</li>
+    <li><strong>Attached pergolas</strong> tied into your deck or house.</li>
+    <li><strong>Covered decks and patios</strong> with a solid roof for full sun and rain protection.</li>
+    <li><strong>Trellises and privacy screens</strong> for climbing plants and screening from neighbors.</li>
+  </ul>
+  <Photo alt="Custom pergola over a composite deck" label="Photo: pergola project" />
+
+  <h2>Built for Utah weather</h2>
+  <p>Pergolas catch wind and carry snow, so post size, footings and connections matter. We anchor every structure properly and size members for the spans and loads, then finish with wood, composite-wrapped posts or low-maintenance aluminum.</p>
+
+  <h2>Pair it with your deck</h2>
+  <p>The best results come from designing the deck and pergola together, so posts land where the framing can support them and the shade falls where you sit. See our <a href="/custom-deck-design-construction">custom deck design</a> process.</p>
+</Service>

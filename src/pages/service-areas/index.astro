@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import { cities } from '../../data/site';
+import { breadcrumbSchema } from '../../lib/schema';
+---
+<Base
+  title="Deck Builder Service Areas in Utah County | TC Decks"
+  description="TC Decks builds custom decks, pergolas and porches in Saratoga Springs, Lehi, Eagle Mountain, American Fork, Pleasant Grove, Highland, Alpine, Orem, Provo and Vineyard."
+  schema={[breadcrumbSchema([{ name: 'Service Areas', path: '/service-areas' }])]}
+>
+  <PageHero eyebrow="Where we build" title="Deck builder serving Utah County" lead="We're based in Saratoga Springs and build throughout northern Utah County. Pick your city for local details, permits and projects." crumbs={[{ name: 'Service Areas', path: '/service-areas' }]} />
+  <section class="section">
+    <div class="wrap grid grid-3">
+      {cities.map((c) => (
+        <div class="card">
+          <h2 class="h3"><a href={`/service-areas/${c.slug}`}>Decks in {c.name}</a></h2>
+          <p>{c.intro.split('. ')[0]}.</p>
+          <a class="more" href={`/service-areas/${c.slug}`}>{c.name} decks →</a>
+        </div>
+      ))}
+    </div>
+    <div class="wrap"><p style="margin-top:24px">Outside these cities? <a href="/contact">Ask us</a>, we often build nearby.</p></div>
+  </section>
+</Base>
+<style>.h3 { font-size: 1.2rem; } .h3 a { color: inherit; text-decoration: none; } .more { font-weight: 700; text-decoration: none; }</style>

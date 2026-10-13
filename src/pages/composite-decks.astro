@@ -1,0 +1,50 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'Does composite decking get hot in Utah summers?', a: 'All decking gets warm in direct sun, and darker colors get hotter. Lighter colors, capped PVC lines and a pergola or shade sail make a big difference on west-facing decks.' },
+  { q: 'Which is better, Trex or TimberTech?', a: 'Both are excellent. Trex offers great value and a wide color range. TimberTech AZEK PVC boards run cooler and lighter and carry longer warranties at a higher price. We bring samples so you can compare in person.' },
+  { q: 'How long does a composite deck last?', a: 'Most composite decking carries a 25 to 50 year manufacturer warranty against fading and staining, depending on the line. The framing underneath is what usually determines how long a deck lasts, which is why we protect it.' },
+  { q: 'Do composite decks need maintenance?', a: 'No sanding, staining or sealing. Wash it with soap and water or a low-pressure rinse a couple times a year and clear snow with a plastic shovel.' },
+];
+---
+<Service
+  slug="composite-decks"
+  name="Composite Decks"
+  title="Composite Deck Installation in Utah County | Trex & TimberTech | TC Decks"
+  description="Trex, TimberTech and Deckorators composite deck installation in Saratoga Springs, Lehi and Utah County. Compare brands, colors and warranties. Free 3D design and estimate."
+  h1="Composite deck installation"
+  lead="Composite decking holds up to Utah's sun, snow and freeze-thaw cycles without staining or sealing. We install the major brands and help you choose the right line for your budget."
+  faqs={faqs}
+>
+  <h2>Composite vs. wood in Utah</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Pressure-treated wood</th><th>Composite / PVC</th></tr></thead>
+      <tbody>
+        <tr><td>Upfront cost</td><td>Lower</td><td>Higher</td></tr>
+        <tr><td>Maintenance</td><td>Stain/seal every 2–3 years</td><td>Wash occasionally</td></tr>
+        <tr><td>Splinters, cracking</td><td>Common as it ages</td><td>No</td></tr>
+        <tr><td>Fade &amp; stain warranty</td><td>None</td><td>25–50 years</td></tr>
+        <tr><td>Long-term cost</td><td>Rises with upkeep</td><td>Often lower over 10+ years</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Brands we install</h2>
+  <h3>Trex</h3>
+  <p>The best-known composite brand, with good-better-best lines (Enhance, Select, Transcend). We've built with Transcend in colors like Lava Rock, Spiced Rum, and Havana Gold, and Pebble Grey from the Enhance line is a popular budget-friendly choice.</p>
+  <h3>TimberTech AZEK</h3>
+  <p>Capped composite and full PVC boards. PVC runs cooler underfoot and is very light, which makes it a strong choice for sunny decks and premium builds.</p>
+  <h3>Deckorators</h3>
+  <p>Mineral-based composite boards that are very stable through temperature swings and have good slip resistance.</p>
+  <h3>Fiberon</h3>
+  <p>A solid composite option with a wide range of colors and price points.</p>
+
+  <Photo alt="Composite deck with matching railing and hidden fasteners" label="Photo: composite deck close-up showing hidden fasteners" />
+
+  <h2>Railings, lighting and finishing touches</h2>
+  <p>We pair your decking with matching composite, aluminum, cable or vinyl railing, picture-frame borders, hidden fasteners and low-voltage lighting so the whole deck looks like one design.</p>
+  <p>Wondering about price? See our <a href="/how-much-does-a-deck-cost-in-utah">Utah deck cost guide</a>.</p>
+</Service>

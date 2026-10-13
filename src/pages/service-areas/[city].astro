@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Photo from '../../components/Photo.astro';
+import ServiceCards from '../../components/ServiceCards.astro';
+import Reviews from '../../components/Reviews.astro';
+import Faqs from '../../components/Faqs.astro';
+import { cities, business, type City } from '../../data/site';
+import { faqSchema, breadcrumbSchema } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return cities.map((city) => ({ params: { city: city.slug }, props: { city } }));
+}
+const { city } = Astro.props as { city: City };
+const path = `/service-areas/${city.slug}`;
+const faqs = [
+  { q: `Do I need a permit to build a deck in ${city.name}?`, a: `Most attached decks and decks more than 30 inches off the ground need a building permit from ${city.name}. We prepare the plans, submit the permit and schedule the inspections for you.` },
+  { q: `How long does a deck take to build in ${city.name}?`, a: 'Construction usually takes one to three weeks once the permit is approved. We give you a schedule with your quote and keep you updated as we go.' },
+  { q: `Do you offer free estimates in ${city.name}?`, a: `Yes. We come out to your ${city.name} home, measure, and give you a free 3D design and itemized quote.` },
+];
+---
+<Base
+  title={`Deck Builder in ${city.name}, UT | Composite Decks & Pergolas | TC Decks`}
+  description={`Custom composite decks, pergolas, deck repair and railing in ${city.name}, Utah. Local, licensed & insured deck builder since ${business.founded}. Free 3D design and estimate.`}
+  schema={[faqSchema(faqs), breadcrumbSchema([{ name: 'Service Areas', path: '/service-areas' }, { name: city.name, path }])]}
+>
+  <PageHero eyebrow={`${city.name}, Utah`} title={`Deck builder in ${city.name}, UT`} lead={city.intro} crumbs={[{ name: 'Service Areas', path: '/service-areas' }, { name: city.name, path }]}>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/contact">Free {city.name} Estimate</a>
+      <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+    </div>
+  </PageHero>
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="prose">
+        <h2>Building decks in {city.name}</h2>
+        <ul class="check-list">{city.notes.map((n) => <li>{n}</li>)}</ul>
+      </div>
+      <Photo alt={`Deck project in ${city.name}, UT`} label={`Photo: a recent ${city.name} project`} />
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap"><h2>Services in {city.name}</h2><ServiceCards /></div>
+  </section>
+  <section class="section">
+    <div class="wrap"><h2>Reviews</h2><Reviews /></div>
+  </section>
+  <section class="section alt">
+    <div class="wrap prose">
+      <Faqs faqs={faqs} heading={`${city.name} deck questions`} />
+      <p>Nearby: {cities.filter((c) => c.slug !== city.slug).map((c, i, arr) => <><a href={`/service-areas/${c.slug}`}>{c.name}</a>{i < arr.length - 1 ? ', ' : ''}</>)}</p>
+    </div>
+  </section>
+</Base>

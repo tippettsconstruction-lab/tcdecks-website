@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import { getCollection, render } from 'astro:content';
+import { business } from '../../data/site';
+import { breadcrumbSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const path = `/blog/${post.id}`;
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  author: { '@type': 'Person', name: business.owner },
+  publisher: { '@id': `${business.url}/#business` },
+  mainEntityOfPage: new URL(path, business.url).href,
+};
+---
+<Base title={`${post.data.title} | TC Decks`} description={post.data.description} image={post.data.image} schema={[article, breadcrumbSchema([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path }])]}>
+  <PageHero eyebrow="Blog" title={post.data.title} crumbs={[{ name: 'Blog', path: '/blog' }]} />
+  <section class="section"><article class="wrap prose"><Content /></article></section>
+</Base>

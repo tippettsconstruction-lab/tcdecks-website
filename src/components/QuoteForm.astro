@@ -1,0 +1,30 @@
+---
+import { cities } from '../data/site';
+---
+<form name="estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" class="card">
+  <input type="hidden" name="form-name" value="estimate" />
+  <p class="hidden"><label>Leave blank <input name="company" /></label></p>
+  <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
+  <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required /></div>
+  <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" /></div>
+  <div class="field">
+    <label for="f-city">City</label>
+    <select id="f-city" name="city">
+      {cities.map((c) => <option>{c.name}</option>)}
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="f-project">Project</label>
+    <select id="f-project" name="project">
+      <option>New deck</option>
+      <option>Replace / rebuild existing deck</option>
+      <option>Deck repair</option>
+      <option>Pergola or covered patio</option>
+      <option>Porch or railing</option>
+      <option>Not sure yet</option>
+    </select>
+  </div>
+  <div class="field"><label for="f-msg">Tell us about it</label><textarea id="f-msg" name="message" placeholder="Rough size, materials you like, timing…"></textarea></div>
+  <button class="btn btn-primary" type="submit">Request My Free Estimate</button>
+</form>

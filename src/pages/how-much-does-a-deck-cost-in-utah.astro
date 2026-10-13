@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Faqs from '../components/Faqs.astro';
+import { business } from '../data/site';
+import { faqSchema, breadcrumbSchema } from '../lib/schema';
+
+// PRICES NEED OWNER CONFIRMATION before launch. Carried over from the old site's cost article (materials + labor combined).
+const installed = [
+  { material: 'Pressure-treated wood', range: '$35–55', note: 'Lowest upfront cost; needs stain/seal every 2–3 years' },
+  { material: 'Cedar', range: '$45–65', note: 'Natural look; more upkeep than composite' },
+  { material: 'Composite (Trex, TimberTech, Deckorators)', range: '$50–80', note: 'No staining; 25+ year warranties' },
+  { material: 'PVC (TimberTech AZEK)', range: '$55–85', note: 'Runs cooler, lightest weight, longest warranties' },
+];
+const addons = [
+  { item: 'Railing', range: '$20–50 per linear foot' },
+  { item: 'Stairs', range: '$200–400 per step' },
+  { item: 'Built-in seating', range: '$100–300 per linear foot' },
+  { item: 'Lighting', range: '$50–100 per fixture' },
+  { item: 'Permit', range: '$200–500 depending on city and size' },
+];
+const faqs = [
+  { q: 'How much does a 12x16 composite deck cost in Utah?', a: 'A 192 square foot composite deck at $50–80 per square foot installed is roughly $9,600–15,400 before railing, stairs and add-ons. Height, access and the brand you choose move it within that range.' },
+  { q: 'What makes a deck cost more?', a: 'Height (taller posts, more bracing and stairs), multiple levels, premium decking lines, aluminum or cable railing, pergolas, lighting, and difficult access or demolition of an old deck.' },
+  { q: 'Is composite worth the extra cost?', a: 'For most Utah homeowners planning to stay more than five years, yes. Composite avoids the recurring cost of staining and sealing and holds up better to sun and snow.' },
+  { q: 'Do you charge for estimates?', a: 'No. Estimates and 3D designs are free, and quotes are itemized so you can see where the money goes.' },
+];
+const path = '/how-much-does-a-deck-cost-in-utah';
+---
+<Base
+  title="How Much Does a Deck Cost in Utah? 2026 Price Guide | TC Decks"
+  description="Typical 2026 deck costs in Utah County per square foot for wood, composite and PVC, plus railing, stairs, pergolas and permits. From a local Saratoga Springs deck builder."
+  schema={[faqSchema(faqs), breadcrumbSchema([{ name: 'Deck Costs', path }])]}
+>
+  <PageHero eyebrow="Pricing guide" title="How much does a deck cost in Utah?" lead="Real price ranges from a Utah County deck builder, so you can budget before you call anyone." crumbs={[{ name: 'Deck Costs', path }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Installed cost per square foot</h2>
+      <p>These ranges include materials and labor for a standard deck up to about 8 feet off the ground. Taller or multi-level decks cost more.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Decking</th><th>Per sq ft installed</th><th>Notes</th></tr></thead>
+          <tbody>{installed.map((r) => <tr><td>{r.material}</td><td><strong>{r.range}</strong></td><td>{r.note}</td></tr>)}</tbody>
+        </table>
+      </div>
+
+      <h2>Common add-ons</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Typical cost</th></tr></thead>
+          <tbody>{addons.map((r) => <tr><td>{r.item}</td><td>{r.range}</td></tr>)}</tbody>
+        </table>
+      </div>
+
+      <h2>Ongoing costs</h2>
+      <p>Wood decks usually need sealing every 2–3 years at roughly $200–400 each time. Composite needs only washing.</p>
+
+      <h2>Get an exact number</h2>
+      <p>Every yard is different. We'll measure, design your deck in 3D and give you an itemized quote for free. <a href="/contact">Request an estimate</a> or call <a href={business.phoneHref}>{business.phone}</a>.</p>
+
+      <Faqs faqs={faqs} />
+    </div>
+  </section>
+</Base>

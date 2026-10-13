@@ -1,0 +1,15 @@
+---
+import { services } from '../data/site';
+interface Props { exclude?: string; }
+const { exclude } = Astro.props;
+---
+<div class="grid services">
+  {services.filter((s) => s.slug !== exclude).map((s) => (
+    <div class="card">
+      <h3><a href={`/${s.slug}`}>{s.name}</a></h3>
+      <p>{s.short}</p>
+      <a class="more" href={`/${s.slug}`}>Learn more →</a>
+    </div>
+  ))}
+</div>
+<style>.services { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } h3 a { color: inherit; text-decoration: none; }</style>
