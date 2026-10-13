@@ -16,12 +16,12 @@ const path = `/service-areas/${city.slug}`;
 const faqs = [
   { q: `Do I need a permit to build a deck in ${city.name}?`, a: `Most attached decks and decks more than 30 inches off the ground need a building permit from ${city.name}. We prepare the plans, submit the permit and schedule the inspections for you.` },
   { q: `How long does a deck take to build in ${city.name}?`, a: 'Construction usually takes one to three weeks once the permit is approved. We give you a schedule with your quote and keep you updated as we go.' },
-  { q: `Do you offer free estimates in ${city.name}?`, a: `Yes. We come out to your ${city.name} home, measure, and give you a free 3D design and itemized quote.` },
+  { q: `Do you offer free estimates in ${city.name}?`, a: `Yes. We come out to your ${city.name} home, measure, and give you a free written estimate. Once your project is booked, we create a 3D design of your new deck.` },
 ];
 ---
 <Base
   title={`Deck Builder in ${city.name}, UT | Composite Decks & Pergolas | TC Decks`}
-  description={`Custom composite decks, pergolas, deck repair and railing in ${city.name}, Utah. Local, licensed & insured deck builder since ${business.founded}. Free 3D design and estimate.`}
+  description={`Custom composite decks, pergolas, deck repair and railing in ${city.name}, Utah. Local, licensed & insured deck builder since ${business.founded}. Free estimates and a 7-year workmanship warranty.`}
   schema={[faqSchema(faqs), breadcrumbSchema([{ name: 'Service Areas', path: '/service-areas' }, { name: city.name, path }])]}
 >
   <PageHero eyebrow={`${city.name}, Utah`} title={`Deck builder in ${city.name}, UT`} lead={city.intro} crumbs={[{ name: 'Service Areas', path: '/service-areas' }, { name: city.name, path }]}>

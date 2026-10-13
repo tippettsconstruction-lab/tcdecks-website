@@ -26,4 +26,4 @@ Composite does get warmer than wood in direct sun, especially darker colors. If 
 
 Wood costs less to build. Composite costs more up front but skips the recurring cost of sanding, staining and sealing, so over ten years the gap gets much smaller, and composite usually looks better at the end of it.
 
-See current numbers in our [Utah deck cost guide](/how-much-does-a-deck-cost-in-utah), or [compare composite brands](/composite-decks).
+See [what affects deck cost](/how-much-does-a-deck-cost-in-utah), or [compare composite brands](/composite-decks).

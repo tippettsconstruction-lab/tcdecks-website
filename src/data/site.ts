@@ -26,7 +26,7 @@ export const services = [
   {
     slug: 'custom-deck-design-construction',
     name: 'Custom Decks',
-    short: 'Designed in 3D, built to last through Utah winters.',
+    short: 'Designed around your home, built to last through Utah winters.',
   },
   {
     slug: 'composite-decks',
