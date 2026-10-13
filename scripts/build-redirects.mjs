@@ -33,6 +33,7 @@ const lines = [
   '/accessibility-statement  /privacy  301',
   '/cookie-policy  /privacy  301',
   '/about-us  /about  301',
+  '/owens-corning  /oc-lumber  301',
   '/blog/category/*  /blog  301',
   '',
   '# Old blog posts (not migrated) -> closest new page',

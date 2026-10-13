@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Faqs from '../components/Faqs.astro';
+import { business } from '../data/site';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const faqs = [
+  { q: 'What is OC Lumber?', a: 'OC Lumber is a composite building material. It contains no wood, so it cannot rot, and no steel, so it cannot rust.' },
+  { q: 'What is the OC Pro Build Team?', a: 'It is the group of contractors trained to build with OC Lumber. TC Decks is part of the OC Pro Build Team, so we can use it on your project and install it the right way.' },
+  { q: 'Is OC Lumber right for my deck?', a: 'It depends on your design and site. Call us for a free phone estimate and we will tell you where OC Lumber makes sense and how it compares with wood or steel for your project.' },
+];
+---
+<Base
+  title="OC Lumber Pro Build Team | Wood-Free, Rot-Proof Deck Building | TC Decks Utah"
+  description="TC Decks is part of the OC Pro Build Team. OC Lumber is a wood-free, rust-free, rot-proof composite building material for decks in Utah County and Salt Lake County."
+  schema={[breadcrumbSchema([{ name: 'OC Lumber', path: '/oc-lumber' }]), faqSchema(faqs)]}
+>
+  <PageHero eyebrow="OC Pro Build Team" title="OC Lumber: wood-free, rust-free, rot-proof" lead="TC Decks is part of the OC Pro Build Team, so we can build with OC Lumber, a composite building material with no wood to rot and no steel to rust." crumbs={[{ name: 'OC Lumber', path: '/oc-lumber' }]} />
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="prose">
+        <h2>Why OC Lumber</h2>
+        <ul class="check-list">
+          <li>Wood-free, so there is nothing to rot</li>
+          <li>Rust-free, with no steel to corrode</li>
+          <li>Made for Utah's sun, snow and freeze-thaw cycles</li>
+        </ul>
+        <h2>Built by the OC Pro Build Team</h2>
+        <p>As part of the OC Pro Build Team, we know how OC Lumber is meant to be installed. You get our 7-year workmanship warranty on top of the manufacturer's coverage.</p>
+        <p>See our <a href="/certified-pro-installer">other Pro Installer certifications</a> or browse <a href="/project-showcase">recent projects</a>.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/contact">Get a free estimate</a>
+          <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+        </div>
+      </div>
+      <div class="grid">
+        <Photo src="/images/projects/sandy-weathered-teak/sandy-timbertech-weathered-teak-covered-second-story-deck" alt="Second-story deck built by TC Decks in Sandy, Utah" />
+      </div>
+    </div>
+  </section>
+  <section class="section alt"><div class="wrap"><Faqs faqs={faqs} /></div></section>
+</Base>
