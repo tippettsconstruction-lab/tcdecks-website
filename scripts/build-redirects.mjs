@@ -9,6 +9,9 @@ const slugs = readFileSync('scripts/old-blog-slugs.txt', 'utf8').split('\n').fil
 // First matching rule wins; order from most to least specific.
 const rules = [
   [/cost|saving-money|value/, '/how-much-does-a-deck-cost-in-utah'],
+  [/st-george/, '/service-areas'],
+  [/drink-rail/, '/design-ideas/railings'],
+  [/core-tex|cortex|fastener/, '/design-ideas/design-details'],
   [/ground-screw|footing|foundation/, '/blog/rethinking-deck-foundations-ground-screws-the-modern-alternative-to-concrete-footings'],
   [/spiced-rum|lava-rock|havana-gold|pebble-grey-decking-trex-signature|custom-deck-build-in-lehi|drainage-systems-installed/, '/project-showcase'],
   [/alpine/, '/service-areas/alpine'],
@@ -38,6 +41,9 @@ const lines = [
   '/deck-repair  /deck-replacement  301',
   '/design-ideas/decking-colors  /design-ideas/composite-decking  301',
   '/blog/category/*  /blog  301',
+  '/blog/pagination/*  /blog  301',
+  '/blog/author/*  /blog  301',
+  '/popup-form  /contact  301',
   '',
   '# Old blog posts (not migrated) -> closest new page',
 ];

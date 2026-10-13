@@ -9,6 +9,9 @@
 /deck-repair  /deck-replacement  301
 /design-ideas/decking-colors  /design-ideas/composite-decking  301
 /blog/category/*  /blog  301
+/blog/pagination/*  /blog  301
+/blog/author/*  /blog  301
+/popup-form  /contact  301
 
 # Old blog posts (not migrated) -> closest new page
 /blog/the-role-of-proportion-in-deck-design  /custom-deck-design-construction  301
@@ -43,9 +46,9 @@
 /blog/experience-your-dream-deck-before-its-built-3d-renderings-with-tc-decks-in-saratoga-springs-utah  /custom-deck-design-construction  301
 /blog/discover-utahs-premier-deck-builder  /about  301
 /blog/transform-your-outdoor-living-space-with-tc-decks-cedar-citys-premier-deck-builder  /about  301
-/blog/choosing-the-right-fastener-the-benefits-of-core-tex-decking-plugs-for-your-decking-project  /custom-deck-design-construction  301
+/blog/choosing-the-right-fastener-the-benefits-of-core-tex-decking-plugs-for-your-decking-project  /design-ideas/design-details  301
 /blog/lluminate-your-utah-deck-brighten-up-your-outdoor-living-with-tc-decks  /custom-deck-design-construction  301
-/blog/unveiling-the-hidden-the-benefits-of-using-hidden-fastener-screw-systems-in-deck-construction  /custom-deck-design-construction  301
+/blog/unveiling-the-hidden-the-benefits-of-using-hidden-fastener-screw-systems-in-deck-construction  /design-ideas/design-details  301
 /blog/seven-compelling-reasons-to-include-a-deck-in-your-saratoga-springs-utah-backyard  /custom-deck-design-construction  301
 /blog/enhancing-your-outdoor-spaces-a-look-at-the-variety-of-railings-offered-by-fortress-railing  /porches-railings  301
 /blog/building-safe-outdoor-spaces-how-tc-decks-adheres-to-nadra-standards-for-deck-safety  /deck-replacement  301
@@ -53,12 +56,12 @@
 /blog/envision-your-dream-outdoor-space-3d-renderings-of-deck-and-pergola-projects-by-tc-decks  /pergolas  301
 /blog/your-comprehensive-guide-to-choosing-the-best-composite-decking-in-utah-embracing-durability-beauty-and-sustainability-with-trex-timber-tech-and-deckorators-user-using-the-top-7-seo-keyword  /composite-decks  301
 /blog/bringing-families-together-the-benefits-of-having-a-deck-in-your-backyard-in-saratoga-springs-ut  /custom-deck-design-construction  301
-/blog/elevating-outdoor-entertainment-the-allure-of-drink-rails-on-decks-in-saratoga-springs-ut  /custom-deck-design-construction  301
+/blog/elevating-outdoor-entertainment-the-allure-of-drink-rails-on-decks-in-saratoga-springs-ut  /design-ideas/railings  301
 /blog/a-relaxing-oasis-enhancing-your-hot-tub-experience-with-deck-surrounds-in-saratoga-springs-ut  /custom-deck-design-construction  301
 /blog/elevate-your-outdoor-living-with-composite-decking-exploring-trex-timber-tech-and-deckorators  /composite-decks  301
 /blog/extend-your-living-space-the-benefits-of-expanding-a-front-porch-in-saratoga-springs-ut  /porches-railings  301
 /blog/repairing-and-rebuilding-decks-after-utahs-snowy-winter-trust-the-experts-at-tc-decks  /deck-replacement  301
-/blog/unveiling-the-secret-to-building-better-decks-the-hidden-fastener-system  /custom-deck-design-construction  301
+/blog/unveiling-the-secret-to-building-better-decks-the-hidden-fastener-system  /design-ideas/design-details  301
 /blog/crafting-unforgettable-outdoor-memories-celebrating-20-years-of-tc-decks  /about  301
 /blog/pergolas-trellises-enhancing-your-outdoor-space-with-tc-decks  /pergolas  301
 /blog/achieve-strength-and-style-the-power-of-fortress-metal-railing-for-your-deck-or-porch-project  /porches-railings  301
@@ -141,7 +144,7 @@
 /blog/six-reasons-why-custom-decks-should-have-helical-piles-for-footings  /blog/rethinking-deck-foundations-ground-screws-the-modern-alternative-to-concrete-footings  301
 /blog/custom-deck-stairs-with-trex-transcend-in-spiced-rum  /project-showcase  301
 /blog/deck-railing-stairs-built-using-trex-pebble-grey-decking-trex-signature-aluminum-railing  /project-showcase  301
-/blog/custom-patio-deck-with-trex-transcend-in-lava-rock-with-matching-trex-vinyl-hideaway-hidden-fasteners  /project-showcase  301
+/blog/custom-patio-deck-with-trex-transcend-in-lava-rock-with-matching-trex-vinyl-hideaway-hidden-fasteners  /design-ideas/design-details  301
 /blog/custom-composite-deck-patio-build-with-trex-transcend-gold-in-havana-gold  /project-showcase  301
 /blog/provo-deck-remodel-using-pebble-grey-trex-decking-with-white-vinyl-railing  /service-areas/provo  301
 /blog/real-deck-construction-costs-in-saratoga-springs-utah  /how-much-does-a-deck-cost-in-utah  301
