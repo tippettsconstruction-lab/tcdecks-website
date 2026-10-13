@@ -29,6 +29,7 @@ const ems = p('eagle-mountain-deck-slide');
 const lehi = p('lehi-covered-deck-fireplace');
 const af = p('american-fork-second-story-lit-stairs');
 const lam = p('lehi-american-fork-decks');
+const sj = p('south-jordan-fiber-optic-privacy');
 
 export const projects: Project[] = [
   {
@@ -41,6 +42,15 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'south-jordan-fiber-optic-privacy',
+    title: 'South Jordan: second-story deck with privacy railing and fiber optic lights',
+    summary: 'A second-story deck with black privacy railing panels and blue fiber optic lights set into the underside, so the patio and hot tub below glow at night like a starry sky.',
+    photos: [
+      sj('south-jordan-deck-fiber-optic-lights-privacy-railing', 'Second-story deck with black privacy railing and blue fiber optic lights underneath in South Jordan, Utah'),
+      sj('second-story-deck-black-privacy-railing', 'Second-story deck with black privacy railing panels over a hot tub patio'),
     ],
   },
   {
