@@ -23,6 +23,7 @@ const santaquin = p('santaquin-pecan-pergola');
 const pg = p('pleasant-grove-trex-slide');
 const lindon = p('lindon-trex-pebble-grey');
 const sandy = p('sandy-weathered-teak');
+const pgf = p('pleasant-grove-foothills-french-white-oak');
 
 export const projects: Project[] = [
   {
@@ -35,6 +36,37 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'pleasant-grove-foothills-french-white-oak',
+    title: 'Pleasant Grove foothills: TimberTech French White Oak with illuminated IG glass railing',
+    summary: 'A covered second-story deck in the Pleasant Grove foothills, built with TimberTech French White Oak and a picture-frame border. IG frameless glass railing keeps the mountain and valley views wide open, and its illuminated top edge glows at night. Lit stairs lead down to the patio under the deck.',
+    photos: [
+      pgf('illuminated-glass-railing-utah-valley-city-lights', 'Illuminated IG glass railing at dusk overlooking the lights of Utah Valley from the Pleasant Grove foothills'),
+      pgf('pleasant-grove-foothills-covered-deck-ig-glass-railing', 'Covered TimberTech French White Oak deck with IG frameless glass railing in the Pleasant Grove foothills'),
+      pgf('lit-glass-railing-stairs-sunset-view', 'Glowing glass railing and black stair railing at sunset'),
+      pgf('blue-lit-glass-railing-edge-stairs', 'Blue-lit edge of an IG glass railing above lit deck stairs'),
+      pgf('covered-deck-illuminated-glass-railing-night', 'Covered deck with illuminated glass railing at night'),
+      pgf('illuminated-ig-glass-railing-blue-led', 'IG illuminated glass railing glowing blue along the top edge at night'),
+      pgf('lit-glass-railing-covered-deck-dusk', 'Illuminated frameless glass railing on a covered deck at dusk'),
+      pgf('timbertech-french-white-oak-covered-deck-hanging-chair', 'TimberTech French White Oak covered deck with a hanging chair and rocking chair'),
+      pgf('french-white-oak-deck-valley-view', 'French White Oak deck with glass railing looking out over Utah Valley'),
+      pgf('second-story-covered-deck-glass-railing', 'Second-story covered deck with glass railing and dark posts'),
+      pgf('covered-deck-frameless-glass-railing-sunset', 'Covered deck with frameless glass railing at sunset'),
+      pgf('frameless-glass-railing-covered-deck-corner', 'Corner of a covered deck with frameless glass panels'),
+      pgf('covered-deck-over-patio-dark-posts', 'Covered second-story deck over a concrete patio'),
+      pgf('under-deck-patio-stairs-mountain-view', 'Patio under the deck with stairs and a mountain view'),
+      pgf('ig-glass-railing-spigots-french-white-oak', 'IG glass railing spigots on TimberTech French White Oak decking'),
+      pgf('french-white-oak-picture-frame-border-detail', 'Picture-frame border detail in TimberTech French White Oak'),
+      pgf('lit-deck-stairs-at-dusk', 'Deck stairs with riser lights at dusk'),
+      pgf('deck-stair-riser-lights-night', 'Deck stair riser lights at night'),
+      pgf('covered-deck-side-view-glass-railing', 'Side view of a covered second-story deck with glass railing'),
+      pgf('covered-deck-glass-railing-high-angle', 'High-angle view of a covered deck with frameless glass railing'),
+      pgf('aerial-covered-deck-pleasant-grove-foothills', 'Aerial view of a covered deck in the Pleasant Grove foothills'),
+      pgf('aerial-covered-deck-metal-roof', 'Aerial view of a covered deck with a metal roof'),
+      pgf('aerial-covered-deck-stairs-patio', 'Aerial view of a covered deck, stairs and patio'),
+      pgf('aerial-deck-stairs-backyard', 'Aerial view of deck stairs down to the backyard'),
     ],
   },
   {
