@@ -35,6 +35,7 @@ const lines = [
   '/about-us  /about  301',
   '/owens-corning  /oc-lumber  301',
   '/deck-repair  /deck-replacement  301',
+  '/design-ideas/decking-colors  /design-ideas/composite-decking  301',
   '/blog/category/*  /blog  301',
   '',
   '# Old blog posts (not migrated) -> closest new page',

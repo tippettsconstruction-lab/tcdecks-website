@@ -16,11 +16,11 @@ export type IdeaPage = {
 
 export const ideaPages: IdeaPage[] = [
   {
-    slug: 'decking-colors',
+    slug: 'composite-decking',
     cover: '/images/ideas/blue-gray-composite-deck-sunset',
-    gallery: ["/images/ideas/blue-gray-composite-deck-sunset", "/images/ideas/composite-deck-pergola-beam", "/images/ideas/gray-composite-deck-black-railing", "/images/ideas/light-gray-deck-cable-railing", "/images/ideas/two-tone-deck-mountain-view", "/images/ideas/natural-wood-deck-railing", "/images/ideas/hardwood-deck-stairs-lights"],
-    name: 'Decking & Colors',
-    title: 'TimberTech Decking Colors & Lines | Good, Better, Best | TC Decks',
+    gallery: ["/images/ideas/blue-gray-composite-deck-sunset", "/images/ideas/composite-deck-pergola-beam", "/images/ideas/gray-composite-deck-black-railing", "/images/ideas/light-gray-deck-cable-railing", "/images/ideas/two-tone-deck-mountain-view"],
+    name: 'Composite Decking',
+    title: 'Composite Decking: TimberTech Colors & Lines | Good, Better, Best | TC Decks',
     description: 'Compare TimberTech decking lines from Prime+ to Legacy and Vintage. See colors and textures, and how TC Decks helps Utah homeowners choose the right board.',
     intro: 'We recommend TimberTech for most of our decks. Its capped PVC boards stay cooler, resist fading and staining, and are fully encapsulated so moisture can’t get in. The lines are grouped good, better and best, so there’s a great-looking option for every budget.',
     features: [
@@ -28,6 +28,23 @@ export const ideaPages: IdeaPage[] = [
       { name: 'Better: Harvest, Harvest+, Landmark, Reserve', text: 'Richer, multi-tonal color and more realistic wood grain. Reserve and Landmark have the hand-scraped and reclaimed-wood look many homeowners love.' },
       { name: 'Best: Legacy, Vintage', text: 'TimberTech’s top lines, with the most natural-looking color variation, the coolest surface temperatures and the longest warranties.' },
       { name: 'Color & texture guide', text: 'Seeing boards in person makes the decision easy. We bring samples so you can compare colors against your siding, trim and roof in real daylight.' },
+    ],
+  },
+  {
+    slug: 'natural-wood',
+    name: 'Natural Wood',
+    cover: '/images/ideas/natural-wood-deck-railing',
+    gallery: ["/images/ideas/natural-wood-deck-railing", "/images/ideas/hardwood-deck-stairs-lights", "/images/ideas/hardwood-parquet-deck-pattern", "/images/ideas/cedar-pergola-composite-deck"],
+    title: 'Natural Wood Decks: Cedar, Hardwood & Pressure-Treated | TC Decks Utah',
+    description: 'Natural wood decking options from TC Decks: pressure-treated, cedar and hardwoods like Ipe, plus how to finish and care for a wood deck in Utah sun and snow.',
+    intro: 'Nothing looks or feels quite like real wood. If you love natural grain and don’t mind some upkeep, we build wood decks that are framed and finished to handle Utah’s sun, snow and freeze-thaw cycles.',
+    features: [
+      { name: 'Pressure-treated', text: 'The most budget-friendly choice. It’s strong and widely available, and it takes stain well. Plan on regular cleaning and refinishing to keep it from graying and checking.' },
+      { name: 'Cedar', image: '/images/ideas/natural-wood-deck-railing', text: 'Warm color, a natural resistance to rot and insects, and a pleasant scent. Cedar is also a favorite for pergolas, trellises and timber accents.' },
+      { name: 'Hardwoods like Ipe', image: '/images/ideas/hardwood-deck-stairs-lights', text: 'Very dense, hard and long-lasting, with a rich color that suits high-end homes and cabins. Hardwoods also make striking patterns and inlays.' },
+      { name: 'Patterns & inlays', image: '/images/ideas/hardwood-parquet-deck-pattern', text: 'Parquet, herringbone and picture-frame patterns show off real wood grain.' },
+      { name: 'Finishing with Messmer’s UV Plus', text: 'We finish wood decks with Messmer’s UV Plus to protect against Utah’s high-altitude sun. Every wood deck needs to be cleaned and refinished from time to time, more often on south- and west-facing decks.' },
+      { name: 'Wood or composite?', text: 'Want the look of wood without the upkeep? Many TimberTech composite lines have realistic wood grain and never need staining. See the Composite Decking page.' },
     ],
   },
   {

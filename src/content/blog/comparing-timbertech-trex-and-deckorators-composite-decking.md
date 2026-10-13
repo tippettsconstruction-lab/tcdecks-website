@@ -35,7 +35,7 @@ Synthetic boards expand and contract with temperature, and Utah swings a lot bet
 
 This part is personal. TimberTech has the widest range of colors and textures, including the French White Oak, English Walnut and Pecan you'll see in a lot of our [project photos](/project-showcase). Trex has a strong lineup of classic grays and browns, like the Pebble Grey on our [Lindon project](/project-showcase#lindon-trex-pebble-grey). Deckorators offers bold, natural-looking grain patterns.
 
-Two-tone decks, with one color in the field and another for a picture-frame border, work with any of the three. The [Draper deck](/project-showcase#draper-brownstone-slate-gray) pairs TimberTech Slate Gray with a Brownstone border. Browse more in our [decking colors guide](/design-ideas/decking-colors).
+Two-tone decks, with one color in the field and another for a picture-frame border, work with any of the three. The [Draper deck](/project-showcase#draper-brownstone-slate-gray) pairs TimberTech Slate Gray with a Brownstone border. Browse more in our [decking colors guide](/design-ideas/composite-decking).
 
 ## Warranty coverage
 
