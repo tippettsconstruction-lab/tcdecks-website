@@ -23,7 +23,7 @@ const article = {
   mainEntityOfPage: new URL(path, business.url).href,
 };
 ---
-<Base title={`${post.data.title} | TC Decks`} description={post.data.description} image={post.data.image} schema={[article, breadcrumbSchema([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path }])]}>
+<Base title={post.data.metaTitle ?? `${post.data.title} | TC Decks`} ogType="article" description={post.data.description} image={post.data.image} schema={[article, breadcrumbSchema([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path }])]}>
   <PageHero eyebrow="Blog" title={post.data.title} crumbs={[{ name: 'Blog', path: '/blog' }]} />
   <section class="section"><article class="wrap prose"><Content /></article></section>
 </Base>

@@ -1,5 +1,6 @@
 ---
 title: "Ground Screws: A Modern Alternative to Concrete Deck Footings"
+metaTitle: "Ground Screws vs Concrete Deck Footings | TC Decks"
 description: "Why TC Decks uses American Ground Screw footings on many Utah decks, how they compare to poured concrete, and when concrete still makes sense."
 date: 2026-09-04
 image: "/images/projects/parade-of-homes-tiger-wood/two-story-deck-covered-patio-below-1600.webp"
