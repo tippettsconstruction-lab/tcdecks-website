@@ -165,6 +165,28 @@ export const cities: City[] = [
     ],
   },
   {
+    slug: 'santaquin',
+    name: 'Santaquin',
+    intro:
+      'Santaquin has roomy lots and plenty of sun at the south end of Utah County, a good fit for wide decks with a pergola for shade.',
+    notes: [
+      'Ranch-style homes often get a low deck off the back door, sometimes with a second level stepping down to the yard.',
+      'A natural wood pergola takes the edge off the afternoon sun.',
+      'We handle the Santaquin City permit and inspections for you.',
+    ],
+  },
+  {
+    slug: 'sundance',
+    name: 'Sundance',
+    intro:
+      'Cabins around Sundance and Provo Canyon deal with deep snow, steep wooded lots and short building seasons, so decks here have to be built for real mountain conditions.',
+    notes: [
+      'Framing and footings are sized for heavy snow loads on steep, rocky ground.',
+      'Sauna and hot tub decks with privacy screens are popular for mountain cabins.',
+      'We work with Utah County on permits for unincorporated mountain properties.',
+    ],
+  },
+  {
     slug: 'draper',
     name: 'Draper',
     county: 'Salt Lake County',
