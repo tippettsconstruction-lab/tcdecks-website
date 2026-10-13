@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Faqs from '../components/Faqs.astro';
+import { business } from '../data/site';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const faqs = [
+  { q: 'What does it mean to be an Owens Corning certified partner?', a: 'Owens Corning certifies independent contractors who meet its standards for installation, licensing and insurance. As a certified partner, we install Owens Corning roofing systems the way the manufacturer specifies.' },
+  { q: 'Why does that matter for a deck roof?', a: 'A covered deck roof ties into your house roof, so it has to shed water and snow and match what is already there. Installing a complete Owens Corning system, not just shingles, is what keeps that tie-in watertight.' },
+  { q: 'Can you match my existing shingles?', a: 'In most cases, yes. Owens Corning makes a wide range of colors and styles, and we will help you pick the closest match to your house.' },
+];
+---
+<Base
+  title="Owens Corning Certified Partner | Covered Deck Roofs | TC Decks Utah"
+  description="TC Decks is an Owens Corning certified partner. We build covered deck and patio roofs in Saratoga Springs and Utah County with Owens Corning roofing systems."
+  schema={[breadcrumbSchema([{ name: 'Owens Corning Certified', path: '/owens-corning' }]), faqSchema(faqs)]}
+>
+  <PageHero eyebrow="Certified partner" title="Owens Corning certified roofs for covered decks" lead="When we put a roof over your deck, we install a complete Owens Corning roofing system as a certified partner, so it holds up to Utah snow and sun and matches your house." crumbs={[{ name: 'Owens Corning Certified', path: '/owens-corning' }]} />
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="prose">
+        <h2>A roof that matches your house</h2>
+        <p>A covered deck should look like it was always part of the home. We frame the roof to match your existing pitch and tie it in properly. Then we finish it with Owens Corning shingles and components chosen to match your house.</p>
+        <h2>What you get</h2>
+        <ul class="check-list">
+          <li>A roof installed by an Owens Corning certified partner</li>
+          <li>Owens Corning shingles, underlayment and components installed as a system</li>
+          <li>Proper flashing where the new roof meets your house</li>
+          <li>Snow loads and wind accounted for in the framing</li>
+          <li>Our 7-year workmanship warranty, plus the manufacturer's warranty</li>
+        </ul>
+        <p>See a full <a href="/project-showcase#covered-deck-roof">covered deck roof build</a> from 3D design to shingles, or browse <a href="/design-ideas/roofs-shade">roof and shade ideas</a>.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/contact">Get a free estimate</a>
+          <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+        </div>
+      </div>
+      <div class="grid">
+        <Photo src="/images/projects/covered-deck-roof/deck-roof-shingle-install-1" alt="Installing shingles on a new covered deck roof" />
+        <Photo src="/images/projects/covered-deck-roof/covered-deck-roof-framing-1" alt="Framing a new roof over a second-story deck" />
+      </div>
+    </div>
+  </section>
+  <section class="section alt"><div class="wrap"><Faqs faqs={faqs} /></div></section>
+</Base>

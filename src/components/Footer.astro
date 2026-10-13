@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 <section class="cta-band">
   <div class="wrap">
     <h2>Ready to plan your deck?</h2>
-    <p>Free estimates over the phone. Call Levi or send a few details and we'll get back to you with a ballpark.</p>
+    <p>Free estimates over the phone, and <a href="/financing">financing up to $65,000</a> through Wisetack. Call Levi or send a few details and we'll get back to you with a ballpark.</p>
     <div class="btn-row">
       <a class="btn btn-dark" href="/contact">Get a Free Estimate</a>
       <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
@@ -27,7 +27,7 @@ const year = new Date().getFullYear();
     <div>
       <p class="head">Services</p>
       <ul>{services.map((s) => <li><a href={`/${s.slug}`}>{s.name}</a></li>)}</ul>
-      <ul><li><a href="/how-much-does-a-deck-cost-in-utah">Deck Costs in Utah</a></li></ul>
+      <ul><li><a href="/how-much-does-a-deck-cost-in-utah">Deck Costs in Utah</a></li><li><a href="/financing">Financing</a></li><li><a href="/owens-corning">Owens Corning Certified</a></li></ul>
     </div>
     <div>
       <p class="head">Service Areas</p>
@@ -54,6 +54,7 @@ const year = new Date().getFullYear();
   .cta-band { background: var(--accent); color: #fff; padding: 56px 0; }
   .cta-band h2 { color: #fff; }
   .cta-band p { color: #fde8e9; max-width: 40rem; }
+  .cta-band p a { color: #fff; font-weight: 700; }
   .site-footer { border-top: 3px solid var(--silver); background: var(--dark); color: var(--silver); padding: 48px 0 24px; font-size: 0.95rem; }
   .site-footer a { color: #e9ece9; text-decoration: none; }
   .cols { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
