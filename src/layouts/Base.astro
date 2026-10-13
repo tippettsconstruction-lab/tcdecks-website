@@ -29,6 +29,7 @@ const localBusiness = {
   openingHours: business.hoursSchema,
   priceRange: '$$',
   image: new URL(image, business.url).href,
+  logo: new URL('/images/brand/icon-512.png', business.url).href,
   address: { '@type': 'PostalAddress', addressLocality: business.city, addressRegion: business.region, addressCountry: 'US' },
   areaServed: ['Saratoga Springs', 'Lehi', 'Eagle Mountain', 'American Fork', 'Pleasant Grove', 'Highland', 'Alpine', 'Orem', 'Provo', 'Vineyard'].map((c) => ({ '@type': 'City', name: `${c}, UT` })),
   aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating.value, reviewCount: business.rating.count },
@@ -51,7 +52,8 @@ const localBusiness = {
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(image, business.url).href} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/brand/icon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/brand/icon-180.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
     {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
