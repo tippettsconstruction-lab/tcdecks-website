@@ -63,6 +63,6 @@ Once the snow is gone, give the deck a good rinse and a gentle scrub with soap a
 
 ## Building a deck for Utah winters
 
-If you're planning a new deck, a few choices make winter easier: capped composite or PVC boards that don't absorb water, G-Tape on the joists or steel framing, a covered roof over the main seating area, and lit stairs. We design every deck for local snow loads and handle the permit and inspections.
+If you're planning a new deck, a few choices make winter easier: capped composite or PVC boards that don't absorb water, G-Tape on the joists or steel framing, a covered roof over the main seating area, and lit stairs. We design every deck for local snow loads.
 
 See our [deck tear-out and rebuild service](/deck-replacement) or our [Saratoga Springs service area page](/service-areas/saratoga-springs), and [contact us](/contact) for a free estimate over the phone.

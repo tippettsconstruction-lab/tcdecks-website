@@ -1,6 +1,6 @@
 ---
 title: "The Process of Building a Composite Deck with TC Decks"
-description: "What to expect when you build a composite deck with TC Decks, step by step: free phone estimate, site visit, booking, 3D rendering, permit, build, final walkthrough and warranty."
+description: "What to expect when you build a composite deck with TC Decks, step by step: free phone estimate, site visit, booking, 3D rendering, build, final walkthrough and warranty."
 date: 2026-10-06
 image: "/images/projects/covered-deck-roof/3d-rendering-covered-deck-4-1600.webp"
 ---
@@ -31,29 +31,25 @@ Once the details and scope are settled, you book the job. If you'd like to sprea
 
 After the job is booked, we create a 3D rendering of your deck on your house. You'll see the layout, stairs, railing and colors before anything is built. This is the time to adjust a stair location, change a border color, add lighting or move a privacy screen. It's much easier to change a drawing than a finished deck.
 
-## 5. Permit
+If you have an HOA, the rendering is also handy for getting their approval.
 
-Most decks need a building permit, especially decks more than 30 inches off the ground or attached to the house. We prepare the plans, submit them to your city and handle the back and forth with the building department. HOA approval, if you need it, is a separate step, and the rendering helps with that too.
-
-## 6. The build
+## 5. The build
 
 Here's what construction usually looks like:
 
 1. **Demolition** of any old deck, if needed.
 2. **Footings.** We often use American Ground Screw footings, which go in quickly with less mess than digging and pouring concrete. Concrete is still used where the site calls for it.
 3. **Framing.** Either Fortress Evolution steel framing or wood framing with G-Tape joist tape on top to protect it from water. If you want a dry space below, Trex RainEscape drainage goes in at this stage.
-4. **Inspections.** The city inspects footings and framing before they're covered up.
-5. **Decking.** We install TimberTech decking, or Trex or Deckorators if that's your choice, following the manufacturer's gapping and fastening rules. We use Cortex plugs or hidden fasteners for a clean surface.
-6. **Stairs, railing and lighting.** Fortress FE26 railing, glass, cable or privacy screens, plus in-lite low-voltage lights in risers, posts and boards.
-7. **Final inspection.**
+4. **Decking.** We install TimberTech decking, or Trex or Deckorators if that's your choice, following the manufacturer's gapping and fastening rules. We use Cortex plugs or hidden fasteners for a clean surface.
+5. **Stairs, railing and lighting.** Fortress FE26 railing, glass, cable or privacy screens, plus in-lite low-voltage lights in risers, posts and boards.
 
 Utah weather can affect the schedule, especially in winter, but ground screw footings help us keep working in colder months.
 
-## 7. Final walkthrough
+## 6. Final walkthrough
 
 When the deck is done, we walk it with you. We'll show you how to care for the boards, what to use for snow removal and cleaning, and anything specific to your lighting or drainage. If something isn't right, we fix it.
 
-## 8. Warranty
+## 7. Warranty
 
 Every deck we build carries our 7-year workmanship warranty. On top of that, because we're a [certified Pro Installer](/certified-pro-installer) for TimberTech, Trex, Deckorators and Fortress Railing, we can offer manufacturer-backed labor and material warranty coverage on qualifying projects. Check the manufacturer's warranty for the specific products on your deck.
 

@@ -64,11 +64,10 @@ export const cities: City[] = [
     slug: 'saratoga-springs',
     name: 'Saratoga Springs',
     intro:
-      'Saratoga Springs is home base for TC Decks. We know the neighborhoods, the city permit process, and how hot an unshaded west-facing backyard gets in July, so we design for that from the start.',
+      'Saratoga Springs is home base for TC Decks. We know the neighborhoods and how hot an unshaded west-facing backyard gets in July, so we design for that from the start.',
     notes: [
       'Many newer homes have walk-out basements, which means second-story decks with stairs to the yard.',
       'Hot west-facing backyards are common; lighter composite colors and a pergola keep the surface comfortable.',
-      'We handle the Saratoga Springs building permit and inspections for you.',
     ],
   },
   {
@@ -79,7 +78,6 @@ export const cities: City[] = [
     notes: [
       'Hillside lots around Traverse Mountain often need taller posts and engineered footings.',
       'Older Lehi decks are frequently ready for a tear-out and composite rebuild.',
-      'We pull the Lehi City permit and schedule the inspections.',
     ],
   },
   {
@@ -101,7 +99,6 @@ export const cities: City[] = [
     notes: [
       'Many older decks here are pressure-treated wood that has reached the end of its life.',
       'Covered decks are popular for views toward the mountains.',
-      'We handle the American Fork permit process.',
     ],
   },
   {
@@ -183,7 +180,6 @@ export const cities: City[] = [
     notes: [
       'Ranch-style homes often get a low deck off the back door, sometimes with a second level stepping down to the yard.',
       'A natural wood pergola takes the edge off the afternoon sun.',
-      'We handle the Santaquin City permit and inspections for you.',
     ],
   },
   {
@@ -194,7 +190,6 @@ export const cities: City[] = [
     notes: [
       'Framing and footings are sized for heavy snow loads on steep, rocky ground.',
       'Sauna and hot tub decks with privacy screens are popular for mountain cabins.',
-      'We work with Utah County on permits for unincorporated mountain properties.',
     ],
   },
   {
@@ -206,7 +201,6 @@ export const cities: City[] = [
     notes: [
       'Hillside lots often need taller posts, engineered footings and cable or glass railing to keep the view.',
       'Built-in benches and planters along the rail line add seating without crowding the deck.',
-      'We handle the Draper City permit and inspections for you.',
     ],
   },
   {
@@ -218,7 +212,6 @@ export const cities: City[] = [
     notes: [
       'Tear-out and rebuild projects are common, often reusing the footprint with new framing and composite decking.',
       'East-side lots near the foothills get great mountain views worth designing around.',
-      'We pull the Sandy City permit and schedule the inspections.',
     ],
   },
   {
@@ -230,7 +223,6 @@ export const cities: City[] = [
     notes: [
       'On smaller lots, a covered deck or pergola adds usable outdoor space without giving up the yard.',
       'Some neighborhoods have HOA design rules; we plan colors and railing to fit them.',
-      'We handle the South Jordan permit and inspections for you.',
     ],
   },
   {
@@ -242,7 +234,6 @@ export const cities: City[] = [
     notes: [
       'Older wood decks are often ready for a composite rebuild with modern aluminum railing.',
       'Newer homes with walk-out basements need second-story decks with stairs to the yard.',
-      'We pull the West Jordan permit and schedule the inspections.',
     ],
   },
   {
@@ -254,7 +245,6 @@ export const cities: City[] = [
     notes: [
       'Second-story decks with covered patios underneath are a popular way to use both levels.',
       'A covered roof or pergola makes a west-facing deck usable on summer afternoons.',
-      'We handle the Herriman City permit and inspections for you.',
     ],
   },
   {
@@ -266,7 +256,6 @@ export const cities: City[] = [
     notes: [
       'Hot tub decks need framing sized for the extra weight; we plan for it from the start.',
       'Replacing an aging wood deck with composite cuts out yearly staining for good.',
-      'We pull the Riverton permit and schedule the inspections.',
     ],
   },
   {
@@ -278,7 +267,6 @@ export const cities: City[] = [
     notes: [
       'Large, open lots leave room for multi-level decks and freestanding pavilions.',
       'Wind exposure makes footings, railing choice and roof anchoring important.',
-      'We handle the Bluffdale permit and inspections for you.',
     ],
   },
 ];

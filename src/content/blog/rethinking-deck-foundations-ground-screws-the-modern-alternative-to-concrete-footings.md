@@ -38,9 +38,9 @@ Whichever footing you use, it has to be designed for the actual load and soil, a
 
 Ground screws aren't the answer for every site. Very rocky ground can stop a screw before it reaches depth. Some engineered designs, very heavy loads, or specific city requirements may call for poured footings. On those jobs we pour concrete and do it right. We pick the footing based on the site, not habit.
 
-## Do ground screws pass inspection?
+## Sizing ground screws
 
-Ground screw footings are used on permitted decks, but every city reviews footings as part of the plan. Your city's building department sets the requirements for footing type, size and depth, and some will ask for manufacturer documentation or engineering. We handle the permit and inspections, so we sort that out before we start.
+Footing type, size and depth depend on the deck and the soil, and we size ground screws to the manufacturer's specifications.
 
 ## Part of a frame built to last
 

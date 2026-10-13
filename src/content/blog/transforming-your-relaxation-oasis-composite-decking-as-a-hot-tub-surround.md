@@ -57,6 +57,6 @@ Another popular setup is a hot tub on a patio under a second-story deck, like th
 
 ## Plan it with the deck
 
-The best hot tub decks are designed together with the tub from the start. We'll show the layout in a 3D rendering once the job is booked, handle the permit and inspections, and back the build with our 7-year workmanship warranty.
+The best hot tub decks are designed together with the tub from the start. We'll show the layout in a 3D rendering once the job is booked and back the build with our 7-year workmanship warranty.
 
 See more [deck add-on ideas](/design-ideas/add-ons) and our [composite deck options](/composite-decks), or [contact us](/contact) for a free estimate over the phone.

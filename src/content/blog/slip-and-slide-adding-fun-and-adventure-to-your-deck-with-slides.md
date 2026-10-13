@@ -37,7 +37,7 @@ A slide changes how the deck is used, so it needs to be planned like any other p
 
 **Heat.** Utah sun is intense, and slides in direct afternoon sun can get hot. Look at which way the slide faces, consider a lighter color, and check it before kids go down on a summer afternoon.
 
-**Code and permits.** Guard rules apply to decks more than 30 inches off the ground, and changes to the railing are part of the plan your city reviews. Your city's building department sets the requirements, and we include the slide in the permit drawings.
+**Railing rules.** Guard rules apply to decks more than 30 inches off the ground, so the slide opening has to be planned as part of the railing.
 
 ## Design it in from the start
 

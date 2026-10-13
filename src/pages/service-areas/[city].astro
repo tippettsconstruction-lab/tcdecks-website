@@ -31,8 +31,7 @@ const local = localPhotos[city.slug];
 const photoSrc = local ? local.src : `/images/ideas/${cityPhotos[cities.indexOf(city) % cityPhotos.length]}`;
 const photoAlt = local ? local.alt : `Deck built by TC Decks in ${county}`;
 const faqs = [
-  { q: `Do I need a permit to build a deck in ${city.name}?`, a: `Most attached decks and decks more than 30 inches off the ground need a building permit from ${city.name}. We prepare the plans, submit the permit and schedule the inspections for you.` },
-  { q: `How long does a deck take to build in ${city.name}?`, a: 'Construction usually takes one to three weeks once the permit is approved. We give you a schedule with your quote and keep you updated as we go.' },
+  { q: `How long does a deck take to build in ${city.name}?`, a: 'Construction usually takes one to three weeks. We give you a schedule with your quote and keep you updated as we go.' },
   { q: `Do you offer free estimates in ${city.name}?`, a: `Yes. Estimates are free over the phone. If your ${city.name} project is a good fit, we schedule a site visit to measure and finalize the quote, and once it's booked we create a 3D design of your new deck.` },
 ];
 ---

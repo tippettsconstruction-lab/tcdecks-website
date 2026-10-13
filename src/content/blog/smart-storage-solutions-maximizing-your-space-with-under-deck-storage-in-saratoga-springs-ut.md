@@ -55,7 +55,7 @@ Storage areas close in the space under a deck, which can trap moisture against t
 
 ## Code and safety
 
-Enclosing the space under a deck doesn't usually change the deck's structure, but it can affect access to things like gas meters, dryer vents, window wells and electrical panels. Don't block those, and keep any required clearances. If the space will be finished, wired or used as a room, your city's building department may need to review it. We'll sort that out during the permit.
+Enclosing the space under a deck doesn't usually change the deck's structure, but it can affect access to things like gas meters, dryer vents, window wells and electrical panels. Don't block those, and keep any required clearances.
 
 ## Plan storage with a new deck
 

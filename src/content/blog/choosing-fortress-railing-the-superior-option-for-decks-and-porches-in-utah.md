@@ -52,7 +52,7 @@ Front porches are often low enough that railing isn't required, but many homeown
 
 ## Code basics
 
-Most decks more than 30 inches off the ground need guards along open sides, and stairs need handrails. Codes also limit the size of openings so small children can't slip through. Your city's building department sets the exact requirements, and every system we install is built to meet them. We handle the permit and inspections.
+Most decks more than 30 inches off the ground need guards along open sides, and stairs need handrails. Codes also limit the size of openings so small children can't slip through. Your city's building department sets the exact requirements, and every system we install is built to meet them.
 
 ## How to choose
 
