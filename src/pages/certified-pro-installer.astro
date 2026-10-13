@@ -49,7 +49,7 @@ const faqs = [
   <section class="section alt">
     <div class="wrap">
       <h2>Brands we're certified to install</h2>
-      <div class="grid grid-2">
+      <div class="grid brands">
         {brands.map((b) => (
           <div class="card">
             <h3>{b.name}</h3>
@@ -62,3 +62,7 @@ const faqs = [
   </section>
   <section class="section"><div class="wrap"><Faqs faqs={faqs} /></div></section>
 </Base>
+
+<style>
+  .brands { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+</style>
