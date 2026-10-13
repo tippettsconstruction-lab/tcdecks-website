@@ -18,6 +18,7 @@ const cocoa = p('saratoga-springs-dark-cocoa');
 const hl = p('highland-english-walnut-hideaway');
 const pecan = p('highland-legacy-pecan-covered');
 const draper = p('draper-brownstone-slate-gray');
+const sundance = p('sundance-cabin-english-walnut');
 
 export const projects: Project[] = [
   {
@@ -51,6 +52,21 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'sundance-cabin-english-walnut',
+    title: 'Sundance: cabin sauna deck in TimberTech English Walnut',
+    summary: 'A mountain cabin deck in Sundance built to hold a barrel sauna, in TimberTech English Walnut. The standout is a built-in waterfall bench, where the boards curve down over the edge in one continuous piece. Black privacy screens close off the side, and recessed lights in the deck and bench glow against the snow.',
+    photos: [
+      sundance('sundance-cabin-timbertech-english-walnut-hideaway-sauna-deck', 'TimberTech English Walnut sauna deck with black privacy screens and a waterfall bench at a Sundance, Utah cabin'),
+      sundance('timbertech-waterfall-bench-english-walnut-lights', 'Built-in waterfall bench in TimberTech English Walnut with recessed lights'),
+      sundance('waterfall-bench-sauna-deck-snow', 'Waterfall bench on a snowy sauna deck with recessed lights'),
+      sundance('sauna-deck-privacy-screen-waterfall-bench', 'Sauna deck with privacy screens and a curved built-in bench in the mountains'),
+      sundance('english-walnut-sauna-deck-bench-black-posts', 'English Walnut sauna deck with a built-in bench and black posts'),
+      sundance('barrel-sauna-deck-a-frame-cabin-winter', 'Barrel sauna on a new deck beside an A-frame cabin in winter'),
+      sundance('mountain-cabin-sauna-deck-snowy-trees', 'Mountain cabin and sauna deck among snowy trees at dusk'),
+      sundance('a-frame-cabin-lit-path-sauna-deck', 'Lit path from an A-frame cabin up to the sauna deck'),
     ],
   },
   {
