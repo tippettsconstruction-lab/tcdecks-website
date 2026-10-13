@@ -15,7 +15,7 @@ import { breadcrumbSchema } from '../lib/schema';
   {galleries.map((g) => (
     <section class="section">
       <div class="wrap">
-        <h2>{g.title}</h2>
+        <h2 id={g.slug}>{g.title}</h2>
         <p class="lead">{g.summary}</p>
         <div class="grid grid-3">{g.photos.map((ph) => <Photo src={ph.src} alt={ph.alt} />)}</div>
       </div>
