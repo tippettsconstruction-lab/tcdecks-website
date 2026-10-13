@@ -1,6 +1,7 @@
 ---
 title: "Choosing Deck and Porch Railing in Utah: Fortress Steel, Glass, Cable and More"
-description: "A guide to the deck and porch railing options TC Decks installs in Utah: Fortress FE26 steel, frameless and illuminated glass, cable, TimberTech HideAway privacy screens and composite."
+metaTitle: "Deck & Porch Railing Options in Utah | TC Decks"
+description: "Deck and porch railing we install in Utah: Fortress FE26 steel, frameless and lit glass, cable, TimberTech HideAway privacy screens and composite."
 date: 2026-09-29
 image: "/images/projects/new-home-covered-deck/timbertech-american-walnut-deck-fortress-steel-rail-1600.webp"
 ---

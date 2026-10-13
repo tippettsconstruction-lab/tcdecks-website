@@ -1,6 +1,7 @@
 ---
 title: "Balcony and Second-Story Deck Railing Ideas for Utah Homes"
-description: "Railing ideas for balconies and second-story decks in Utah: Fortress FE26 steel, frameless glass, cable, horizontal rod and privacy railing, and how to choose for views, safety and style."
+metaTitle: "Balcony & Second-Story Deck Railing Ideas | TC Decks"
+description: "Railing ideas for Utah balconies and second-story decks: Fortress steel, frameless glass, cable, rod and privacy railing, and how to choose."
 date: 2026-10-10
 image: "/images/projects/american-fork-second-story-lit-stairs/american-fork-second-story-deck-black-railing-1600.webp"
 ---

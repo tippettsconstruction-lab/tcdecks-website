@@ -6,8 +6,8 @@ import { breadcrumbSchema } from '../../lib/schema';
 const groups = ['Utah County', 'Salt Lake County'].map((county) => ({ county, list: cities.filter((c) => (c.county ?? 'Utah County') === county) }));
 ---
 <Base
-  title="Deck Builder Service Areas in Utah County & Salt Lake County | TC Decks"
-  description="TC Decks builds custom decks, pergolas and porches across Utah County and southern Salt Lake County, from Saratoga Springs, Lehi and Highland to Draper, Sandy, South Jordan and Herriman."
+  title="Service Areas: Utah & Salt Lake County Decks | TC Decks"
+  description="TC Decks builds custom decks, pergolas and porches across Utah County and southern Salt Lake County, from Saratoga Springs and Lehi to Draper and Sandy."
   schema={[breadcrumbSchema([{ name: 'Service Areas', path: '/service-areas' }])]}
 >
   <PageHero eyebrow="Where we build" title="Deck builder serving Utah County and Salt Lake County" lead="We're based in Saratoga Springs and build throughout northern Utah County and the south end of Salt Lake County. Pick your city for local details and projects." crumbs={[{ name: 'Service Areas', path: '/service-areas' }]} />

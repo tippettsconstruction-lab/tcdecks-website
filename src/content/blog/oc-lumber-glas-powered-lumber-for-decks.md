@@ -1,6 +1,7 @@
 ---
 title: "OC Lumber: Glas-Powered Lumber for Deck Framing in Utah"
-description: "What OC Lumber from Owens Corning is, why its Glas-Powered Lumber is wood-free, rust-free and rot-proof, and how TC Decks uses it as a member of the OC Pro Build Team."
+metaTitle: "OC Lumber: Glas-Powered Deck Framing in Utah | TC Decks"
+description: "What Owens Corning OC Lumber is, why Glas-Powered Lumber is wood-free, rust-free and rot-proof, and how TC Decks builds with it."
 date: 2026-10-11
 image: "/images/projects/highland-legacy-pecan-covered/highland-covered-deck-timbertech-legacy-pecan-gable-roof-1600.webp"
 ---

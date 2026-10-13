@@ -1,6 +1,7 @@
 ---
 title: "Comparing TimberTech, Trex and Deckorators Composite Decking"
-description: "How TimberTech, Trex and Deckorators decking compare for Utah decks: board types, heat, fading, traction and warranty, from a builder certified to install all three."
+metaTitle: "TimberTech vs Trex vs Deckorators Decking | TC Decks"
+description: "How TimberTech, Trex and Deckorators decking compare for Utah: board types, heat, fading, traction and warranty, from a builder certified on all three."
 date: 2026-09-01
 image: "/images/projects/draper-brownstone-slate-gray/two-tone-timbertech-deck-cable-railing-mountain-view-1600.webp"
 ---
