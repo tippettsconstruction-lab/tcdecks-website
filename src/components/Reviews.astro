@@ -5,18 +5,64 @@ import { reviews, business } from '../data/site';
   <span class="stars" aria-hidden="true">★★★★★</span>
   <strong>{business.rating.value} on Google</strong> from {business.rating.count} reviews
 </div>
-<div class="grid grid-3">
-  {reviews.map((r) => (
-    <figure class="card">
-      <blockquote>“{r.text}”</blockquote>
-      <figcaption>{r.author}</figcaption>
-    </figure>
-  ))}
+<div class="carousel" role="region" aria-roledescription="carousel" aria-label="Google reviews">
+  <button class="nav prev" type="button" aria-label="Previous review">‹</button>
+  <div class="track" tabindex="0">
+    {reviews.map((r, i) => (
+      <figure class="card slide" aria-roledescription="slide" aria-label={`Review ${i + 1} of ${reviews.length}`}>
+        <span class="stars" aria-label="5 stars">★★★★★</span>
+        <blockquote>“{r.text}”</blockquote>
+        <figcaption>{r.author}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <button class="nav next" type="button" aria-label="Next review">›</button>
 </div>
 <style>
   .rating { margin-bottom: 18px; font-size: 1.05rem; }
   .stars { color: #d49a1c; letter-spacing: 2px; margin-right: 6px; }
-  figure { margin: 0; }
-  blockquote { margin: 0 0 12px; font-size: 1.02rem; }
+  .carousel { position: relative; }
+  .track { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 8px; }
+  .track::-webkit-scrollbar { display: none; }
+  @media (min-width: 700px) { .track { grid-auto-columns: calc((100% - 18px) / 2); } }
+  @media (min-width: 1000px) { .track { grid-auto-columns: calc((100% - 36px) / 3); } }
+  .slide { scroll-snap-align: start; margin: 0; display: flex; flex-direction: column; }
+  .slide .stars { display: block; margin-bottom: 8px; }
+  blockquote { margin: 0 0 12px; font-size: 1.02rem; flex: 1; }
   figcaption { color: var(--ink-soft); font-size: 0.9rem; font-weight: 600; }
+  .nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 1; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--dark, #111); font-size: 1.5rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .prev { left: -10px; }
+  .next { right: -10px; }
+  .nav[disabled] { opacity: 0.35; cursor: default; }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>('.carousel').forEach((c) => {
+    const track = c.querySelector<HTMLElement>('.track')!;
+    const prev = c.querySelector<HTMLButtonElement>('.prev')!;
+    const next = c.querySelector<HTMLButtonElement>('.next')!;
+    const step = () => (track.querySelector<HTMLElement>('.slide')?.offsetWidth ?? 300) + 18;
+    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    const update = () => {
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = atEnd();
+      c.classList.toggle('static', prev.disabled && next.disabled);
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step() }));
+    next.addEventListener('click', () => track.scrollBy({ left: step() }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+    // Gentle auto-advance, paused on hover/focus and for reduced-motion users.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let paused = false;
+    ['mouseenter', 'focusin', 'touchstart'].forEach((e) => c.addEventListener(e, () => (paused = true), { passive: true }));
+    ['mouseleave', 'focusout'].forEach((e) => c.addEventListener(e, () => (paused = false)));
+    setInterval(() => {
+      if (paused || document.hidden) return;
+      if (atEnd()) track.scrollTo({ left: 0 }); else track.scrollBy({ left: step() });
+    }, 6000);
+  });
+</script>
+<style is:global>
+  .carousel.static .nav { display: none; }
 </style>
