@@ -26,6 +26,9 @@ const sandy = p('sandy-weathered-teak');
 const pgf = p('pleasant-grove-foothills-french-white-oak');
 const em = p('eagle-mountain-second-story');
 const ems = p('eagle-mountain-deck-slide');
+const lehi = p('lehi-covered-deck-fireplace');
+const af = p('american-fork-second-story-lit-stairs');
+const lam = p('lehi-american-fork-decks');
 
 export const projects: Project[] = [
   {
@@ -38,6 +41,50 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'american-fork-second-story-lit-stairs',
+    title: 'American Fork: second-story deck with lit stairs and mountain views',
+    summary: 'A tall second-story composite deck with black aluminum railing, a long straight stair with lights in every riser, and a lounge area that looks out at the mountains. The patio underneath gets shade all afternoon.',
+    photos: [
+      af('american-fork-second-story-deck-black-railing', 'Second-story composite deck with black railing and stairs in American Fork, Utah'),
+      af('deck-sectional-mountain-view-dusk', 'Outdoor sectional on a composite deck with a mountain view at dusk'),
+      af('lit-deck-stairs-black-railing', 'Deck stairs with riser lights and black aluminum railing'),
+      af('second-story-deck-patio-below-stairs', 'Second-story deck with a patio below and a long stair'),
+      af('riser-lights-stairs-from-above', 'Lit deck stairs seen from the top'),
+      af('deck-lounge-sunset-railing', 'Deck lounge area at sunset'),
+      af('deck-stair-lights-night', 'Deck stair lights at night'),
+      af('composite-deck-stairs-daylight', 'Composite deck stairs with black railing in daylight'),
+    ],
+  },
+  {
+    slug: 'lehi-covered-deck-fireplace',
+    title: 'Lehi: covered deck with an outdoor fireplace',
+    summary: 'A light gray composite deck under a full roof, with a stone outdoor fireplace, a contrasting border, cable and black aluminum railing, and stairs down to a landscaped yard.',
+    photos: [
+      lehi('lehi-covered-composite-deck-stone-fireplace', 'Covered composite deck with a stone fireplace and stairs in Lehi, Utah'),
+      lehi('covered-deck-outdoor-fireplace-view', 'Outdoor fireplace on a covered composite deck'),
+      lehi('covered-deck-fireplace-light-gray-boards', 'Light gray composite deck boards under a covered roof'),
+      lehi('second-story-covered-deck-stairs', 'Second-story covered deck and stairs'),
+      lehi('composite-deck-walkway-cable-railing', 'Composite deck walkway with railing above a landscaped yard'),
+      lehi('deck-grill-area-landscaped-yard', 'Grill area on a covered deck'),
+    ],
+  },
+  {
+    slug: 'lehi-american-fork-decks',
+    title: 'More decks in Lehi and American Fork',
+    summary: 'A few more of our builds around Lehi and American Fork: a second-story deck with a tube slide and built-in bench, a large deck with white and black railing, lit stairs, and composite entry steps.',
+    photos: [
+      lam('second-story-deck-green-tube-slide', 'Second-story deck with a green tube slide'),
+      lam('built-in-composite-deck-bench', 'Built-in composite bench on a deck'),
+      lam('large-composite-deck-white-black-railing', 'Large composite deck with white posts and black balusters'),
+      lam('second-story-deck-white-railing-stairs', 'Second-story deck with white railing and stairs'),
+      lam('long-deck-stairs-white-railing', 'Long deck stairs with white railing'),
+      lam('raised-deck-black-railing-dusk', 'Raised deck with black railing at dusk'),
+      lam('deck-stair-riser-lights', 'Composite deck stairs with riser lights'),
+      lam('second-story-deck-new-build', 'New second-story deck on a new home'),
+      lam('gray-composite-entry-stairs-white-railing', 'Gray composite entry stairs with white railing'),
     ],
   },
   {
