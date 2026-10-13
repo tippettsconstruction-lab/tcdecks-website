@@ -31,7 +31,12 @@ const localBusiness = {
   image: new URL(image, business.url).href,
   logo: new URL('/images/brand/icon-512.png', business.url).href,
   address: { '@type': 'PostalAddress', addressLocality: business.city, addressRegion: business.region, addressCountry: 'US' },
-  areaServed: cities.map((c) => ({ '@type': 'City', name: `${c.name}, UT` })),
+  hasMap: business.social.google,
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Utah County, UT' },
+    { '@type': 'AdministrativeArea', name: 'Salt Lake County, UT' },
+    ...cities.map((c) => ({ '@type': 'City', name: `${c.name}, UT` })),
+  ],
   aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating.value, reviewCount: business.rating.count },
   sameAs: Object.values(business.social),
 };

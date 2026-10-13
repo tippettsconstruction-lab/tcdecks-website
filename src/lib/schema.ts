@@ -26,5 +26,8 @@ export const serviceSchema = (name: string, description: string, path: string) =
   description,
   url: new URL(path, business.url).href,
   provider: { '@id': `${business.url}/#business` },
-  areaServed: { '@type': 'AdministrativeArea', name: 'Utah County, UT' },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Utah County, UT' },
+    { '@type': 'AdministrativeArea', name: 'Salt Lake County, UT' },
+  ],
 });
