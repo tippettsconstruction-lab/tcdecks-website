@@ -18,9 +18,9 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
   <PageHero eyebrow="Design ideas" title={page.name} lead={page.intro} crumbs={[{ name: 'Design Ideas', path: '/design-ideas' }, { name: page.name, path }]} />
   <section class="section">
     <div class="wrap features">
-      {page.features.map((f) => (
+      {page.features.filter((f) => f.image).map((f) => (
         <article class="feature">
-          <Photo src={f.image} alt={(f.image && photoAlts[f.image]) || f.name} label={f.name} />
+          <Photo src={f.image} alt={(f.image && photoAlts[f.image]) || f.name} />
           <div>
             <h2 class="h3">{f.name}</h2>
             <p>{f.text}</p>
@@ -28,6 +28,16 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
         </article>
       ))}
     </div>
+    {page.features.some((f) => !f.image) && (
+      <div class="wrap text-features">
+        {page.features.filter((f) => !f.image).map((f) => (
+          <article class="card">
+            <h2 class="h3">{f.name}</h2>
+            <p>{f.text}</p>
+          </article>
+        ))}
+      </div>
+    )}
     {page.note && <div class="wrap"><p class="note">{page.note}</p></div>}
     {page.gallery && (
       <div class="wrap gallery">
@@ -50,6 +60,9 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
 <style>
   .features { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .feature h2 { margin-top: 14px; font-size: 1.25rem; }
+  .text-features { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 28px; }
+  .text-features h2 { margin-top: 0; font-size: 1.15rem; }
+  .text-features p { margin-bottom: 0; }
   .note { margin-top: 28px; font-weight: 600; }
   .gallery { margin-top: 48px; }
   .more-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }

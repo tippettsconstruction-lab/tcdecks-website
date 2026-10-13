@@ -137,7 +137,7 @@ export const ideaPages: IdeaPage[] = [
       { name: 'Finished soffits', image: '/images/ideas/finished-under-deck-ceiling', text: 'A finished ceiling under the deck (like TimberTech DrySpace) hides framing and creates a covered patio below.' },
       { name: 'Under-deck storage', image: '/images/ideas/under-deck-storage-doors', text: 'Enclose the space under a raised deck for bikes, tools and seasonal gear.' },
       { name: 'Hot tubs & pools', image: '/images/ideas/hot-tub-surround-deck-lights', text: 'Reinforced framing and a flush or partially recessed surround make a hot tub look built in.' },
-      { name: 'Cold plunge & sauna', text: 'We plan the structure, access and electrical so wellness features fit cleanly into the deck.' },
+      { name: 'Cold plunge & sauna', image: '/images/projects/sundance-cabin-english-walnut/sauna-and-hot-tub-deck-waterfall-bench-mountains', text: 'We plan the structure, access and electrical so wellness features fit cleanly into the deck.' },
       { name: 'Outdoor kitchens & tiki bars', text: 'Grill stations, counters and bar seating designed into the layout.' },
       { name: 'Waterfall benches', image: '/images/projects/sundance-cabin-english-walnut/timbertech-waterfall-bench-english-walnut-lights', text: 'Deck boards that curve down over the front of a built-in bench in one continuous piece, like this Sundance cabin sauna deck.' },
       { name: 'Privacy walls', image: '/images/ideas/privacy-wall-deck-lights', text: 'Slatted or solid walls screen neighbors and block wind.' },

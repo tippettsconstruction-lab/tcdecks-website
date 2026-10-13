@@ -65,6 +65,9 @@ export const projects: Project[] = [
       provo('rooftop-composite-deck-utah-valley-view', 'Rooftop composite deck overlooking Utah Valley'),
       provo('dark-composite-deck-stairs-mountain-view-provo', 'Dark composite deck and stairs with white railing and a mountain view in Provo'),
       provo('composite-deck-stairs-white-posts-step-lights', 'Composite deck stairs with white posts, black balusters and step lights'),
+      provo('provo-covered-balcony-geometric-white-railing', 'Covered balcony with geometric white railing and stone columns on the same Provo home'),
+      provo('provo-home-upper-deck-mountain-view', 'Provo home with an upper deck below the mountains'),
+      provo('provo-composite-staircase-white-railing', 'Long enclosed composite staircase with white railing in Provo'),
     ],
   },
   {
