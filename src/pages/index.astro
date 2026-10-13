@@ -35,7 +35,11 @@ const faqs = [
           <li>{yearsInBusiness}+ years building decks</li>
         </ul>
       </div>
-      <Photo src="/images/ideas/gray-composite-deck-mountain-view-railing" alt="Gray composite deck with aluminum railing overlooking the Wasatch mountains, built by TC Decks" eager />
+      <div class="photo real hero-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="/video/tc-decks-deck-builds-poster.webp" aria-label="Drone and close-up footage of composite decks built by TC Decks">
+          <source src="/video/tc-decks-deck-builds.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   </section>
 
@@ -112,6 +116,7 @@ const faqs = [
 
 <style>
   .home-hero { background: var(--surface); padding: 56px 0; }
+  .hero-video video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: inherit; }
   .hero-grid { display: grid; gap: 32px; align-items: center; }
   @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.15fr 1fr; } }
   .trust { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-weight: 600; color: var(--dark); font-size: 0.95rem; }
@@ -121,3 +126,10 @@ const faqs = [
   .city-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .more { font-weight: 700; }
 </style>
+
+<script>
+  // Respect reduced-motion: show the poster frame instead of looping video.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLVideoElement>('.hero-video video').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  }
+</script>
