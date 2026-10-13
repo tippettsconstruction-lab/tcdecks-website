@@ -19,7 +19,7 @@ const groups = ['Utah County', 'Salt Lake County'].map((county) => ({ county, li
           {g.list.map((c) => (
             <div class="card">
               <h3 class="h3"><a href={`/service-areas/${c.slug}`}>Decks in {c.name}</a></h3>
-              <p>{c.intro.split('. ')[0]}.</p>
+              <p>{c.intro.split('. ')[0].replace(/\.$/, '')}.</p>
               <a class="more" href={`/service-areas/${c.slug}`}>{c.name} decks →</a>
             </div>
           ))}
