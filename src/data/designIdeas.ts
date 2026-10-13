@@ -64,6 +64,7 @@ export const ideaPages: IdeaPage[] = [
       { name: 'Gates', image: '/images/ideas/deck-railing-gate', text: 'Matching gates at the top of stairs keep kids and pets safe and give you easy yard access.' },
       { name: 'Frameless glass', image: '/images/ideas/glass-panel-deck-railing-stairs', text: 'Glass panels with minimal hardware for completely open views of the mountains or lake.' },
       { name: 'Privacy railing', image: '/images/ideas/privacy-railing-second-story-deck', text: 'Taller, solid or slatted privacy panels block sightlines from neighbors without building a wall.' },
+      { name: 'TimberTech HideAway privacy screens', image: '/images/projects/highland-english-walnut-hideaway/timbertech-hideaway-privacy-screen-sunset', text: 'Black aluminum panels with a cut geometric pattern. They block the view from next door but still let light and breeze through, like this Highland hot tub deck.' },
       { name: 'Wild Hog mesh panels', image: '/images/ideas/pergola-deck-mesh-railing-panels', text: 'Welded mesh inserts with an industrial, modern look that stay see-through.' },
       { name: 'Horizontal rod rail', image: '/images/ideas/horizontal-rod-deck-railing', text: 'Clean horizontal lines that feel modern and keep views open.' },
       { name: 'Cable rail', image: '/images/ideas/cable-railing-composite-deck', text: 'Stainless cables are nearly invisible from a distance, a favorite for decks with a view.' },
