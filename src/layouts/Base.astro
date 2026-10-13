@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { business } from '../data/site';
+import { business, cities } from '../data/site';
 
 interface Props {
   title: string;
@@ -31,7 +31,7 @@ const localBusiness = {
   image: new URL(image, business.url).href,
   logo: new URL('/images/brand/icon-512.png', business.url).href,
   address: { '@type': 'PostalAddress', addressLocality: business.city, addressRegion: business.region, addressCountry: 'US' },
-  areaServed: ['Saratoga Springs', 'Lehi', 'Eagle Mountain', 'American Fork', 'Pleasant Grove', 'Highland', 'Alpine', 'Orem', 'Provo', 'Vineyard'].map((c) => ({ '@type': 'City', name: `${c}, UT` })),
+  areaServed: cities.map((c) => ({ '@type': 'City', name: `${c.name}, UT` })),
   aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating.value, reviewCount: business.rating.count },
   sameAs: Object.values(business.social),
 };

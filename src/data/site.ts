@@ -55,6 +55,7 @@ export type City = {
   name: string;
   intro: string;
   notes: string[];
+  county?: 'Utah County' | 'Salt Lake County';
 };
 
 // Local notes are deliberately factual and specific; add real projects per city as photos arrive.
@@ -161,6 +162,90 @@ export const cities: City[] = [
     notes: [
       'Compact decks with built-in benches and planters.',
       'Pergolas add privacy between closely spaced homes.',
+    ],
+  },
+  {
+    slug: 'draper',
+    name: 'Draper',
+    county: 'Salt Lake County',
+    intro:
+      'Draper backyards range from flat lots in the valley to steep hillside homes with big views, so we build everything from low two-tone decks to tall decks with long stair runs.',
+    notes: [
+      'Hillside lots often need taller posts, engineered footings and cable or glass railing to keep the view.',
+      'Built-in benches and planters along the rail line add seating without crowding the deck.',
+      'We handle the Draper City permit and inspections for you.',
+    ],
+  },
+  {
+    slug: 'sandy',
+    name: 'Sandy',
+    county: 'Salt Lake County',
+    intro:
+      'Many Sandy homes were built in the 1970s through 1990s, and a lot of those original wood decks are ready to be replaced with low-maintenance composite.',
+    notes: [
+      'Tear-out and rebuild projects are common, often reusing the footprint with new framing and composite decking.',
+      'East-side lots near the foothills get great mountain views worth designing around.',
+      'We pull the Sandy City permit and schedule the inspections.',
+    ],
+  },
+  {
+    slug: 'south-jordan',
+    name: 'South Jordan',
+    county: 'Salt Lake County',
+    intro:
+      'South Jordan has a mix of established neighborhoods and newer communities with smaller yards, so smart layout matters as much as materials.',
+    notes: [
+      'On smaller lots, a covered deck or pergola adds usable outdoor space without giving up the yard.',
+      'Some neighborhoods have HOA design rules; we plan colors and railing to fit them.',
+      'We handle the South Jordan permit and inspections for you.',
+    ],
+  },
+  {
+    slug: 'west-jordan',
+    name: 'West Jordan',
+    county: 'Salt Lake County',
+    intro:
+      'From older homes on the east side to new construction on the west side, West Jordan projects include deck replacements, new composite decks and covered patios.',
+    notes: [
+      'Older wood decks are often ready for a composite rebuild with modern aluminum railing.',
+      'Newer homes with walk-out basements need second-story decks with stairs to the yard.',
+      'We pull the West Jordan permit and schedule the inspections.',
+    ],
+  },
+  {
+    slug: 'herriman',
+    name: 'Herriman',
+    county: 'Salt Lake County',
+    intro:
+      'Herriman is full of newer homes, many with walk-out basements and open yards that catch strong afternoon sun and wind.',
+    notes: [
+      'Second-story decks with covered patios underneath are a popular way to use both levels.',
+      'A covered roof or pergola makes a west-facing deck usable on summer afternoons.',
+      'We handle the Herriman City permit and inspections for you.',
+    ],
+  },
+  {
+    slug: 'riverton',
+    name: 'Riverton',
+    county: 'Salt Lake County',
+    intro:
+      'Riverton has established family neighborhoods with good-sized backyards, a great fit for larger decks, hot tub decks and covered seating areas.',
+    notes: [
+      'Hot tub decks need framing sized for the extra weight; we plan for it from the start.',
+      'Replacing an aging wood deck with composite cuts out yearly staining for good.',
+      'We pull the Riverton permit and schedule the inspections.',
+    ],
+  },
+  {
+    slug: 'bluffdale',
+    name: 'Bluffdale',
+    county: 'Salt Lake County',
+    intro:
+      'Bluffdale has some of the largest lots in the valley, with room for big multi-level decks, outdoor kitchens and timber pavilions.',
+    notes: [
+      'Large, open lots leave room for multi-level decks and freestanding pavilions.',
+      'Wind exposure makes footings, railing choice and roof anchoring important.',
+      'We handle the Bluffdale permit and inspections for you.',
     ],
   },
 ];
