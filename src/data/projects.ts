@@ -1,6 +1,6 @@
 // Real project galleries. Images live in /public/images/projects/<slug>/ as <name>-800.webp and <name>-1600.webp.
 export type ProjectPhoto = { src: string; alt: string };
-export type Project = { slug: string; title: string; summary: string; photos: ProjectPhoto[] };
+export type Project = { slug: string; title: string; summary: string; link?: { href: string; label: string }; photos: ProjectPhoto[] };
 
 const roof = (name: string, alt: string): ProjectPhoto => ({ src: `/images/projects/covered-deck-roof/${name}`, alt });
 
@@ -22,17 +22,37 @@ const sundance = p('sundance-cabin-english-walnut');
 const santaquin = p('santaquin-pecan-pergola');
 const pg = p('pleasant-grove-trex-slide');
 const lindon = p('lindon-trex-pebble-grey');
+const sandy = p('sandy-weathered-teak');
 
 export const projects: Project[] = [
   {
     slug: 'pleasant-grove-trex-slide',
     title: 'Pleasant Grove: Trex deck with a twisty slide, featured on the cover of Deck Specialist magazine',
     summary: 'This Pleasant Grove deck made the cover of Deck Specialist magazine. It is a large second-story Trex deck with a two-tone picture-frame border, white posts with black balusters, a long stair run and a twisty tube slide straight down to the lawn. The covered patio underneath holds the hot tub.',
+    link: { href: 'https://issuu.com/building-products/docs/deckspecialist_fall_2021_for_issuu', label: 'Read the Fall 2021 issue of Deck Specialist' },
     photos: [
       pg('pleasant-grove-trex-deck-twisty-tube-slide', 'Second-story Trex deck with a green twisty tube slide in Pleasant Grove, Utah'),
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'sandy-weathered-teak',
+    title: 'Sandy: covered second-story deck in TimberTech Weathered Teak',
+    summary: 'A long second-story deck in TimberTech Weathered Teak, tucked under the roofline with white posts, a matching fascia and black aluminum railing. A switchback stair with lights in every riser leads down to the patio and the backyard, so the deck works at night as well as during the day.',
+    photos: [
+      sandy('sandy-timbertech-weathered-teak-covered-second-story-deck', 'Covered second-story TimberTech Weathered Teak deck with black railing in Sandy, Utah'),
+      sandy('weathered-teak-deck-above-landscaped-backyard', 'Weathered Teak deck above a terraced backyard in Sandy'),
+      sandy('lit-composite-deck-stairs-black-railing', 'Composite deck stairs with riser lights and black aluminum railing'),
+      sandy('deck-stairs-riser-lights-down-to-fire-pit', 'Lit deck stairs leading down to a backyard fire pit patio'),
+      sandy('covered-deck-weathered-teak-seating', 'Seating area on a covered TimberTech Weathered Teak deck'),
+      sandy('weathered-teak-deck-walkway-black-railing', 'Weathered Teak deck walkway along a brick house with black railing'),
+      sandy('weathered-teak-deck-dining-sunset', 'Dining table on a Weathered Teak deck at sunset'),
+      sandy('stair-landing-black-aluminum-railing', 'Deck stair landing with black aluminum railing'),
+      sandy('aerial-second-story-deck-backyard', 'Aerial view of a second-story deck and backyard in Sandy'),
+      sandy('deck-and-stairs-at-night', 'Deck and lit stairs at night'),
+      sandy('deck-stairs-beside-backyard-stream', 'Composite deck stairs beside a backyard stream at sunset'),
     ],
   },
   {
