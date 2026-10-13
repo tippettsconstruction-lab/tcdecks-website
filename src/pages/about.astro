@@ -65,6 +65,7 @@ import { breadcrumbSchema } from '../lib/schema';
 </Base>
 <style>
   .about-side { display: grid; gap: 18px; align-content: start; }
+  .about-side :global(.photo:last-child img) { object-position: top; }
   .family-photos { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin: 20px 0 28px; }
   .family-photos figure { margin: 0; }
   .family-photos figcaption { font-size: .85rem; color: var(--muted, #666); margin-top: 6px; }
