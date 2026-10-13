@@ -22,6 +22,7 @@ const localBusiness = {
   '@id': `${business.url}/#business`,
   name: business.name,
   alternateName: business.legalName,
+  description: business.summary,
   url: business.url,
   telephone: `+1-${business.phone}`,
   email: business.email,
@@ -40,6 +41,9 @@ const localBusiness = {
   ],
   aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating.value, reviewCount: business.rating.count },
   sameAs: Object.values(business.social),
+  knowsAbout: business.specialties,
+  hasCredential: [`Utah Contractor License #${business.license}`, ...business.credentials].map((name) => ({ '@type': 'EducationalOccupationalCredential', name })),
+  memberOf: business.memberships.map((name) => ({ '@type': 'Organization', name })),
 };
 ---
 <!doctype html>
