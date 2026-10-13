@@ -9,7 +9,7 @@ import { breadcrumbSchema, faqSchema } from '../lib/schema';
 const faqs = [
   { q: 'Who provides the financing?', a: 'We offer financing through Wisetack, a consumer financing platform built for home service companies. Wisetack works with lending partners who make the loans.' },
   { q: 'How much can I borrow?', a: 'Wisetack loans go up to $65,000, which covers most new decks, covered decks and railing upgrades.' },
-  { q: 'How do I apply?', a: `Call us at ${business.phone} or ask during your phone estimate and we'll send you a link. The application takes a few minutes on your phone, and you'll see your options right away.` },
+  { q: 'How do I apply?', a: 'Use the Check your options button on this page to open our Wisetack application. It takes a few minutes on your phone, and you will see your options right away. You can also call us and we will send you the link.' },
   { q: 'Can I use financing for part of the project?', a: 'Yes. You can finance the whole project or just part of it and pay the rest another way.' },
 ];
 ---
@@ -25,7 +25,7 @@ const faqs = [
         <h2>How it works</h2>
         <ol>
           <li><strong>Get your free estimate</strong> over the phone so you know what your project involves.</li>
-          <li><strong>Apply in a few minutes.</strong> We send you a Wisetack link and you fill it out on your phone.</li>
+          <li><strong>Apply in a few minutes.</strong> Use the <a href="https://wisetack.us/#/97z1eyt/prequalify" target="_blank" rel="noopener">Wisetack application</a> on your phone or computer.</li>
           <li><strong>Pick your plan.</strong> You'll see your loan options and choose the one that fits your budget.</li>
           <li><strong>We build.</strong> Once you're approved and the job is booked, we schedule your build and send your 3D design.</li>
         </ol>
@@ -37,8 +37,8 @@ const faqs = [
           <li>Finance all or part of your project</li>
         </ul>
         <div class="btn-row">
-          <a class="btn btn-primary" href={business.phoneHref}>Call {business.phone}</a>
-          <a class="btn btn-ghost" href="/contact">Request a free estimate</a>
+          <a class="btn btn-primary" href="https://wisetack.us/#/97z1eyt/prequalify" target="_blank" rel="noopener">Check your options</a>
+          <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
         </div>
         <p class="small">All financing is subject to credit approval. Your terms may vary. Payment options through Wisetack are provided by our lending partners.</p>
       </div>

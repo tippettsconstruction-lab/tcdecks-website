@@ -14,6 +14,7 @@ const diag = p('diagonal-gray-deck');
 const porch = p('back-porch-storage');
 const more = p('more-builds');
 const brown = p('saratoga-springs-brownstone-covered');
+const cocoa = p('saratoga-springs-dark-cocoa');
 
 export const projects: Project[] = [
   {
@@ -47,6 +48,21 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'saratoga-springs-dark-cocoa',
+    title: 'Saratoga Springs: two-level TimberTech deck in Dark Cocoa and Coconut Husk',
+    summary: 'A two-level deck in TimberTech Coconut Husk with a Dark Cocoa picture-frame border and stair accents, black metal railing, and a covered corner with a metal roof, string lights and a porch swing. Wide stairs lead down to the yard and fire pit.',
+    photos: [
+      cocoa('aerial-timbertech-dark-cocoa-coconut-husk-deck-saratoga-springs', 'Aerial view of a two-level TimberTech deck in Coconut Husk and Dark Cocoa in Saratoga Springs, Utah'),
+      cocoa('two-level-timbertech-deck-covered-swing-fire-pit', 'Two-level TimberTech deck with a covered swing area above a backyard fire pit'),
+      cocoa('covered-deck-porch-swing-metal-roof-lights', 'Covered deck corner with a metal roof, string lights and a porch swing'),
+      cocoa('timbertech-dark-cocoa-stairs-black-railing', 'TimberTech Dark Cocoa stairs with black metal railing down to the yard'),
+      cocoa('two-level-deck-steps-coconut-husk-dark-cocoa', 'Steps between two deck levels in Coconut Husk with Dark Cocoa nosing'),
+      cocoa('raised-timbertech-deck-rear-view', 'Raised two-level TimberTech deck across the back of a Saratoga Springs home'),
+      cocoa('coconut-husk-decking-dark-cocoa-picture-frame', 'Coconut Husk decking with a Dark Cocoa picture-frame border and black railing'),
+      cocoa('two-tone-timbertech-step-detail', 'Close-up of two-tone TimberTech steps in Dark Cocoa and Coconut Husk'),
     ],
   },
   {
