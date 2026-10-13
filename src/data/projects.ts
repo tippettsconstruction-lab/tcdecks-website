@@ -20,8 +20,20 @@ const pecan = p('highland-legacy-pecan-covered');
 const draper = p('draper-brownstone-slate-gray');
 const sundance = p('sundance-cabin-english-walnut');
 const santaquin = p('santaquin-pecan-pergola');
+const pg = p('pleasant-grove-trex-slide');
 
 export const projects: Project[] = [
+  {
+    slug: 'pleasant-grove-trex-slide',
+    title: 'Pleasant Grove: Trex deck with a twisty slide, featured on the cover of Deck Specialist magazine',
+    summary: 'This Pleasant Grove deck made the cover of Deck Specialist magazine. It is a large second-story Trex deck with a two-tone picture-frame border, white posts with black balusters, a long stair run and a twisty tube slide straight down to the lawn. The covered patio underneath holds the hot tub.',
+    photos: [
+      pg('pleasant-grove-trex-deck-twisty-tube-slide', 'Second-story Trex deck with a green twisty tube slide in Pleasant Grove, Utah'),
+      pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
+      pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
+      pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
   {
     slug: 'all-woman-build',
     title: 'Saratoga Springs Parade of Homes: an All Woman Build',
