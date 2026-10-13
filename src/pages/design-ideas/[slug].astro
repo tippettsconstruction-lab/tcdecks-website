@@ -5,6 +5,7 @@ import Photo from '../../components/Photo.astro';
 import { ideaPages, type IdeaPage } from '../../data/designIdeas';
 import { business } from '../../data/site';
 import { breadcrumbSchema } from '../../lib/schema';
+import { photoAlts } from '../../data/photoAlts';
 
 export function getStaticPaths() {
   return ideaPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
@@ -19,7 +20,7 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
     <div class="wrap features">
       {page.features.map((f) => (
         <article class="feature">
-          <Photo src={f.image} alt={f.name} label={f.name} />
+          <Photo src={f.image} alt={(f.image && photoAlts[f.image]) || f.name} label={f.name} />
           <div>
             <h2 class="h3">{f.name}</h2>
             <p>{f.text}</p>
@@ -28,6 +29,12 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
       ))}
     </div>
     {page.note && <div class="wrap"><p class="note">{page.note}</p></div>}
+    {page.gallery && (
+      <div class="wrap gallery">
+        <h2>More {page.name.toLowerCase()} from our projects</h2>
+        <div class="grid grid-3">{page.gallery.map((g) => <Photo src={g} alt={photoAlts[g] ?? page.name} />)}</div>
+      </div>
+    )}
     <div class="wrap btn-row">
       <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
       <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
@@ -44,6 +51,7 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
   .features { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .feature h2 { margin-top: 14px; font-size: 1.25rem; }
   .note { margin-top: 28px; font-weight: 600; }
+  .gallery { margin-top: 48px; }
   .more-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
   .more-list a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 600; }
   .more-list a:hover { border-color: var(--accent); color: var(--accent); }

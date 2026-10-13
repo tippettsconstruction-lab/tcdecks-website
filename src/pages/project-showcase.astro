@@ -5,15 +5,6 @@ import Photo from '../components/Photo.astro';
 import { projects as galleries } from '../data/projects';
 import { breadcrumbSchema } from '../lib/schema';
 
-// Replace with real projects (photos, city, materials) as the owner sends them.
-const projects = [
-  { title: 'Trex Transcend deck in Lava Rock', detail: 'Hidden fasteners, matching patio' },
-  { title: 'Custom stairs in Trex Transcend Spiced Rum', detail: 'Wide treads with picture-frame borders' },
-  { title: 'Composite deck in Trex Transcend Havana Gold', detail: 'Deck and patio combination' },
-  { title: 'Provo deck remodel', detail: 'Pebble Grey Trex with white vinyl railing' },
-  { title: 'Pebble Grey deck with Trex Signature aluminum railing', detail: 'Railing and stairs' },
-  { title: 'Under-deck drainage with Trex RainEscape', detail: 'Dry patio under a second-story deck' },
-];
 ---
 <Base
   title="Deck Projects & Photo Gallery | Utah County | TC Decks"
@@ -31,15 +22,7 @@ const projects = [
     </section>
   ))}
   <section class="section alt">
-    <div class="wrap"><h2>More projects</h2><p>More photos are on the way.</p></div>
-    <div class="wrap grid grid-3">
-      {projects.map((p) => (
-        <figure class="proj">
-          <Photo alt={p.title} label={p.title} />
-          <figcaption><strong>{p.title}</strong><br />{p.detail}</figcaption>
-        </figure>
-      ))}
-    </div>
+    <div class="wrap"><h2>Want to see more?</h2><p>Browse hundreds of photos by feature in our <a href="/design-ideas">design ideas</a>, or follow us on <a href="https://www.instagram.com/tcdecks/">Instagram</a>.</p></div>
   </section>
 </Base>
 <style>.proj { margin: 0; } figcaption { margin-top: 8px; color: var(--ink-soft); }</style>

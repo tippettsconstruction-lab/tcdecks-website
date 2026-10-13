@@ -4,7 +4,33 @@ export type Project = { slug: string; title: string; summary: string; photos: Pr
 
 const roof = (name: string, alt: string): ProjectPhoto => ({ src: `/images/projects/covered-deck-roof/${name}`, alt });
 
+const p = (dir: string) => (name: string, alt: string): ProjectPhoto => ({ src: `/images/projects/${dir}/${name}`, alt });
+const oak = p('saratoga-springs-french-white-oak');
+const mt = p('new-home-covered-deck');
+
 export const projects: Project[] = [
+  {
+    slug: 'saratoga-springs-french-white-oak',
+    title: 'Saratoga Springs: TimberTech French White Oak & American Walnut',
+    summary: 'A wide, low deck off the back slider in TimberTech French White Oak with an American Walnut picture-frame border and stair nosing, white risers, and recessed riser lights on every step.',
+    photos: [
+      oak('timbertech-french-white-oak-american-walnut-steps', 'Two-tone TimberTech deck in French White Oak and American Walnut with white risers and step lights in Saratoga Springs'),
+      oak('two-tone-timbertech-stairs-riser-lights', 'Close-up of mitered American Walnut stair nosing with recessed riser lights'),
+    ],
+  },
+  {
+    slug: 'new-home-covered-deck',
+    title: 'Montana: covered deck in American Walnut with Fortress railing',
+    summary: 'A new-construction build we did for a friend in Montana: a full-length second-story deck under a timber-framed roof, in TimberTech American Walnut with a breaker board, Fortress steel railing, switchback stairs and a covered patio below.',
+    photos: [
+      mt('covered-second-story-deck-new-home-2', 'Covered second-story deck with timber posts and black railing on a new home at sunset'),
+      mt('covered-second-story-deck-new-home-1', 'Timber-framed roof over a second-story deck with a covered patio underneath'),
+      mt('american-walnut-covered-deck-fortress-railing', 'Covered deck in TimberTech American Walnut with a breaker board and black Fortress steel railing overlooking pine trees'),
+      mt('timbertech-american-walnut-deck-fortress-steel-rail', 'Long run of black Fortress steel railing along a covered TimberTech American Walnut deck'),
+      mt('fortress-railing-composite-stairs-landing', 'Composite stairs and landing with two-tone treads and black Fortress steel railing'),
+      mt('covered-deck-stairs-new-home', 'Switchback stairs with black aluminum railing leading to a covered second-story deck'),
+    ],
+  },
   {
     slug: 'covered-deck-roof',
     title: 'Covered deck with a shingled roof',

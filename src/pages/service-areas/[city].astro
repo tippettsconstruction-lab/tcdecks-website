@@ -13,6 +13,11 @@ export function getStaticPaths() {
 }
 const { city } = Astro.props as { city: City };
 const path = `/service-areas/${city.slug}`;
+// Rotate through real TC Decks photos; only Saratoga Springs has a confirmed local project photo so far.
+const cityPhotos = ['two-tone-deck-mountain-view', 'cascading-wrap-around-deck-stairs', 'covered-two-story-deck-white-columns', 'pergola-deck-view', 'large-second-story-composite-deck', 'hot-tub-surround-deck-lights', 'gable-roof-entry-deck-wide-stairs', 'wrap-around-stairs-lights-dusk', 'blue-gray-composite-deck-sunset', 'gray-composite-deck-black-railing'];
+const local = city.slug === 'saratoga-springs';
+const photoSrc = local ? '/images/projects/saratoga-springs-french-white-oak/timbertech-french-white-oak-american-walnut-steps' : `/images/ideas/${cityPhotos[cities.indexOf(city) % cityPhotos.length]}`;
+const photoAlt = local ? 'TimberTech deck with step lights built by TC Decks in Saratoga Springs' : 'Deck built by TC Decks in Utah County';
 const faqs = [
   { q: `Do I need a permit to build a deck in ${city.name}?`, a: `Most attached decks and decks more than 30 inches off the ground need a building permit from ${city.name}. We prepare the plans, submit the permit and schedule the inspections for you.` },
   { q: `How long does a deck take to build in ${city.name}?`, a: 'Construction usually takes one to three weeks once the permit is approved. We give you a schedule with your quote and keep you updated as we go.' },
@@ -36,7 +41,7 @@ const faqs = [
         <h2>Building decks in {city.name}</h2>
         <ul class="check-list">{city.notes.map((n) => <li>{n}</li>)}</ul>
       </div>
-      <Photo alt={`Deck project in ${city.name}, UT`} label={`Photo: a recent ${city.name} project`} />
+      <Photo src={photoSrc} alt={photoAlt} />
     </div>
   </section>
   <section class="section alt">
