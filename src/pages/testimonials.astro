@@ -2,11 +2,12 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Reviews from '../components/Reviews.astro';
+import { business } from '../data/site';
 import { breadcrumbSchema } from '../lib/schema';
 ---
 <Base
   title="TC Decks Reviews | 4.9 Stars on Google | Utah Deck Builder"
-  description="Read reviews from Utah County homeowners who had their decks built by TC Decks. Rated 4.9 stars from 34 Google reviews."
+  description={`Read reviews from Utah County homeowners who had their decks built by TC Decks. Rated ${business.rating.value} stars from ${business.rating.count} Google reviews.`}
   schema={[breadcrumbSchema([{ name: 'Reviews', path: '/testimonials' }])]}
 >
   <PageHero eyebrow="Reviews" title="What our customers say" lead="We're proud of our 4.9-star rating on Google. Here's what homeowners say about working with TC Decks." crumbs={[{ name: 'Reviews', path: '/testimonials' }]} />

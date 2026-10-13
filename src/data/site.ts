@@ -13,7 +13,7 @@ export const business = {
   region: 'UT',
   hours: 'Mon–Sat, 7am–8pm',
   hoursSchema: ['Mo-Sa 07:00-20:00'],
-  rating: { value: 4.9, count: 34 },
+  rating: { value: 4.9, count: 43 },
   social: {
     instagram: 'https://www.instagram.com/tcdecks/',
     youtube: 'https://www.youtube.com/@TCDecksUtah',
