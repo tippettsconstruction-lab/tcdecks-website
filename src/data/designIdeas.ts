@@ -8,6 +8,7 @@ export type IdeaPage = {
   title: string;
   description: string;
   intro: string;
+  cover?: string;
   features: Feature[];
   note?: string;
 };
@@ -63,12 +64,13 @@ export const ideaPages: IdeaPage[] = [
   },
   {
     slug: 'roofs-shade',
+    cover: '/images/projects/covered-deck-roof/covered-deck-roof-framed',
     name: 'Roofs & Shade',
     title: 'Covered Deck, Pergola & Louvered Roof Ideas in Utah | TC Decks',
     description: 'Ways to shade your Utah deck: wood-framed roofs, open timber roofs, polycarbonate panels, louvered roof systems, pergolas, shade sails and aluminum patio covers.',
     intro: 'Utah sun can make an uncovered deck too hot to use on summer afternoons. A roof or shade structure turns it into an outdoor room. Here are the options we build, from full roofs to simple shade.',
     features: [
-      { name: 'Solid wood-framed roof', text: 'A shingled or metal roof that matches the house, with full protection from sun, rain and snow.' },
+      { name: 'Solid wood-framed roof', image: '/images/projects/covered-deck-roof/covered-deck-roof-framing-1', text: 'A shingled or metal roof that matches the house, with full protection from sun, rain and snow.' },
       { name: 'Open-soffit timber roof', text: 'Exposed beams and rafters for a warm, lodge-style look with full coverage.' },
       { name: 'Timber roof with polycarbonate panels', text: 'Clear or tinted panels let in light but block rain and UV, so the space stays bright.' },
       { name: 'Louvered roof systems', text: 'Motorized aluminum louvers open for sun or close for shade and rain at the push of a button.' },

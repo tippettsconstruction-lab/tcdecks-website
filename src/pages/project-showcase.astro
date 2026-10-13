@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Photo from '../components/Photo.astro';
+import { projects as galleries } from '../data/projects';
 import { breadcrumbSchema } from '../lib/schema';
 
 // Replace with real projects (photos, city, materials) as the owner sends them.
@@ -20,7 +21,17 @@ const projects = [
   schema={[breadcrumbSchema([{ name: 'Projects', path: '/project-showcase' }])]}
 >
   <PageHero eyebrow="Our work" title="Deck projects across Utah County" lead="A few recent builds. Ask us for addresses of finished decks near you that you can drive by." crumbs={[{ name: 'Projects', path: '/project-showcase' }]} />
-  <section class="section">
+  {galleries.map((g) => (
+    <section class="section">
+      <div class="wrap">
+        <h2>{g.title}</h2>
+        <p class="lead">{g.summary}</p>
+        <div class="grid grid-3">{g.photos.map((ph) => <Photo src={ph.src} alt={ph.alt} />)}</div>
+      </div>
+    </section>
+  ))}
+  <section class="section alt">
+    <div class="wrap"><h2>More projects</h2><p>More photos are on the way.</p></div>
     <div class="wrap grid grid-3">
       {projects.map((p) => (
         <figure class="proj">

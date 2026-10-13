@@ -1,8 +1,11 @@
 ---
-// Shows a real photo when `src` is given; otherwise a labeled placeholder until project photos arrive.
-interface Props { src?: string; alt: string; label?: string; }
-const { src, alt, label } = Astro.props;
+// `src` is an image base path without size suffix, e.g. '/images/projects/x/name'
+// (expects name-800.webp and name-1600.webp). Without `src`, shows a labeled placeholder.
+interface Props { src?: string; alt: string; label?: string; eager?: boolean; }
+const { src, alt, label, eager = false } = Astro.props;
 ---
-<div class="photo">
-  {src ? <img src={src} alt={alt} loading="lazy" decoding="async" /> : <span>{label ?? alt}</span>}
+<div class:list={['photo', { real: !!src }]}>
+  {src
+    ? <img src={`${src}-1600.webp`} srcset={`${src}-800.webp 800w, ${src}-1600.webp 1600w`} sizes="(min-width: 900px) 50vw, 100vw" alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    : <span>{label ?? alt}</span>}
 </div>

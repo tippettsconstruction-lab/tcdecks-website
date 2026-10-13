@@ -23,7 +23,7 @@ const steps = [
       <div class="grid grid-3">
         {ideaPages.map((p) => (
           <a class="idea card" href={`/design-ideas/${p.slug}`}>
-            <Photo alt={p.name} label={p.name} />
+            <Photo src={p.cover} alt={p.name} label={p.name} />
             <h2 class="h3">{p.name}</h2>
             <p>{p.intro.split('. ')[0]}.</p>
           </a>
