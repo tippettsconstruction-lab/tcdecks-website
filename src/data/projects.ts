@@ -19,6 +19,7 @@ const hl = p('highland-english-walnut-hideaway');
 const pecan = p('highland-legacy-pecan-covered');
 const draper = p('draper-brownstone-slate-gray');
 const sundance = p('sundance-cabin-english-walnut');
+const santaquin = p('santaquin-pecan-pergola');
 
 export const projects: Project[] = [
   {
@@ -55,9 +56,22 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'santaquin-pecan-pergola',
+    title: 'Santaquin: TimberTech Pecan with a natural wood pergola',
+    summary: 'A two-level deck in TimberTech Pecan in Santaquin. The upper level sits under a rough-sawn natural wood pergola with wood-framed hog wire railing, and a step leads down to a wide lower deck with a curved cutout around the window well.',
+    photos: [
+      santaquin('santaquin-timbertech-pecan-deck-cedar-pergola', 'Two-level TimberTech Pecan deck with a natural wood pergola in Santaquin, Utah'),
+      santaquin('natural-wood-pergola-hog-wire-railing-timbertech', 'Natural wood pergola over a TimberTech Pecan deck with hog wire railing'),
+      santaquin('cedar-pergola-composite-deck-wire-panel-railing', 'Rough-sawn wood pergola and wire panel railing on a composite deck'),
+      santaquin('two-level-timbertech-pecan-deck-pergola', 'Upper deck with pergola stepping down to a wide lower TimberTech Pecan deck'),
+      santaquin('pergola-shade-pecan-deck-window-well-cutout', 'Pergola shade on a Pecan deck with a cutout around the window well'),
+      santaquin('low-timbertech-deck-curved-window-well', 'Low TimberTech deck with a curved cutout around a basement window well'),
+    ],
+  },
+  {
     slug: 'sundance-cabin-english-walnut',
     title: 'Sundance: cabin sauna deck in TimberTech English Walnut',
-    summary: 'A mountain cabin deck in Sundance built to hold a barrel sauna, in TimberTech English Walnut. The standout is a built-in waterfall bench, where the boards curve down over the edge in one continuous piece. Black privacy screens close off the side, and recessed lights in the deck and bench glow against the snow.',
+    summary: 'A mountain cabin deck in Sundance built to hold a barrel sauna and a hot tub, in TimberTech English Walnut. The standout is a built-in waterfall bench, where the boards curve down over the edge in one continuous piece. Black privacy screens close off the side, and recessed lights in the deck and bench glow against the snow.',
     photos: [
       sundance('sundance-cabin-timbertech-english-walnut-hideaway-sauna-deck', 'TimberTech English Walnut sauna deck with black privacy screens and a waterfall bench at a Sundance, Utah cabin'),
       sundance('timbertech-waterfall-bench-english-walnut-lights', 'Built-in waterfall bench in TimberTech English Walnut with recessed lights'),
@@ -67,6 +81,10 @@ export const projects: Project[] = [
       sundance('barrel-sauna-deck-a-frame-cabin-winter', 'Barrel sauna on a new deck beside an A-frame cabin in winter'),
       sundance('mountain-cabin-sauna-deck-snowy-trees', 'Mountain cabin and sauna deck among snowy trees at dusk'),
       sundance('a-frame-cabin-lit-path-sauna-deck', 'Lit path from an A-frame cabin up to the sauna deck'),
+      sundance('sauna-and-hot-tub-deck-waterfall-bench-mountains', 'Sauna and hot tub deck with a waterfall bench on a wooded mountain lot'),
+      sundance('hillside-sauna-hot-tub-deck-stone-steps', 'Hillside sauna and hot tub deck above lit stone steps'),
+      sundance('hot-tub-deck-privacy-screen-mountain-cabin', 'Hot tub deck with privacy screens and a curved bench at a mountain cabin'),
+      sundance('black-privacy-screen-recessed-deck-lights-snow', 'Black privacy screen panels above recessed deck lights in the snow'),
     ],
   },
   {
