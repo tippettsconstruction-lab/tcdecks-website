@@ -145,6 +145,17 @@ export const cities: City[] = [
     ],
   },
   {
+    slug: 'cedar-hills',
+    name: 'Cedar Hills',
+    county: 'Utah County',
+    intro:
+      'Cedar Hills sits high on the bench below the mountains, so many backyards slope toward the valley and look out over Utah Lake.',
+    notes: [
+      'Sloped lots suit raised decks with stairs down to the yard and room for storage or a dry patio underneath.',
+      'Higher elevation means more snow, so framing and footings are sized for real bench winters.',
+    ],
+  },
+  {
     slug: 'orem',
     name: 'Orem',
     intro:
@@ -182,6 +193,50 @@ export const cities: City[] = [
     notes: [
       'Ranch-style homes often get a low deck off the back door, sometimes with a second level stepping down to the yard.',
       'A natural wood pergola takes the edge off the afternoon sun.',
+    ],
+  },
+  {
+    slug: 'spanish-fork',
+    name: 'Spanish Fork',
+    county: 'Utah County',
+    intro:
+      'Spanish Fork has grown fast, with new neighborhoods alongside established homes, so we build both brand-new composite decks and full tear-outs of aging wood decks.',
+    notes: [
+      'Newer homes with walk-out basements often need second-story decks with stairs to the yard.',
+      'Canyon winds make solid footings, railing choice and pergola anchoring important.',
+    ],
+  },
+  {
+    slug: 'springville',
+    name: 'Springville',
+    county: 'Utah County',
+    intro:
+      'Springville mixes older homes near downtown with newer builds on the east bench, and many backyards have big views of the mountains.',
+    notes: [
+      'Older wood decks are often ready for a full rebuild with composite decking and aluminum railing.',
+      'Covered decks and pergolas make west-facing yards comfortable on summer afternoons.',
+    ],
+  },
+  {
+    slug: 'mapleton',
+    name: 'Mapleton',
+    county: 'Utah County',
+    intro:
+      'Mapleton has larger lots right up against the mountains, with room for wide decks, outdoor kitchens and covered entertaining spaces.',
+    notes: [
+      'Big lots leave room for multi-level decks and freestanding pavilions.',
+      'Cable and glass-style railings keep the mountain views open.',
+    ],
+  },
+  {
+    slug: 'payson',
+    name: 'Payson',
+    county: 'Utah County',
+    intro:
+      'Payson homes range from established neighborhoods to new subdivisions on the edge of town, with roomy yards and plenty of afternoon sun.',
+    notes: [
+      'Low decks off the back door with a step-down second level are a common layout.',
+      'A pergola or covered section takes the edge off the summer sun.',
     ],
   },
   {
