@@ -15,6 +15,7 @@ const porch = p('back-porch-storage');
 const more = p('more-builds');
 const brown = p('saratoga-springs-brownstone-covered');
 const cocoa = p('saratoga-springs-dark-cocoa');
+const hl = p('highland-english-walnut-hideaway');
 
 export const projects: Project[] = [
   {
@@ -48,6 +49,23 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'highland-english-walnut-hideaway',
+    title: 'Highland: TimberTech Vintage English Walnut with HideAway privacy screens',
+    summary: 'A backyard retreat in Highland built around two hot tubs. The decking is TimberTech Vintage Collection in English Walnut, under a rough-sawn timber-frame pavilion with a metal roof. Black TimberTech HideAway privacy screens close in the sides, and recessed lights run along every step and the boulder edge, where the boards are scribed to fit the rocks.',
+    photos: [
+      hl('highland-timbertech-vintage-english-walnut-timber-pavilion', 'Timber-frame pavilion over a TimberTech Vintage English Walnut hot tub deck in Highland, Utah'),
+      hl('timber-frame-pavilion-hot-tub-deck-step-lights', 'Timber pavilion and two hot tub decks with lit stairs at dusk'),
+      hl('lit-composite-stairs-hideaway-privacy-screen', 'Lit English Walnut stairs leading up to a HideAway privacy screen'),
+      hl('timbertech-hideaway-privacy-screen-sunset', 'TimberTech HideAway privacy screen panels against a sunset'),
+      hl('timber-pavilion-metal-roof-hot-tub-deck', 'Rough-sawn timber pavilion with a metal roof over a hot tub deck with step lights'),
+      hl('black-hideaway-privacy-panels-timber-posts', 'Black HideAway privacy panels between rough-sawn timber posts with deck lights'),
+      hl('hideaway-privacy-screen-wall-deck-lights', 'Wall of HideAway privacy screens lit by recessed deck lights'),
+      hl('english-walnut-deck-boulders-mountain-view', 'English Walnut deck scribed around boulders with a mountain view'),
+      hl('recessed-deck-lights-along-boulders', 'Recessed deck lights along a boulder edge at dusk'),
+      hl('timber-truss-pavilion-mountain-view', 'Timber truss pavilion framing a view of the mountains'),
     ],
   },
   {
