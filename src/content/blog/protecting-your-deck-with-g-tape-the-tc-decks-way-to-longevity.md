@@ -44,7 +44,7 @@ Steel framing makes the most sense for:
 
 We're also on the Owens Corning OC Pro Build Team, so we can build with Glas-Powered [OC Lumber](/oc-lumber), a composite building material that is wood-free, rust-free and rot-proof. It's another way to take rot out of the picture on parts of the build where wood would normally go.
 
-Wood framing with G-Tape is still a solid, cost-effective choice for many decks, particularly low decks where the framing is easy to inspect and repair. We'll walk you through both.
+Wood framing with G-Tape is still a solid, cost-effective choice for many decks, particularly low decks where the framing is easy to inspect. We'll walk you through both.
 
 ## A complete system
 
@@ -57,8 +57,8 @@ Joist tape is one part of how we build decks for Utah weather. The rest of the s
 
 Read more in our [built-to-last guide](/design-ideas/built-to-last).
 
-## Adding G-Tape to an existing deck
+## G-Tape on a deck rebuild
 
-If you're replacing worn boards on a deck with a sound frame, that's the time to add joist tape. Once the old boards are off, we check the joists, replace any bad ones, tape the tops, and put new boards on. It's a common part of a [deck rebuild](/deck-repair).
+When we do a [full tear-out and rebuild](/deck-replacement), the old deck comes out completely and the new frame gets G-Tape (or steel framing) from day one.
 
 See our [composite deck options](/composite-decks), or [contact us](/contact) for a free estimate over the phone.

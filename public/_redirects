@@ -6,6 +6,7 @@
 /cookie-policy  /privacy  301
 /about-us  /about  301
 /owens-corning  /oc-lumber  301
+/deck-repair  /deck-replacement  301
 /blog/category/*  /blog  301
 
 # Old blog posts (not migrated) -> closest new page
@@ -25,10 +26,10 @@
 /blog/elevating-home-value-the-impact-of-quality-deck-construction-with-tc-decks  /how-much-does-a-deck-cost-in-utah  301
 /blog/building-decks-with-a-view-the-tc-decks-guide-for-utah-homeowners  /custom-deck-design-construction  301
 /blog/sustainable-decking-solutions-with-tc-decks-eco-friendly-choices-for-utah-homes  /custom-deck-design-construction  301
-/blog/experience-seamless-deck-repairs-with-tc-decks-in-utah  /deck-repair  301
+/blog/experience-seamless-deck-repairs-with-tc-decks-in-utah  /deck-replacement  301
 /blog/how-tc-decks-creates-custom-decks-perfect-for-utahs-climate  /custom-deck-design-construction  301
-/blog/revamping-your-outdoor-space-deck-renovation-tips-from-tc-decks  /deck-repair  301
-/blog/winter-deck-care-101-protect-your-investment-with-tc-decks  /deck-repair  301
+/blog/revamping-your-outdoor-space-deck-renovation-tips-from-tc-decks  /deck-replacement  301
+/blog/winter-deck-care-101-protect-your-investment-with-tc-decks  /deck-replacement  301
 /blog/why-tc-decks-is-your-best-choice-for-deck-building-in-utah  /about  301
 /blog/add-a-spark-to-your-utah-deck-with-tc-decks-lighting-solutions  /custom-deck-design-construction  301
 /blog/laying-a-strong-foundation-the-importance-of-proper-footings-in-decks-with-american-ground-screws  /custom-deck-design-construction  301
@@ -46,7 +47,7 @@
 /blog/unveiling-the-hidden-the-benefits-of-using-hidden-fastener-screw-systems-in-deck-construction  /custom-deck-design-construction  301
 /blog/seven-compelling-reasons-to-include-a-deck-in-your-saratoga-springs-utah-backyard  /custom-deck-design-construction  301
 /blog/enhancing-your-outdoor-spaces-a-look-at-the-variety-of-railings-offered-by-fortress-railing  /porches-railings  301
-/blog/building-safe-outdoor-spaces-how-tc-decks-adheres-to-nadra-standards-for-deck-safety  /deck-repair  301
+/blog/building-safe-outdoor-spaces-how-tc-decks-adheres-to-nadra-standards-for-deck-safety  /deck-replacement  301
 /blog/enhancing-your-deck-or-patio-exploring-shade-structures-for-outdoor-comfort  /pergolas  301
 /blog/envision-your-dream-outdoor-space-3d-renderings-of-deck-and-pergola-projects-by-tc-decks  /pergolas  301
 /blog/your-comprehensive-guide-to-choosing-the-best-composite-decking-in-utah-embracing-durability-beauty-and-sustainability-with-trex-timber-tech-and-deckorators-user-using-the-top-7-seo-keyword  /composite-decks  301
@@ -55,7 +56,7 @@
 /blog/a-relaxing-oasis-enhancing-your-hot-tub-experience-with-deck-surrounds-in-saratoga-springs-ut  /custom-deck-design-construction  301
 /blog/elevate-your-outdoor-living-with-composite-decking-exploring-trex-timber-tech-and-deckorators  /composite-decks  301
 /blog/extend-your-living-space-the-benefits-of-expanding-a-front-porch-in-saratoga-springs-ut  /porches-railings  301
-/blog/repairing-and-rebuilding-decks-after-utahs-snowy-winter-trust-the-experts-at-tc-decks  /deck-repair  301
+/blog/repairing-and-rebuilding-decks-after-utahs-snowy-winter-trust-the-experts-at-tc-decks  /deck-replacement  301
 /blog/unveiling-the-secret-to-building-better-decks-the-hidden-fastener-system  /custom-deck-design-construction  301
 /blog/crafting-unforgettable-outdoor-memories-celebrating-20-years-of-tc-decks  /about  301
 /blog/pergolas-trellises-enhancing-your-outdoor-space-with-tc-decks  /pergolas  301
@@ -63,18 +64,18 @@
 /blog/the-ultimate-guide-to-finding-a-reliable-and-skilled-deck-builder  /about  301
 /blog/unveiling-the-tc-decks-experience-what-to-expect-when-working-with-utahs-top-deck-contractor  /about  301
 /blog/experience-the-ultimate-in-composite-decking-azek-pvc-decking-at-tc-decks-in-utah  /composite-decks  301
-/blog/addressing-utahs-unprecedented-winter-snowfall-deck-repair-and-rebuild-by-tc-decks  /deck-repair  301
+/blog/addressing-utahs-unprecedented-winter-snowfall-deck-repair-and-rebuild-by-tc-decks  /deck-replacement  301
 /blog/adding-a-touch-of-elegance-to-your-deck-with-custom-railings-by-tc-decks  /porches-railings  301
 /blog/why-composite-decking-is-a-smart-choice-for-utah-homes-insights-from-tc-decks  /composite-decks  301
 /blog/enjoy-your-outdoors-transforming-your-yard-with-tc-decks  /custom-deck-design-construction  301
 /blog/exploring-the-art-of-deck-design-how-tc-decks-crafts-uniquely-beautiful-outdoor-spaces-in-utah  /custom-deck-design-construction  301
-/blog/heavy-snowfall-and-your-deck-the-time-is-now-for-deck-repair-in-utah  /deck-repair  301
+/blog/heavy-snowfall-and-your-deck-the-time-is-now-for-deck-repair-in-utah  /deck-replacement  301
 /blog/celebrating-over-two-decades-of-tc-decks-in-the-utah-deck-building-industry  /about  301
 /blog/how-custom-pergolas-by-tc-decks-can-transform-your-utah-outdoor-living-space  /pergolas  301
 /blog/composite-decking-a-long-lasting-choice-for-utah-homes-why-tc-decks-recommends-this-option  /composite-decks  301
 /blog/elevating-your-outdoor-living-the-impact-of-a-custom-deck-on-your-utah-home  /custom-deck-design-construction  301
 /blog/how-to-find-a-reputable-deck-builder-in-saratoga-springs-utah  /about  301
-/blog/how-to-maintain-your-hardwood-deck-tips-from-utahs-premier-deck-builders  /deck-repair  301
+/blog/how-to-maintain-your-hardwood-deck-tips-from-utahs-premier-deck-builders  /deck-replacement  301
 /blog/10-reasons-why-a-deck-is-the-perfect-addition-to-your-backyard  /custom-deck-design-construction  301
 /blog/should-you-enhance-your-airbnb-property-with-a-deck-addition  /custom-deck-design-construction  301
 /blog/five-stunning-deck-design-ideas-to-enhance-your-utah-backyard  /custom-deck-design-construction  301
@@ -88,7 +89,7 @@
 /blog/the-benefits-of-composite-decking-why-more-homeowners-are-making-the-switch-1729344701  /composite-decks  301
 /blog/from-simple-to-stunning-transforming-your-deck-with-custom-features  /custom-deck-design-construction  301
 /blog/eco-friendly-decking-options-sustainable-practices-from-tc-decks-utah  /custom-deck-design-construction  301
-/blog/deck-safety-tips-how-to-keep-your-outdoor-living-space-secure  /deck-repair  301
+/blog/deck-safety-tips-how-to-keep-your-outdoor-living-space-secure  /deck-replacement  301
 /blog/why-trellises-are-the-perfect-addition-to-your-utah-deck-insights-from-tc-decks  /pergolas  301
 /blog/why-choose-a-professional-deck-builder-the-advantages-of-hiring-tc-decks-utah  /about  301
 /blog/creating-an-outdoor-oasis-the-benefits-of-custom-deck-building  /custom-deck-design-construction  301
@@ -144,7 +145,7 @@
 /blog/provo-deck-remodel-using-pebble-grey-trex-decking-with-white-vinyl-railing  /service-areas/provo  301
 /blog/real-deck-construction-costs-in-saratoga-springs-utah  /how-much-does-a-deck-cost-in-utah  301
 /blog/which-deck-materials-last-longest-in-utahs-climate  /blog/wood-vs-composite-performance-in-utahs-weather  301
-/blog/when-to-schedule-your-annual-deck-safety-check  /deck-repair  301
+/blog/when-to-schedule-your-annual-deck-safety-check  /deck-replacement  301
 /blog/pergola-design-ideas-that-work-well-in-utah-summers  /pergolas  301
 /blog/planning-your-dream-outdoor-kitchen-in-saratoga-springs  /custom-deck-design-construction  301
 /blog/which-deck-material-last-longest-in-utahs-weather  /blog/wood-vs-composite-performance-in-utahs-weather  301
@@ -154,7 +155,7 @@
 /blog/the-best-deck-materials-for-hot-summers-in-alpine  /service-areas/alpine  301
 /blog/why-composite-decks-are-big-in-highland-ut  /service-areas/highland  301
 /blog/how-to-turn-your-lehi-backyard-into-a-family-hangout  /service-areas/lehi  301
-/blog/keep-your-saratoga-springs-deck-looking-great-year-round  /deck-repair  301
+/blog/keep-your-saratoga-springs-deck-looking-great-year-round  /deck-replacement  301
 /blog/deck-ideas-that-make-pleasant-grove-homes-stand-out  /service-areas/pleasant-grove  301
 /blog/how-to-build-a-patio-that-stays-cool-in-saratoga-springs  /custom-deck-design-construction  301
 /blog/how-to-prepare-for-a-new-deck-build-in-saratoga-springs  /custom-deck-design-construction  301

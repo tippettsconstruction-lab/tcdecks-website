@@ -1,0 +1,39 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'Do you repair decks or replace boards on an existing frame?', a: 'No. We build new decks and do full tear-out and rebuilds. Starting from new footings and framing is the only way we can stand behind the whole deck with our 7-year workmanship warranty.' },
+  { q: 'Can a heavy winter damage my deck?', a: 'Yes. Heavy snow loads, ice and freeze-thaw cycles can crack boards, loosen fasteners and damage framing and footings. If you see sagging, bouncy spots or loose railing, it is time to plan a replacement.' },
+  { q: 'What happens to my old deck?', a: 'We tear it out completely and haul it away, then build the new deck from new footings and framing up, to current code.' },
+];
+---
+<Service
+  slug="deck-replacement"
+  name="Deck Tear-Out & Rebuild"
+  title="Deck Replacement: Full Tear-Out & Rebuild in Utah | TC Decks"
+  description="Full deck tear-out and rebuild in Utah County and Salt Lake County. We remove your old deck and build a new composite deck with new footings, framing and railing, built to current code."
+  h1="Deck replacement: full tear-out and rebuild"
+  lead="Utah's snow and freeze-thaw cycles are hard on decks. When yours is worn out, we tear it out completely and build a new one from the footings up."
+  faqs={faqs}
+>
+  <h2>Signs it's time to replace your deck</h2>
+  <ul class="check-list">
+    <li>Soft, spongy or bouncy spots when you walk</li>
+    <li>Loose or wobbly railing or stairs</li>
+    <li>Rot at the posts, ledger board or joists</li>
+    <li>Cracked, warped or splintering boards</li>
+    <li>Rusty or popped fasteners and connectors</li>
+    <li>Gaps where the deck meets the house</li>
+  </ul>
+  <Photo src="/images/ideas/full-width-elevated-deck-mountains" alt="Full-width elevated composite deck rebuilt by TC Decks" />
+
+  <h2>What a rebuild includes</h2>
+  <ul class="check-list">
+    <li>Full demolition and haul-away of the old deck</li>
+    <li>New footings and framing, built to current code</li>
+    <li>New TimberTech decking, railing and stairs</li>
+    <li>Permit, inspections and our 7-year workmanship warranty</li>
+  </ul>
+  <p>A rebuild is also a chance to rethink the layout. See our <a href="/custom-deck-design-construction">custom deck design</a> process or <a href="/composite-decks">composite options</a>.</p>
+</Service>

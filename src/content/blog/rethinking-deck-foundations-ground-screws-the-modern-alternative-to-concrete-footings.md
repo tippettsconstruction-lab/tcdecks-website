@@ -46,8 +46,8 @@ Ground screw footings are used on permitted decks, but every city reviews footin
 
 Footings are the first step in building a deck that stays solid for decades. On top of them we often use Fortress Evolution steel framing, which won't rot or warp, and we protect wood framing with G-Tape joist tape. Then the deck boards go on with hidden fasteners or Cortex plugs. You can read more in our [built-to-last guide](/design-ideas/built-to-last).
 
-## Ground screws on decks we repair
+## Ground screws on a deck rebuild
 
-If your existing deck has footings that have sunk or heaved, ground screws are often a clean way to add new support without tearing out the yard. It depends on the condition of the rest of the frame, which we look at as part of a [deck repair or rebuild](/deck-repair).
+If your old deck's footings have sunk or heaved, a [full tear-out and rebuild](/deck-replacement) on new ground screw footings is a clean way to start fresh without digging up the yard.
 
 If you're planning a new deck on a slope, in clay, or in a tight backyard, ask us about ground screw footings. See how we approach a [custom deck build](/custom-deck-design-construction), or [contact us](/contact) for a free estimate over the phone.

@@ -44,9 +44,9 @@ export const services = [
     short: 'Front porches, stairs, and aluminum, cable or vinyl railing.',
   },
   {
-    slug: 'deck-repair',
-    name: 'Deck Repair & Rebuild',
-    short: 'Snow damage, rotted framing, and full tear-out and replace.',
+    slug: 'deck-replacement',
+    name: 'Deck Tear-Out & Rebuild',
+    short: 'Full tear-out of a worn deck and a new one built from the footings up.',
   },
 ];
 
@@ -151,7 +151,7 @@ export const cities: City[] = [
     intro:
       'Orem has many established homes with original wood decks, and replacing them with low-maintenance composite is one of our most common projects.',
     notes: [
-      'Tear-out and rebuild on existing footings when they pass inspection, which can save cost.',
+      'Full tear-out and rebuild with new footings, framing and composite decking.',
       'Front porch upgrades are popular on older Orem homes.',
     ],
   },

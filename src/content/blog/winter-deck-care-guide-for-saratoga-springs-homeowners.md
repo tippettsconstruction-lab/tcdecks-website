@@ -65,4 +65,4 @@ Once the snow is gone, give the deck a good rinse and a gentle scrub with soap a
 
 If you're planning a new deck, a few choices make winter easier: capped composite or PVC boards that don't absorb water, G-Tape on the joists or steel framing, a covered roof over the main seating area, and lit stairs. We design every deck for local snow loads and handle the permit and inspections.
 
-See our [deck repair and rebuild service](/deck-repair) or our [Saratoga Springs service area page](/service-areas/saratoga-springs), and [contact us](/contact) for a free estimate over the phone.
+See our [deck tear-out and rebuild service](/deck-replacement) or our [Saratoga Springs service area page](/service-areas/saratoga-springs), and [contact us](/contact) for a free estimate over the phone.

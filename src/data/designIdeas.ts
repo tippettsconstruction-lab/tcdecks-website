@@ -122,7 +122,6 @@ export const ideaPages: IdeaPage[] = [
       { name: 'Hot tubs & pools', image: '/images/ideas/hot-tub-surround-deck-lights', text: 'Reinforced framing and a flush or partially recessed surround make a hot tub look built in.' },
       { name: 'Cold plunge & sauna', text: 'We plan the structure, access and electrical so wellness features fit cleanly into the deck.' },
       { name: 'Outdoor kitchens & tiki bars', text: 'Grill stations, counters and bar seating designed into the layout.' },
-      { name: 'Furniture packages', text: 'Outdoor furniture sized for your layout so the space works from day one.' },
       { name: 'Waterfall benches', image: '/images/projects/sundance-cabin-english-walnut/timbertech-waterfall-bench-english-walnut-lights', text: 'Deck boards that curve down over the front of a built-in bench in one continuous piece, like this Sundance cabin sauna deck.' },
       { name: 'Privacy walls', image: '/images/ideas/privacy-wall-deck-lights', text: 'Slatted or solid walls screen neighbors and block wind.' },
       { name: 'Planter boxes', text: 'Built-in planters soften the deck and can double as a barrier.' },

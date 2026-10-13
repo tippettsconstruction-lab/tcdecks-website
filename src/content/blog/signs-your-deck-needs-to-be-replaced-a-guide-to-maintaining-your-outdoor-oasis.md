@@ -1,11 +1,11 @@
 ---
 title: "Signs Your Deck Needs to Be Replaced"
-description: "How to tell whether your Utah deck needs a repair or a full replacement: rot, loose ledgers, wobbly railings, sinking footings, failing boards and more."
+description: "How to tell whether your Utah deck needs a full replacement: rot, loose ledgers, wobbly railings, sinking footings, failing boards and more."
 date: 2026-09-18
 image: "/images/projects/more-builds/two-level-gray-deck-stairs-black-railing-1600.webp"
 ---
 
-Utah is hard on decks. Intense summer sun dries out wood, snow sits on the boards for weeks, and freeze-thaw cycles in spring and fall open up every crack. A lot of older decks in Utah County were built from pressure-treated lumber, and many have simply worn out. Some only need a repair. Others aren't safe anymore. Here's how to tell the difference.
+Utah is hard on decks. Intense summer sun dries out wood, snow sits on the boards for weeks, and freeze-thaw cycles in spring and fall open up every crack. A lot of older decks in Utah County were built from pressure-treated lumber, and many have simply worn out, and some aren't safe anymore. Here's how to tell when it's time for a new one.
 
 ## Do a walk-around once a year
 
@@ -37,11 +37,9 @@ Spring, after the snow melts, is a good time to look your deck over. Bring a fla
 
 **Openings that are too big.** Older railings may have baluster spacing that doesn't meet today's codes, which limit openings so small children can't slip through.
 
-## Repair or replace?
+## Why we only do full rebuilds
 
-If the problems are limited to a few boards, a loose railing post or a single stair, a repair often makes sense. If the framing has widespread rot, the ledger is failing, or several footings have moved, replacing the deck is usually the safer and smarter choice. Patching a worn-out frame tends to lead to another repair the next year.
-
-There's also a middle path. If the framing is solid, sometimes the old boards can come off and new composite boards go on, with G-Tape joist tape added to protect the frame. We'll tell you honestly which option fits your deck.
+Patching a worn-out deck tends to lead to another fix the next year, and new boards on an old frame are only as good as the frame underneath. That's why TC Decks only builds new decks and does full tear-out and rebuilds. Starting from new footings and framing means we can stand behind the whole deck.
 
 ## If you replace, build it to last
 
@@ -59,4 +57,4 @@ Our builds carry a 7-year workmanship warranty, and because we're a certified Pr
 
 A rotted ledger or wobbly railing on a raised deck isn't something to put off until next summer. If you see those signs, stay off the area and have it looked at.
 
-Learn more about our [deck repair and rebuild service](/deck-repair), or [contact us](/contact) for a free estimate over the phone.
+Learn more about our [deck tear-out and rebuild service](/deck-replacement), or [contact us](/contact) for a free estimate over the phone.
