@@ -24,6 +24,8 @@ const pg = p('pleasant-grove-trex-slide');
 const lindon = p('lindon-trex-pebble-grey');
 const sandy = p('sandy-weathered-teak');
 const pgf = p('pleasant-grove-foothills-french-white-oak');
+const em = p('eagle-mountain-second-story');
+const ems = p('eagle-mountain-deck-slide');
 
 export const projects: Project[] = [
   {
@@ -36,6 +38,30 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'eagle-mountain-second-story',
+    title: 'Eagle Mountain: second-story deck with valley views',
+    summary: 'A second-story composite deck across the back of an Eagle Mountain home, with black aluminum railing, a long side stair and room for a full dining set looking out over the valley and mountains. The patio underneath stays shaded.',
+    photos: [
+      em('eagle-mountain-second-story-composite-deck', 'Second-story composite deck with black railing in Eagle Mountain, Utah'),
+      em('deck-dining-mountain-view-eagle-mountain', 'Dining set on a composite deck with a mountain view in Eagle Mountain'),
+      em('second-story-deck-patio-below', 'Second-story deck with a shaded patio below'),
+      em('deck-black-aluminum-railing-valley-view', 'Black aluminum deck railing overlooking the valley'),
+      em('composite-deck-dining-area-railing', 'Composite deck dining area along black railing'),
+      em('deck-stairs-black-railing-side', 'Side stairs with black railing down from a second-story deck'),
+    ],
+  },
+  {
+    slug: 'eagle-mountain-deck-slide',
+    title: 'Eagle Mountain: family deck with a slide',
+    summary: 'A raised composite deck with black aluminum railing, stairs to the yard and a slide straight down to the lawn for the kids.',
+    photos: [
+      ems('eagle-mountain-deck-with-slide', 'Raised composite deck with stairs and a green slide in Eagle Mountain, Utah'),
+      ems('deck-stairs-green-slide', 'Deck stairs and a green slide down to the lawn'),
+      ems('raised-composite-deck-black-railing', 'Raised composite deck with black aluminum railing'),
+      ems('composite-deck-black-railing-corner', 'Corner of a composite deck with black railing'),
     ],
   },
   {
