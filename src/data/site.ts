@@ -8,7 +8,7 @@ export const business = {
   phoneHref: 'tel:+18014728939',
   email: 'tippettsconstruction@gmail.com',
   license: '5899795-5501',
-  url: 'https://tcdecksutah.com',
+  url: 'https://www.tcdecksutah.com',
   city: 'Saratoga Springs',
   region: 'UT',
   hours: 'Mon–Sat, 7am–8pm',
