@@ -10,6 +10,10 @@ const slugs = readFileSync('scripts/old-blog-slugs.txt', 'utf8').split('\n').fil
 const rules = [
   [/cost|saving-money|value/, '/how-much-does-a-deck-cost-in-utah'],
   [/st-george/, '/service-areas'],
+  [/pergola-design|pergolas-design/, '/blog/pergola-design-ideas-for-utah-decks'],
+  [/hot-tub|sauna|plunge/, '/blog/hot-tub-cold-plunge-and-sauna-decks'],
+  [/balcon/, '/blog/balcony-and-second-story-deck-railing-ideas'],
+  [/steel-fram|metal-fram/, '/blog/steel-deck-framing-fortress-evolution'],
   [/drink-rail/, '/design-ideas/railings'],
   [/core-tex|cortex|fastener/, '/design-ideas/design-details'],
   [/ground-screw|footing|foundation/, '/blog/rethinking-deck-foundations-ground-screws-the-modern-alternative-to-concrete-footings'],
