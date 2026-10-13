@@ -13,6 +13,7 @@ const slide = p('deck-with-slide');
 const diag = p('diagonal-gray-deck');
 const porch = p('back-porch-storage');
 const more = p('more-builds');
+const brown = p('saratoga-springs-brownstone-covered');
 
 export const projects: Project[] = [
   {
@@ -46,6 +47,14 @@ export const projects: Project[] = [
       poh('tiger-wood-deck-stairs-black-railing', 'Long composite stair run with black metal railing down to the yard'),
       poh('covered-patio-under-deck-stairs', 'Covered patio under a second-story deck with stairs to the yard'),
       poh('timbertech-tiger-wood-boards-closeup', 'Close-up of TimberTech Tiger Wood deck boards and black railing'),
+    ],
+  },
+  {
+    slug: 'saratoga-springs-brownstone-covered',
+    title: 'Saratoga Springs: covered deck in TimberTech Brownstone',
+    summary: 'A raised deck in TimberTech Brownstone under a new shingled roof tied into the house, with white wrapped columns, under-rail lighting and stairs down to the patio. Utah Lake sits just beyond the rooftops.',
+    photos: [
+      brown('saratoga-springs-covered-deck-timbertech-brownstone-lighting', 'Drone view at dusk of a covered TimberTech Brownstone deck with white columns and under-rail lights in Saratoga Springs, Utah'),
     ],
   },
   {
