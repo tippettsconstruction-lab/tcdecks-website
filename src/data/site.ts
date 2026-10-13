@@ -115,6 +115,17 @@ export const cities: City[] = [
     ],
   },
   {
+    slug: 'lindon',
+    name: 'Lindon',
+    county: 'Utah County',
+    intro:
+      'Lindon sits on the bench between Pleasant Grove and Orem, and many backyards here look straight out over Utah Valley.',
+    notes: [
+      'Larger Lindon lots have room for wide, low decks with angled stairs and built-in lighting.',
+      'Composite decking and railing hold up to the sun and the winters without staining.',
+    ],
+  },
+  {
     slug: 'highland',
     name: 'Highland',
     intro:

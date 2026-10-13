@@ -21,6 +21,7 @@ const draper = p('draper-brownstone-slate-gray');
 const sundance = p('sundance-cabin-english-walnut');
 const santaquin = p('santaquin-pecan-pergola');
 const pg = p('pleasant-grove-trex-slide');
+const lindon = p('lindon-trex-pebble-grey');
 
 export const projects: Project[] = [
   {
@@ -32,6 +33,17 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'lindon-trex-pebble-grey',
+    title: 'Lindon: Trex Pebble Grey deck with white accents and lighting',
+    summary: 'A low, wide Trex deck in Pebble Grey with white fascia and risers, Trex composite railing with white posts and black balusters, and warm lights on the stairs and under the rail. The angled stairs step down to the patio, and the deck looks out over Utah Valley.',
+    photos: [
+      lindon('lindon-trex-pebble-grey-deck-stair-lights', 'Trex Pebble Grey deck with white fascia and lit stairs in Lindon, Utah'),
+      lindon('trex-pebble-grey-deck-valley-view-dusk', 'Trex Pebble Grey deck at dusk looking out over Utah Valley'),
+      lindon('trex-composite-railing-post-lights', 'Trex composite railing with white posts, black balusters and under-rail lights'),
+      lindon('trex-pebble-grey-deck-white-railing-posts', 'Trex deck with white railing posts wrapping the back of a Lindon home'),
     ],
   },
   {
