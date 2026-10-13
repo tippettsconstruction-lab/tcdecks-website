@@ -35,6 +35,7 @@ const rules = [
 
 const lines = [
   '# Old site pages',
+  '/sitemap.xml  /sitemap-0.xml  200',
   '/home/highland  /service-areas/highland  301',
   '/home/orem  /service-areas/orem  301',
   '/photo-gallery  /project-showcase  301',
