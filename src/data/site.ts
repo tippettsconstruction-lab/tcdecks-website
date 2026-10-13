@@ -31,7 +31,7 @@ export const services = [
   {
     slug: 'composite-decks',
     name: 'Composite Decks',
-    short: 'Trex, TimberTech and Deckorators, installed to manufacturer spec so the warranty holds.',
+    short: 'TimberTech PVC and composite, installed to manufacturer spec so the warranty holds.',
   },
   {
     slug: 'pergolas',
@@ -181,4 +181,4 @@ export const reviews = [
   },
 ];
 
-export const brands = ['Trex', 'TimberTech', 'Deckorators', 'Fiberon', 'Fortress Railing'];
+export const brands = ['TimberTech (our top pick)', 'Fortress railing & steel framing', 'Trex', 'Deckorators', 'Fiberon'];

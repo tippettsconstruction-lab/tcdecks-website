@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Photo from '../../components/Photo.astro';
+import { ideaPages, type IdeaPage } from '../../data/designIdeas';
+import { business } from '../../data/site';
+import { breadcrumbSchema } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return ideaPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props as { page: IdeaPage };
+const path = `/design-ideas/${page.slug}`;
+const others = ideaPages.filter((p) => p.slug !== page.slug);
+---
+<Base title={page.title} description={page.description} schema={[breadcrumbSchema([{ name: 'Design Ideas', path: '/design-ideas' }, { name: page.name, path }])]}>
+  <PageHero eyebrow="Design ideas" title={page.name} lead={page.intro} crumbs={[{ name: 'Design Ideas', path: '/design-ideas' }, { name: page.name, path }]} />
+  <section class="section">
+    <div class="wrap features">
+      {page.features.map((f) => (
+        <article class="feature">
+          <Photo src={f.image} alt={f.name} label={f.name} />
+          <div>
+            <h2 class="h3">{f.name}</h2>
+            <p>{f.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    {page.note && <div class="wrap"><p class="note">{page.note}</p></div>}
+    <div class="wrap btn-row">
+      <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+      <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap">
+      <h2>More design ideas</h2>
+      <ul class="more-list">{others.map((p) => <li><a href={`/design-ideas/${p.slug}`}>{p.name}</a></li>)}</ul>
+    </div>
+  </section>
+</Base>
+<style>
+  .features { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .feature h2 { margin-top: 14px; font-size: 1.25rem; }
+  .note { margin-top: 28px; font-weight: 600; }
+  .more-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .more-list a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 600; }
+  .more-list a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
