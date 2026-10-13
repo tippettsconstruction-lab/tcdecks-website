@@ -7,17 +7,17 @@ import { business } from '../data/site';
 import { breadcrumbSchema, faqSchema } from '../lib/schema';
 
 const faqs = [
-  { q: 'What is OC Lumber?', a: 'OC Lumber is a composite building material. It contains no wood, so it cannot rot, and no steel, so it cannot rust.' },
+  { q: 'What is OC Lumber?', a: 'OC Lumber is Owens Corning’s Glas-Powered Lumber, a composite building material. It contains no wood, so it cannot rot, and no steel, so it cannot rust.' },
   { q: 'What is the OC Pro Build Team?', a: 'It is the group of contractors trained to build with OC Lumber. TC Decks is part of the OC Pro Build Team, so we can use it on your project and install it the right way.' },
   { q: 'Is OC Lumber right for my deck?', a: 'It depends on your design and site. Call us for a free phone estimate and we will tell you where OC Lumber makes sense and how it compares with wood or steel for your project.' },
 ];
 ---
 <Base
-  title="OC Lumber Pro Build Team | Wood-Free, Rot-Proof Deck Building | TC Decks Utah"
-  description="TC Decks is part of the OC Pro Build Team. OC Lumber is a wood-free, rust-free, rot-proof composite building material for decks in Utah County and Salt Lake County."
+  title="Owens Corning OC Lumber Pro Build Team | Rot-Proof Decks | TC Decks Utah"
+  description="TC Decks is part of the OC Pro Build Team. Owens Corning’s Glas-Powered OC Lumber is a wood-free, rust-free, rot-proof composite building material for decks in Utah County and Salt Lake County."
   schema={[breadcrumbSchema([{ name: 'OC Lumber', path: '/oc-lumber' }]), faqSchema(faqs)]}
 >
-  <PageHero eyebrow="OC Pro Build Team" title="OC Lumber: wood-free, rust-free, rot-proof" lead="TC Decks is part of the OC Pro Build Team, so we can build with OC Lumber, a composite building material with no wood to rot and no steel to rust." crumbs={[{ name: 'OC Lumber', path: '/oc-lumber' }]} />
+  <PageHero eyebrow="Owens Corning OC Pro Build Team" title="OC Lumber: wood-free, rust-free, rot-proof" lead="TC Decks is part of the OC Pro Build Team, so we can build with OC Lumber, Owens Corning’s Glas-Powered Lumber. It is a composite building material with no wood to rot and no steel to rust." crumbs={[{ name: 'OC Lumber', path: '/oc-lumber' }]} />
   <section class="section">
     <div class="wrap grid grid-2">
       <div class="prose">
@@ -29,7 +29,7 @@ const faqs = [
         </ul>
         <h2>Built by the OC Pro Build Team</h2>
         <p>As part of the OC Pro Build Team, we know how OC Lumber is meant to be installed. You get our 7-year workmanship warranty on top of the manufacturer's coverage.</p>
-        <p>See our <a href="/certified-pro-installer">other Pro Installer certifications</a> or browse <a href="/project-showcase">recent projects</a>.</p>
+        <p>Learn more about <a href="https://www.owenscorning.com/en-us/lumber/glas-powered-lumber" target="_blank" rel="noopener">Glas-Powered Lumber from Owens Corning</a>, see our <a href="/certified-pro-installer">other Pro Installer certifications</a> or browse <a href="/project-showcase">recent projects</a>.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="/contact">Get a free estimate</a>
           <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
