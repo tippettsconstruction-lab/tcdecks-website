@@ -31,6 +31,7 @@ const af = p('american-fork-second-story-lit-stairs');
 const lam = p('lehi-american-fork-decks');
 const sj = p('south-jordan-fiber-optic-privacy');
 const provo = p('provo-decks');
+const sandy2 = p('sandy-white-railing-second-story');
 
 export const projects: Project[] = [
   {
@@ -43,6 +44,16 @@ export const projects: Project[] = [
       pg('two-tone-trex-deck-sunset-dining', 'Two-tone Trex deck with a dining table and white and black railing at sunset'),
       pg('trex-deck-lounge-area-hanging-chair', 'Trex deck lounge area with a hanging chair along the house'),
       pg('trex-deck-boards-white-posts-black-balusters', 'Close-up of Trex deck boards with a contrasting border and white railing posts'),
+    ],
+  },
+  {
+    slug: 'sandy-white-railing-second-story',
+    title: 'Sandy: second-story deck with white railing over a covered patio',
+    summary: 'A second-story composite deck with white posts, black balusters and a long stair down to the yard. White wrapped posts carry the deck and create a covered patio underneath. Also from Sandy: a composite stair with black cable railing.',
+    photos: [
+      sandy2('sandy-second-story-deck-white-railing-stairs', 'Second-story composite deck with white railing and stairs in Sandy, Utah'),
+      sandy2('second-story-deck-covered-patio-white-posts', 'Second-story deck over a covered patio with white wrapped posts'),
+      sandy2('composite-deck-stairs-black-cable-railing', 'Composite deck stairs with black cable railing in Sandy'),
     ],
   },
   {
