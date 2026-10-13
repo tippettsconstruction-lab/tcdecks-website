@@ -44,6 +44,7 @@ const lines = [
   '/blog/pagination/*  /blog  301',
   '/blog/author/*  /blog  301',
   '/popup-form  /contact  301',
+  '/blog/discover-the-top-deck-builder-in-st-george-utah  /service-areas  301',
   '',
   '# Old blog posts (not migrated) -> closest new page',
 ];
