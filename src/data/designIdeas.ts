@@ -117,6 +117,7 @@ export const ideaPages: IdeaPage[] = [
     intro: 'These are the extras that make a deck yours. Most can be added during the build or planned in for later.',
     features: [
       { name: 'Under-deck drainage (Trex RainEscape)', image: '/images/ideas/under-deck-drainage-patio', text: 'A drainage system under a second-story deck keeps the space below dry, so it can become a patio or storage area.' },
+      { name: 'Finished soffits', image: '/images/ideas/finished-under-deck-ceiling', text: 'A finished ceiling under the deck (like TimberTech DrySpace) hides framing and creates a covered patio below.' },
       { name: 'Under-deck storage', image: '/images/ideas/under-deck-storage-doors', text: 'Enclose the space under a raised deck for bikes, tools and seasonal gear.' },
       { name: 'Hot tubs & pools', image: '/images/ideas/hot-tub-surround-deck-lights', text: 'Reinforced framing and a flush or partially recessed surround make a hot tub look built in.' },
       { name: 'Cold plunge & sauna', text: 'We plan the structure, access and electrical so wellness features fit cleanly into the deck.' },
@@ -126,7 +127,6 @@ export const ideaPages: IdeaPage[] = [
       { name: 'Privacy walls', image: '/images/ideas/privacy-wall-deck-lights', text: 'Slatted or solid walls screen neighbors and block wind.' },
       { name: 'Planter boxes', text: 'Built-in planters soften the deck and can double as a barrier.' },
       { name: 'Post & beam wrap (Diamond Kote)', image: '/images/ideas/wrapped-deck-columns', text: 'Pre-finished wraps give posts and beams a clean, low-maintenance finish.' },
-      { name: 'Finished soffits', image: '/images/ideas/finished-under-deck-ceiling', text: 'A finished ceiling under the deck (like TimberTech DrySpace) hides framing and creates a covered patio below.' },
       { name: 'Slides & play features', image: '/images/ideas/deck-with-playground-slide', text: 'A slide off the deck or room for a play set turns the backyard into the kids’ favorite spot.' },
       { name: 'Fire pits', text: 'A fire feature with proper clearances for cool Utah evenings.' },
     ],
