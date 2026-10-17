@@ -1,0 +1,404 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { business } from '../data/site';
+import { breadcrumbSchema } from '../lib/schema';
+import { deckColors, railColors, railings, extrasList } from '../lib/deckPlanner';
+
+const timbertechLines = [
+  { tier: 'Good', lines: ['Prime+', 'Premier', 'Terrain', 'Terrain+'] },
+  { tier: 'Better', lines: ['Harvest', 'Harvest+', 'Landmark', 'Reserve'] },
+  { tier: 'Best', lines: ['Legacy', 'Vintage'] },
+];
+---
+<Base
+  title="Deck Planner: Sketch Your Deck for a Free Estimate | TC Decks"
+  description="Lay out your new deck online: size, shape, height, stairs, TimberTech decking color, railing and extras. Send the sketch to TC Decks for a free estimate by phone."
+  schema={[breadcrumbSchema([{ name: 'Deck Planner', path: '/deck-planner' }])]}
+>
+  <PageHero
+    eyebrow="Deck Planner"
+    title="Sketch your deck"
+    lead="Lay out a rough idea of your new deck, pick materials and extras, and send it to us. It doesn't need to be exact. We'll call you to talk it through and give you a free estimate."
+    crumbs={[{ name: 'Deck Planner', path: '/deck-planner' }]}
+  />
+
+  <section class="section planner-section">
+    <div class="wrap planner">
+      <div class="preview" aria-label="Deck preview">
+        <div class="preview-card">
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" class="tab" data-view="3d" aria-selected="true">3D view</button>
+            <button type="button" role="tab" class="tab" data-view="top" aria-selected="false">Top view</button>
+          </div>
+          <div class="canvas-wrap">
+            <canvas id="dp-canvas" role="img" aria-label="Drawing of your deck design"></canvas>
+          </div>
+          <div class="stats">
+            <div><strong id="dp-area">280</strong><span>sq ft</span></div>
+            <div><strong id="dp-size">20 x 14</strong><span>feet</span></div>
+            <div><strong id="dp-steps">5</strong><span>steps down</span></div>
+          </div>
+        </div>
+        <div class="preview-actions">
+          <a class="btn btn-primary" href="#send">Send my design</a>
+          <button type="button" class="btn btn-ghost" id="dp-save">Save image</button>
+        </div>
+      </div>
+
+      <form class="controls" id="dp-controls" onsubmit="return false">
+        <fieldset class="step card">
+          <legend><span class="num">1</span> Shape and size</legend>
+          <div class="pills">
+            <label><input type="radio" name="shape" value="rect" checked /><span>Rectangle</span></label>
+            <label><input type="radio" name="shape" value="l" /><span>L-shape</span></label>
+          </div>
+          <div class="nums">
+            <label class="numfield">Width along the house<span class="stepper"><button type="button" data-step="-1" aria-label="Less">−</button><input type="number" name="width" value="20" min="4" max="80" step="1" inputmode="decimal" /><button type="button" data-step="1" aria-label="More">+</button><em>ft</em></span></label>
+            <label class="numfield">Depth out from the house<span class="stepper"><button type="button" data-step="-1" aria-label="Less">−</button><input type="number" name="depth" value="14" min="4" max="50" step="1" inputmode="decimal" /><button type="button" data-step="1" aria-label="More">+</button><em>ft</em></span></label>
+          </div>
+          <div class="l-only" hidden>
+            <p class="hint">The L extends out from one corner of the main deck.</p>
+            <div class="nums">
+              <label class="numfield">Extension width<span class="stepper"><button type="button" data-step="-1" aria-label="Less">−</button><input type="number" name="lWidth" value="10" min="4" max="80" step="1" inputmode="decimal" /><button type="button" data-step="1" aria-label="More">+</button><em>ft</em></span></label>
+              <label class="numfield">Extension depth<span class="stepper"><button type="button" data-step="-1" aria-label="Less">−</button><input type="number" name="lDepth" value="8" min="4" max="50" step="1" inputmode="decimal" /><button type="button" data-step="1" aria-label="More">+</button><em>ft</em></span></label>
+            </div>
+            <div class="pills">
+              <label><input type="radio" name="lSide" value="left" /><span>Extension on left</span></label>
+              <label><input type="radio" name="lSide" value="right" checked /><span>Extension on right</span></label>
+            </div>
+          </div>
+          <p class="label">Attached to the house?</p>
+          <div class="pills">
+            <label><input type="radio" name="attached" value="yes" checked /><span>Attached</span></label>
+            <label><input type="radio" name="attached" value="no" /><span>Freestanding</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="step card">
+          <legend><span class="num">2</span> Height and stairs</legend>
+          <label class="numfield">Height off the ground<span class="stepper"><button type="button" data-step="-0.5" aria-label="Lower">−</button><input type="number" name="height" value="3" min="0" max="25" step="0.5" inputmode="decimal" /><button type="button" data-step="0.5" aria-label="Higher">+</button><em>ft</em></span></label>
+          <p class="hint" id="dp-height-hint">A walk-out from a main floor is usually 2 to 4 ft. A second-story deck is often 9 to 12 ft.</p>
+          <p class="label">Stairs on which side?</p>
+          <div class="pills">
+            <label><input type="checkbox" name="stairs" value="front" checked /><span>Front</span></label>
+            <label><input type="checkbox" name="stairs" value="left" /><span>Left</span></label>
+            <label><input type="checkbox" name="stairs" value="right" /><span>Right</span></label>
+          </div>
+          <div class="pills">
+            <label><input type="radio" name="stairStyle" value="standard" checked /><span>Standard stairs</span></label>
+            <label><input type="radio" name="stairStyle" value="cascading" /><span>Wide cascading steps</span></label>
+          </div>
+          <label class="numfield stair-width">Stair width<span class="stepper"><button type="button" data-step="-1" aria-label="Narrower">−</button><input type="number" name="stairWidth" value="4" min="3" max="20" step="1" inputmode="decimal" /><button type="button" data-step="1" aria-label="Wider">+</button><em>ft</em></span></label>
+        </fieldset>
+
+        <fieldset class="step card">
+          <legend><span class="num">3</span> Decking and framing</legend>
+          <p class="label">Decking brand</p>
+          <div class="pills">
+            <label><input type="radio" name="brand" value="TimberTech" checked /><span>TimberTech <small>our pick</small></span></label>
+            <label><input type="radio" name="brand" value="Trex" /><span>Trex</span></label>
+            <label><input type="radio" name="brand" value="Deckorators" /><span>Deckorators</span></label>
+            <label><input type="radio" name="brand" value="Not sure" /><span>Not sure</span></label>
+          </div>
+          <label class="field-select tt-only">TimberTech collection
+            <select name="line">
+              <option>Help me choose</option>
+              {timbertechLines.map((g) => (
+                <optgroup label={g.tier}>{g.lines.map((l) => <option>{l}</option>)}</optgroup>
+              ))}
+            </select>
+          </label>
+          <p class="label">Board color</p>
+          <div class="swatches">
+            {Object.entries(deckColors).map(([id, c], i) => (
+              <label title={c.label}><input type="radio" name="color" value={id} checked={id === 'medium-gray'} /><span style={`--c:${c.hex}`}></span><em>{c.label}</em></label>
+            ))}
+          </div>
+          <label class="field-select">Color name, if you have one in mind <span class="opt">(optional)</span>
+            <input type="text" name="colorName" placeholder="e.g. Coastline, Dark Hickory" maxlength="60" />
+          </label>
+          <label class="check"><input type="checkbox" name="frame" checked /> Picture-frame border</label>
+          <div class="frame-only">
+            <p class="label">Border color <span class="opt">(pick a different color for a two-tone look)</span></p>
+            <div class="swatches">
+              {Object.entries(deckColors).map(([id, c]) => (
+                <label title={c.label}><input type="radio" name="frameColor" value={id} checked={id === 'charcoal'} /><span style={`--c:${c.hex}`}></span><em>{c.label}</em></label>
+              ))}
+            </div>
+          </div>
+          <p class="label">Board direction</p>
+          <div class="pills">
+            <label><input type="radio" name="direction" value="parallel" checked /><span>Parallel to house</span></label>
+            <label><input type="radio" name="direction" value="perpendicular" /><span>Out from house</span></label>
+            <label><input type="radio" name="direction" value="diagonal" /><span>Diagonal</span></label>
+          </div>
+          <p class="label">Framing</p>
+          <div class="pills">
+            <label><input type="radio" name="framing" value="Fortress Evolution steel" checked /><span>Steel <small>our pick</small></span></label>
+            <label><input type="radio" name="framing" value="OC Lumber (Glas-Powered)" /><span>OC Lumber</span></label>
+            <label><input type="radio" name="framing" value="Wood" /><span>Wood</span></label>
+            <label><input type="radio" name="framing" value="Not sure" /><span>Not sure</span></label>
+          </div>
+          <p class="hint">Not sure? See <a href="/composite-decks">composite decking</a> and <a href="/oc-lumber">OC Lumber</a>.</p>
+        </fieldset>
+
+        <fieldset class="step card">
+          <legend><span class="num">4</span> Railing</legend>
+          <div class="pills">
+            {Object.entries(railings).map(([id, label]) => (
+              <label><input type="radio" name="railing" value={id} checked={id === 'aluminum'} /><span>{label}</span></label>
+            ))}
+          </div>
+          <div class="rail-color">
+            <p class="label">Railing color</p>
+            <div class="swatches">
+              {Object.entries(railColors).map(([id, c]) => (
+                <label title={c.label}><input type="radio" name="railColor" value={id} checked={id === 'black'} /><span style={`--c:${c.hex}`}></span><em>{c.label}</em></label>
+              ))}
+            </div>
+          </div>
+          <p class="hint">Railing shows on the drawing once the deck is about 18 inches or more off the ground.</p>
+        </fieldset>
+
+        <fieldset class="step card">
+          <legend><span class="num">5</span> Extras</legend>
+          <div class="checks">
+            {extrasList.map((e) => (
+              <label class="check"><input type="checkbox" name="extras" value={e.id} /> {e.label}</label>
+            ))}
+          </div>
+          <p class="hint">Ideas for each of these are on our <a href="/design-ideas">Design Ideas</a> page.</p>
+        </fieldset>
+        <a class="btn btn-primary next" href="#send">Next: send my design</a>
+      </form>
+    </div>
+  </section>
+
+  <section class="section alt" id="send">
+    <div class="wrap grid grid-2">
+      <div>
+        <h2>Send your design</h2>
+        <p>Your drawing and selections are attached to the request automatically. Levi will call you to talk through the project and give you a free estimate over the phone.</p>
+        <ul class="check-list">
+          <li>Rough is fine. We confirm every measurement before building.</li>
+          <li>Add photos of your yard or house so we can see the space.</li>
+          <li>Booked projects get a 3D rendering before we build.</li>
+          <li>7-year workmanship warranty on every deck.</li>
+        </ul>
+        <p>Prefer to talk? Call <a href={business.phoneHref}>{business.phone}</a>.</p>
+      </div>
+      <QuoteForm planner />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .planner-section { padding-top: 32px; }
+  .planner { display: grid; gap: 20px; align-items: start; }
+  @media (min-width: 960px) { .planner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; } }
+
+  .preview { position: sticky; top: 72px; z-index: 5; }
+  @media (min-width: 960px) { .preview { top: 90px; } }
+  .preview-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .tabs { display: flex; border-bottom: 1px solid var(--line); background: var(--dark); }
+  .tab { flex: 1; font: inherit; font-weight: 700; padding: 10px; border: 0; background: transparent; color: var(--silver); cursor: pointer; border-bottom: 3px solid transparent; }
+  .tab[aria-selected='true'] { color: #fff; border-bottom-color: var(--accent); }
+  .canvas-wrap { height: 34vh; min-height: 220px; }
+  @media (min-width: 960px) { .canvas-wrap { height: 460px; } }
+  canvas { display: block; width: 100%; height: 100%; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); text-align: center; }
+  .stats div { padding: 8px 4px; line-height: 1.2; }
+  .stats div + div { border-left: 1px solid var(--line); }
+  .stats strong { display: block; font-size: 1.15rem; }
+  .stats span { font-size: 0.78rem; color: var(--ink-soft); }
+  .preview-actions { display: none; gap: 12px; margin-top: 12px; }
+  @media (min-width: 960px) { .preview-actions { display: flex; } }
+  .preview-actions .btn { padding: 0.65rem 1.2rem; }
+  .btn-ghost { background: #fff; cursor: pointer; font: inherit; font-weight: 700; }
+
+  .next { text-align: center; }
+  @media (min-width: 960px) { .next { display: none; } }
+  .controls [hidden] { display: none !important; }
+  .controls { display: grid; gap: 16px; min-width: 0; }
+  .step { margin: 0; min-width: 0; padding: 18px 18px 8px; }
+  .step legend { float: left; width: 100%; font-weight: 800; font-size: 1.1rem; margin-bottom: 12px; padding: 0; display: flex; align-items: center; gap: 10px; }
+  .step legend + * { clear: both; }
+  .num { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 0.9rem; }
+  .label { font-weight: 700; margin: 4px 0 8px; }
+  .hint { font-size: 0.9rem; color: var(--ink-soft); margin: -4px 0 14px; }
+  .opt { font-weight: 400; color: var(--ink-soft); font-size: 0.88rem; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .pills label { margin: 0; cursor: pointer; }
+  .pills input { position: absolute; opacity: 0; pointer-events: none; }
+  .pills span { display: inline-block; padding: 8px 14px; border: 1.5px solid #b9bec4; border-radius: 999px; background: #fff; font-weight: 600; font-size: 0.95rem; }
+  .pills small { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent); margin-left: 4px; font-weight: 800; }
+  .pills input:checked + span { background: var(--dark); border-color: var(--dark); color: #fff; }
+  .pills input:checked + span small { color: #ff8a8f; }
+  .pills input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  .nums { display: grid; gap: 0 14px; }
+  @media (min-width: 520px) { .nums { grid-template-columns: 1fr 1fr; } }
+  .numfield { display: flex; flex-direction: column; font-weight: 600; margin-bottom: 14px; font-size: 0.95rem; }
+  .stepper { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .stepper input { width: 5.5rem; text-align: center; font-weight: 700; }
+  .stepper button { width: 44px; height: 44px; border-radius: 8px; border: 1px solid #b9bec4; background: var(--surface); font-size: 1.3rem; font-weight: 700; cursor: pointer; color: var(--ink); }
+  .stepper em { font-style: normal; color: var(--ink-soft); }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .swatches label { display: flex; flex-direction: column; align-items: center; width: 64px; margin: 0; cursor: pointer; font-weight: 500; }
+  .swatches input { position: absolute; opacity: 0; pointer-events: none; }
+  .swatches span { width: 44px; height: 44px; border-radius: 10px; background: var(--c); border: 2px solid #fff; box-shadow: 0 0 0 1px #b9bec4; }
+  .swatches input:checked + span { box-shadow: 0 0 0 3px var(--accent); }
+  .swatches input:focus-visible + span { outline: 2px solid var(--dark); outline-offset: 3px; }
+  .swatches em { font-style: normal; font-size: 0.74rem; text-align: center; line-height: 1.2; margin-top: 4px; color: var(--ink-soft); }
+
+  .field-select { display: flex; flex-direction: column; margin-bottom: 14px; font-size: 0.95rem; }
+  .field-select select, .field-select input { margin-top: 4px; }
+  .check { display: flex; align-items: center; gap: 10px; font-weight: 600; margin-bottom: 12px; cursor: pointer; }
+  .check input { width: 20px; height: 20px; accent-color: var(--accent); }
+  .checks { display: grid; gap: 0 14px; }
+  @media (min-width: 520px) { .checks { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<script>
+  import { defaultDesign, clampDesign, drawTop, draw3D, area, stepCount, summary, exportImage, type Design } from '../lib/deckPlanner';
+
+  const KEY = 'tcdecks-deck-planner';
+  const controls = document.getElementById('dp-controls') as HTMLFormElement;
+  const canvas = document.getElementById('dp-canvas') as HTMLCanvasElement;
+  const wrap = canvas.parentElement as HTMLElement;
+  let view: '3d' | 'top' = '3d';
+
+  const read = (): Design => {
+    const f = new FormData(controls);
+    const num = (k: string) => parseFloat(String(f.get(k)));
+    return clampDesign({
+      shape: f.get('shape') === 'l' ? 'l' : 'rect',
+      width: num('width'),
+      depth: num('depth'),
+      lWidth: num('lWidth'),
+      lDepth: num('lDepth'),
+      lSide: f.get('lSide') === 'left' ? 'left' : 'right',
+      attached: f.get('attached') !== 'no',
+      height: num('height'),
+      stairs: f.getAll('stairs') as Design['stairs'],
+      stairWidth: num('stairWidth'),
+      stairStyle: f.get('stairStyle') === 'cascading' ? 'cascading' : 'standard',
+      brand: String(f.get('brand') ?? 'TimberTech'),
+      line: String(f.get('line') ?? ''),
+      color: String(f.get('color') ?? 'medium-gray'),
+      colorName: String(f.get('colorName') ?? '').trim(),
+      frame: f.get('frame') === 'on',
+      frameColor: String(f.get('frameColor') ?? 'charcoal'),
+      direction: (f.get('direction') as Design['direction']) ?? 'parallel',
+      framing: String(f.get('framing') ?? ''),
+      railing: String(f.get('railing') ?? 'aluminum'),
+      railColor: String(f.get('railColor') ?? 'black'),
+      extras: f.getAll('extras').map(String),
+    });
+  };
+
+  // Restore a saved design into the controls.
+  const write = (d: Design) => {
+    for (const el of Array.from(controls.elements) as HTMLInputElement[]) {
+      const v = (d as Record<string, unknown>)[el.name];
+      if (v === undefined) continue;
+      if (el.type === 'radio') el.checked = el.name === 'attached' ? (v ? 'yes' : 'no') === el.value : String(v) === el.value;
+      else if (el.type === 'checkbox') el.checked = Array.isArray(v) ? v.includes(el.value) : Boolean(v);
+      else el.value = String(v);
+    }
+  };
+
+  const show = (sel: string, on: boolean) => controls.querySelectorAll<HTMLElement>(sel).forEach((el) => (el.hidden = !on));
+
+  const render = () => {
+    const d = read();
+    show('.l-only', d.shape === 'l');
+    show('.tt-only', d.brand === 'TimberTech');
+    show('.frame-only', d.frame);
+    show('.rail-color', d.railing !== 'none' && d.railing !== 'glass');
+    show('.stair-width', d.stairStyle === 'standard');
+    const w = wrap.clientWidth, h = wrap.clientHeight;
+    if (w && h) (view === '3d' ? draw3D : drawTop)(canvas, d, w, h);
+    const steps = stepCount(d);
+    document.getElementById('dp-area')!.textContent = String(area(d));
+    document.getElementById('dp-size')!.textContent = d.shape === 'l' ? `${d.width} x ${d.depth + d.lDepth}` : `${d.width} x ${d.depth}`;
+    document.getElementById('dp-steps')!.textContent = steps && d.stairs.length ? String(steps) : '0';
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch {}
+  };
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(KEY) ?? 'null');
+    if (saved && typeof saved === 'object') write(clampDesign({ ...defaultDesign, ...saved }));
+  } catch {}
+
+  controls.addEventListener('input', render);
+  controls.addEventListener('change', render);
+  controls.querySelectorAll<HTMLButtonElement>('[data-step]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const input = b.parentElement!.querySelector('input') as HTMLInputElement;
+      const next = (parseFloat(input.value) || 0) + parseFloat(b.dataset.step!);
+      input.value = String(Math.min(parseFloat(input.max), Math.max(parseFloat(input.min), next)));
+      render();
+    }),
+  );
+  // Snap typed numbers into range when the field loses focus.
+  controls.querySelectorAll<HTMLInputElement>('input[type="number"]').forEach((i) =>
+    i.addEventListener('blur', () => {
+      const v = parseFloat(i.value);
+      i.value = String(Number.isFinite(v) ? Math.min(parseFloat(i.max), Math.max(parseFloat(i.min), v)) : i.min);
+      render();
+    }),
+  );
+  document.querySelectorAll<HTMLButtonElement>('.tab').forEach((t) =>
+    t.addEventListener('click', () => {
+      view = t.dataset.view as '3d' | 'top';
+      document.querySelectorAll('.tab').forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+      render();
+    }),
+  );
+  new ResizeObserver(render).observe(wrap);
+
+  document.getElementById('dp-save')?.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = exportImage(read()).toDataURL('image/png');
+    a.download = 'my-deck-design.png';
+    a.click();
+  });
+
+  // Copy the design into the estimate form before it submits (capture runs before the form's own handlers).
+  document.addEventListener(
+    'submit',
+    (e) => {
+      const form = e.target as HTMLFormElement;
+      if (form.getAttribute('name') !== 'estimate') return;
+      const d = read();
+      const lines = summary(d);
+      const get = (k: string) => lines.find((l) => l[0] === k)?.[1] ?? '';
+      const set = (name: string, v: string) => { const el = form.elements.namedItem(name) as HTMLInputElement | null; if (el) el.value = v; };
+      set('dimensions', `${get('Shape')}, about ${area(d)} sq ft`);
+      set('height', get('Height off ground'));
+      set('steps', get('Stairs'));
+      set('material', `${get('Decking')}; framing: ${get('Framing')}; railing: ${get('Railing')}`);
+      set('design', ['Deck Planner design', ...lines.map(([k, v]) => `${k}: ${v}`)].join('\n'));
+      try {
+        const url = exportImage(d).toDataURL('image/jpeg', 0.86);
+        const bin = atob(url.split(',')[1]);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        const dt = new DataTransfer();
+        dt.items.add(new File([bytes], 'deck-design.jpg', { type: 'image/jpeg' }));
+        const input = form.elements.namedItem('design_image') as HTMLInputElement | null;
+        if (input) input.files = dt.files;
+      } catch {
+        // Older browsers can't attach files from script; the text summary still goes through.
+      }
+    },
+    true,
+  );
+
+  render();
+</script>
