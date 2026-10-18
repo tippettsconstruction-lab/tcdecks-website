@@ -25,5 +25,13 @@ const article = {
 ---
 <Base title={`${post.data.title} | TC Decks`} description={post.data.description} image={post.data.image} schema={[article, breadcrumbSchema([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path }])]}>
   <PageHero eyebrow="Blog" title={post.data.title} crumbs={[{ name: 'Blog', path: '/blog' }]} />
-  <section class="section"><article class="wrap prose"><Content /></article></section>
+  <section class="section">
+    <article class="wrap prose">
+      {post.data.image && (
+        <img class="post-image" src={post.data.image} alt={post.data.title} width="1600" height="1067" fetchpriority="high" />
+      )}
+      <Content />
+    </article>
+  </section>
 </Base>
+<style>.post-image { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; }</style>

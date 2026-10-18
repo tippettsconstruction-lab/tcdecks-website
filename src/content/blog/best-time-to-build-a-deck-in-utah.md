@@ -48,6 +48,8 @@ The rest of the deck is built from materials that handle Utah winters well:
 
 ## How we handle snow days
 
+![TimberTech sauna deck at a mountain cabin in Sundance, Utah, covered in winter snow](/images/projects/sundance-cabin-english-walnut/barrel-sauna-deck-a-frame-cabin-winter-1600.webp)
+
 Utah weather does what it wants. When a storm rolls through, we pause, clear the work area, and pick back up when it passes. A few snow days here and there rarely change much, especially when we aren't racing a pile of spring deadlines.
 
 ## Plan in fall, build in winter, enjoy it all spring
