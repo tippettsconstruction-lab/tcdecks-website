@@ -1,6 +1,7 @@
 ---
 title: "Steel Deck Framing: Why We Build on Fortress Evolution"
-description: "Why TC Decks builds many Utah decks on Fortress Evolution steel framing instead of wood joists, and what steel framing means for a deck's life, flatness and design."
+metaTitle: "Steel Deck Framing with Fortress Evolution | TC Decks"
+description: "Why TC Decks builds many Utah decks on Fortress Evolution steel framing instead of wood joists, and what it means for a deck's life and flatness."
 date: 2026-10-12
 image: "/images/ideas/steel-frame-second-story-deck-1600.webp"
 ---

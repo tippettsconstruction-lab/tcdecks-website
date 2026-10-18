@@ -1,6 +1,7 @@
 ---
 title: "Is Higher-End PVC Decking Worth It? A Utah Deck Builder's Honest Answer"
-description: "Low-end composite vs. TimberTech Advanced PVC in Utah: looks, fading, heat, scratches and warranty, plus when the cheaper board is the smart buy, from a builder with 500 decks behind him."
+metaTitle: "Is Higher-End PVC Decking Worth It? | TC Decks"
+description: "Entry-level composite vs. TimberTech Advanced PVC in Utah: looks, fading, heat, scratches and warranty, and when the cheaper board is the smart buy."
 date: 2026-10-14
 image: "/images/projects/sandy-weathered-teak/weathered-teak-deck-dining-sunset-1600.webp"
 ---

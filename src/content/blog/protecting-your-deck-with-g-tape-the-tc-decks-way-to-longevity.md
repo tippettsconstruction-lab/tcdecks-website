@@ -1,6 +1,6 @@
 ---
 title: "Protecting Your Deck Frame with G-Tape Joist Tape"
-description: "Why TC Decks puts G-Tape joist tape on wood deck framing, how it protects against rot in Utah's freeze-thaw climate, and when steel framing is the better choice."
+description: "Why TC Decks puts G-Tape joist tape on wood deck framing, how it fights rot in Utah's freeze-thaw climate, and when steel framing is better."
 date: 2026-09-25
 image: "/images/projects/diagonal-gray-deck/aerial-diagonal-gray-composite-deck-1600.webp"
 ---

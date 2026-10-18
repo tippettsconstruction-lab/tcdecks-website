@@ -22,8 +22,16 @@ Either way, the framing underneath is still wood. We protect the tops of joists 
 
 Composite does get warmer than wood in direct sun, especially darker colors. If your deck faces west, choose a lighter color, consider a PVC line, or add a pergola.
 
+## What's underneath matters too
+
+The decking is only half the story. A composite surface on a wood frame still depends on that frame staying dry and solid. On many of our decks we use Fortress Evolution steel framing or Owens Corning OC Lumber, which won't rot, warp or attract insects, so the structure lasts as long as the boards on top. Read more about [steel deck framing](/blog/steel-deck-framing-fortress-evolution).
+
 ## Cost over 10 years
 
 Wood costs less to build. Composite costs more up front but skips the recurring cost of sanding, staining and sealing, so over ten years the gap gets much smaller, and composite usually looks better at the end of it.
+
+## Which one is right for you?
+
+Choose wood if you love real grain, want the lowest build cost and don't mind staining every few years. Choose composite or PVC if you'd rather spend weekends using the deck than maintaining it, want color that lasts, or are building a large or second-story deck that's hard to reach for upkeep. We build both, and we'll bring samples to compare in your own backyard light.
 
 See [what affects deck cost](/how-much-does-a-deck-cost-in-utah), or [compare composite brands](/composite-decks).

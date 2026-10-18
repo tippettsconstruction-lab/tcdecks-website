@@ -1,6 +1,6 @@
 ---
 title: "Deck Lighting 101 for Utah Decks"
-description: "A practical guide to low-voltage deck lighting in Utah: stair riser lights, recessed and post cap lights, under-rail accents and illuminated glass railing, with examples from our projects."
+description: "A practical guide to low-voltage deck lighting in Utah: stair riser, recessed, post cap and under-rail lights, plus illuminated glass railing."
 date: 2026-09-11
 image: "/images/projects/pleasant-grove-foothills-french-white-oak/illuminated-glass-railing-utah-valley-city-lights-1600.webp"
 ---

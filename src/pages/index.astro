@@ -14,21 +14,21 @@ const faqs = [
 ];
 ---
 <Base
-  title="Deck Builder in Saratoga Springs & Utah County | TC Decks"
-  description={`Custom composite decks, pergolas and full deck rebuilds across Utah & Salt Lake Counties. Licensed & insured for ${yearsInBusiness}+ years, with a 7-year workmanship warranty.`}
+  title="Deck Builder Utah County | Saratoga Springs | TC Decks"
+  description={`Custom composite decks, pergolas and full deck rebuilds across Utah & Salt Lake Counties. Licensed & insured for ${yearsInBusiness}+ years, 7-year workmanship warranty.`}
   schema={[faqSchema(faqs)]}
 >
+  <link slot="head" rel="preload" as="image" href="/video/tc-decks-deck-builds-poster.webp" fetchpriority="high" />
   <section class="home-hero">
-    <div class="hero-video" aria-hidden="false">
-        <video autoplay muted loop playsinline preload="metadata" poster="/video/tc-decks-deck-builds-poster.webp" aria-label="Drone and close-up footage of composite decks built by TC Decks">
-          <source src="/video/tc-decks-deck-builds.mp4" type="video/mp4" />
-        </video>
+    <div class="hero-video">
+        <img src="/video/tc-decks-deck-builds-poster.webp" alt="Composite deck built by TC Decks" width="1280" height="720" fetchpriority="high" decoding="async" />
+        <video muted loop playsinline preload="none" data-src="/video/tc-decks-deck-builds.mp4" aria-label="Drone and close-up footage of composite decks built by TC Decks"></video>
       </div>
     <div class="hero-shade"></div>
     <div class="wrap hero-content">
       <div>
         <p class="eyebrow">Wasatch Front deck builder since {business.founded}</p>
-        <h1>Custom decks built for Utah weather and how your family lives</h1>
+        <h1>Utah County Deck Builder: Custom Decks Built for Utah Weather</h1>
         <p class="lead">TC Decks designs and builds composite decks, pergolas and porches across Saratoga Springs, Lehi, Eagle Mountain and the rest of Utah County, plus Draper, Herriman and southern Salt Lake County. Estimates are free, every booked project gets a 3D design, and Levi runs your project from the first call to the final walkthrough.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
@@ -89,6 +89,48 @@ const faqs = [
   </section>
 
   <section class="section">
+    <div class="wrap grid grid-2 align">
+      <div>
+        <p class="eyebrow">Built for Utah weather</p>
+        <h2>Decks made for Utah County sun, snow and freeze-thaw</h2>
+        <p>A deck in Utah County takes a beating. Summer sun at 4,500 feet fades and dries out boards, winter brings heavy snow loads, and spring and fall swing above and below freezing day after day. As a Utah County deck contractor, we build for those conditions from the ground up.</p>
+        <ul class="check-list">
+          <li><strong>Footings that stay put.</strong> We set footings below the frost line or use American Ground Screw footings, so your deck doesn't heave or sink.</li>
+          <li><strong>Frames that don't rot.</strong> Fortress Evolution steel framing and OC Lumber won't rot, warp or attract insects. On wood frames we cover every joist with G-Tape so water can't sit in screw holes.</li>
+          <li><strong>Boards that hold their color.</strong> Capped composite and PVC decking resists fading, staining and moisture, and lighter colors stay cooler underfoot on west-facing decks.</li>
+          <li><strong>Railing and stairs built for snow.</strong> Powder-coated aluminum and steel railing won't rust, and we plan stairs and drainage so snow melt runs off instead of pooling.</li>
+        </ul>
+        <a class="more" href="/design-ideas/built-to-last">How we build decks that last →</a>
+      </div>
+      <div>
+        <p class="eyebrow">Why TC Decks</p>
+        <h2>What you get with a local, owner-run builder</h2>
+        <ul class="check-list">
+          <li>Free estimates over the phone, with no waiting for an appointment.</li>
+          <li>A 3D rendering of your deck on your home once your project is booked.</li>
+          <li>Levi Tippetts, the owner, involved from the first call to the final walkthrough.</li>
+          <li>A 7-year workmanship warranty, plus manufacturer labor and material coverage as a certified Pro Installer.</li>
+          <li>Financing through Wisetack, with loans up to $65,000.</li>
+          <li>More than {yearsInBusiness} years building decks for Utah County families.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>Get a free deck estimate</h2>
+        <p>Tell us about your project and get a ballpark price over the phone. We serve Utah County communities from Lehi to Payson, plus southern Salt Lake County.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+        <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap grid grid-2">
       <div>
         <p class="eyebrow">Materials</p>
@@ -100,7 +142,7 @@ const faqs = [
       <div>
         <p class="eyebrow">Service area</p>
         <h2>Where we build</h2>
-        <p>Based in Saratoga Springs and building throughout Utah County and Salt Lake County along the Wasatch Front.</p>
+        <p>We're based in Saratoga Springs and build throughout Utah County, from Lehi, Eagle Mountain, American Fork and Highland in the north to Orem, Provo, Spanish Fork and Payson in the south. We also build in southern Salt Lake County, including Draper, Sandy, South Jordan and Herriman. Pick your city to see local projects and details.</p>
         <ul class="city-list">{cities.map((c) => <li><a href={`/service-areas/${c.slug}`}>{c.name}</a></li>)}</ul>
       </div>
     </div>
@@ -117,7 +159,9 @@ const faqs = [
 <style>
   .home-hero { position: relative; overflow: hidden; background: #111; color: #fff; min-height: min(88vh, 760px); display: flex; align-items: center; padding: 72px 0; }
   .hero-video, .hero-shade { position: absolute; inset: 0; }
-  .hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-video img, .hero-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-video video { opacity: 0; transition: opacity 0.6s; }
+  .hero-video video.playing { opacity: 1; }
   .hero-shade { background: linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.15) 100%); }
   @media (max-width: 899px) { .hero-shade { background: rgba(0,0,0,0.6); } }
   .hero-content { position: relative; }
@@ -132,11 +176,25 @@ const faqs = [
   .align { align-items: center; }
   .city-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .more { font-weight: 700; }
+  .cta-band { background: #111; color: #fff; padding: 48px 0; }
+  .cta-band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+  .cta-band h2 { color: #fff; margin-bottom: 0.4rem; }
+  .cta-band p { color: rgba(255,255,255,0.85); margin: 0; max-width: 40rem; }
+  .cta-band .btn-ghost { color: #fff; }
 </style>
 
 <script>
-  // Respect reduced-motion: show the poster frame instead of looping video.
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll<HTMLVideoElement>('.hero-video video').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  // The hero shows a still image first. The 2.7 MB video loads after the page on
+  // wide screens only, and never for reduced-motion or data-saver visitors.
+  const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+  const wantsVideo = window.matchMedia('(min-width: 900px) and (prefers-reduced-motion: no-preference)').matches && !conn?.saveData;
+  if (wantsVideo) {
+    window.addEventListener('load', () => {
+      document.querySelectorAll<HTMLVideoElement>('.hero-video video').forEach((v) => {
+        v.src = v.dataset.src!;
+        v.addEventListener('playing', () => v.classList.add('playing'), { once: true });
+        v.play().catch(() => {});
+      });
+    });
   }
 </script>

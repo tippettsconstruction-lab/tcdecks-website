@@ -1,6 +1,6 @@
 ---
 title: "Hot Tub, Cold Plunge and Sauna Decks in Utah"
-description: "How TC Decks designs decks for hot tubs, cold plunges and saunas in Utah: framing for the weight, recessed or surround layouts, privacy, lighting and winter use."
+description: "How we design Utah decks for hot tubs, cold plunges and saunas: framing for the weight, recessed or surround layouts, privacy, lighting and winter use."
 date: 2026-10-09
 image: "/images/projects/sundance-cabin-english-walnut/sauna-and-hot-tub-deck-waterfall-bench-mountains-1600.webp"
 ---

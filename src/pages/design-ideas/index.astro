@@ -14,12 +14,13 @@ const steps = [
 ---
 <Base
   title="Deck Design Ideas & Selection Guide | TC Decks Utah"
-  description="Browse deck design ideas from TC Decks: TimberTech colors, railings, roofs and pergolas, lighting, add-ons and the details that make a deck last. Plan your Utah deck."
+  description="Deck design ideas from TC Decks: TimberTech colors, railings, roofs and pergolas, lighting, add-ons and the details that make a Utah deck last."
   schema={[breadcrumbSchema([{ name: 'Design Ideas', path: '/design-ideas' }])]}
 >
   <PageHero eyebrow="Design & selection guide" title="Deck design ideas" lead="Browse the options we build so you can picture your deck and tell us what you like. Bring your favorites to your free phone estimate." crumbs={[{ name: 'Design Ideas', path: '/design-ideas' }]} />
   <section class="section">
     <div class="wrap">
+      <p class="lead intro">This guide covers the choices that shape a new deck: the decking itself, railing, shade, lighting, extras like hot tubs and storage, and the framing and footings underneath. Each page shows what we build, with photos from real TC Decks projects around Utah County and Salt Lake County. Save the ideas you like and bring them to your free phone estimate, and we'll help you narrow them down to a design that fits your home, your yard and your budget.</p>
       <div class="grid grid-3">
         {ideaPages.map((p) => (
           <a class="idea card" href={`/design-ideas/${p.slug}`}>
@@ -46,6 +47,7 @@ const steps = [
   .idea h2, .idea p { padding: 0 18px; }
   .idea h2 { margin-top: 14px; font-size: 1.25rem; }
   .idea:hover h2 { color: var(--accent); }
+  .intro { margin-bottom: 32px; }
   .steps { list-style: none; padding: 0; }
   .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; margin-bottom: 8px; }
 </style>

@@ -1,6 +1,7 @@
 ---
 title: "The Process of Building a Composite Deck with TC Decks"
-description: "What to expect when you build a composite deck with TC Decks, step by step: free phone estimate, site visit, booking, 3D rendering, build, final walkthrough and warranty."
+metaTitle: "How We Build a Composite Deck, Step by Step | TC Decks"
+description: "What to expect building a composite deck with TC Decks: free phone estimate, site visit, booking, 3D rendering, build, walkthrough and warranty."
 date: 2026-10-06
 image: "/images/projects/covered-deck-roof/3d-rendering-covered-deck-4-1600.webp"
 ---
