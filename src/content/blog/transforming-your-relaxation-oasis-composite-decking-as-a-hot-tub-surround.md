@@ -1,6 +1,6 @@
 ---
 title: "Composite Decking as a Hot Tub Surround"
-description: "How to plan a composite deck around a hot tub in Utah: structural support, pads and engineered framing, recessed vs. on-deck tubs, access, privacy and lighting."
+description: "How to plan a composite deck around a hot tub in Utah: structural support, engineered framing, recessed vs. on-deck tubs, access, privacy and lighting."
 date: 2026-10-02
 image: "/images/projects/highland-english-walnut-hideaway/timber-frame-pavilion-hot-tub-deck-step-lights-1600.webp"
 ---

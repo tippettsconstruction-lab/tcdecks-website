@@ -38,7 +38,7 @@ export const ideaPages: IdeaPage[] = [
     cover: '/images/ideas/natural-wood-deck-railing',
     gallery: ["/images/ideas/natural-wood-deck-railing", "/images/ideas/hardwood-deck-stairs-lights", "/images/ideas/hardwood-parquet-deck-pattern", "/images/ideas/cedar-pergola-composite-deck"],
     title: 'Natural Wood Decks: Cedar, Hardwood & Treated | TC Decks',
-    description: 'Natural wood decking options from TC Decks: pressure-treated, cedar and hardwoods like Ipe, plus how to finish and care for a wood deck in Utah sun and snow.',
+    description: 'Natural wood decking options from TC Decks: pressure-treated, cedar and hardwoods like Ipe, plus how to finish and care for wood in Utah sun and snow.',
     intro: 'Nothing looks or feels quite like real wood. If you love natural grain and don’t mind some upkeep, we build wood decks that are framed and finished to handle Utah’s sun, snow and freeze-thaw cycles.',
     features: [
       { name: 'Pressure-treated', text: 'The most budget-friendly choice. It’s strong and widely available, and it takes stain well. Plan on regular cleaning and refinishing to keep it from graying and checking.' },
@@ -55,7 +55,7 @@ export const ideaPages: IdeaPage[] = [
     gallery: ["/images/ideas/two-tone-deck-border-railing", "/images/ideas/two-tone-entry-steps-lights", "/images/ideas/wide-cascading-composite-stairs", "/images/ideas/wrap-around-stairs-riser-lights", "/images/ideas/built-in-deck-bench"],
     name: 'Design Details',
     title: 'Deck Design Details: Inlays, Two-Tone & Curves | TC Decks',
-    description: 'Deck design ideas that add character: picture-frame borders, breaker boards, two-tone colors, mixed-width boards, inlays, curved boards and cascading stairs.',
+    description: 'Design ideas that add character: picture-frame borders, breaker boards, two-tone colors, mixed-width boards, inlays, curved boards and cascading stairs.',
     intro: 'Small details are what make a deck look custom instead of cookie-cutter. Here are the upgrades we use most, from what comes standard on every TC Decks build to the eye-catching extras.',
     features: [
       { name: 'What comes standard', text: 'Every TC Decks build includes quality decking, clean finished edges and installation to manufacturer spec. The options below are where you can add character. Ask us exactly what’s included in your quote.' },
