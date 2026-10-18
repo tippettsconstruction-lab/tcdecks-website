@@ -33,7 +33,20 @@ const rules = [
   [/.*/, '/custom-deck-design-construction'],
 ];
 
+// Alias hostnames 301 to the primary https://www.tcdecksutah.com so crawlers never
+// index a second copy of the site (or an http one) with its own internal links.
+// tcdecksutah.com itself is left to Netlify's primary-domain redirect (no loops).
+const primary = 'https://www.tcdecksutah.com';
+const aliasHosts = [
+  'http://utahdeckbuilders.com', 'https://utahdeckbuilders.com',
+  'http://www.utahdeckbuilders.com', 'https://www.utahdeckbuilders.com',
+  'https://brilliant-heliotrope-ee7437.netlify.app',
+];
+
 const lines = [
+  '# Other hostnames -> primary domain',
+  ...aliasHosts.map((host) => `${host}/*  ${primary}/:splat  301!`),
+  '',
   '# Old site pages',
   '/sitemap.xml  /sitemap-0.xml  200',
   '/home/highland  /service-areas/highland  301',

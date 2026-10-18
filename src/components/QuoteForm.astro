@@ -1,9 +1,16 @@
 ---
 import { cities } from '../data/site';
+
+// planner: the Deck Planner fills size, height, stairs and material, so those inputs are hidden.
+interface Props { planner?: boolean }
+const { planner = false } = Astro.props;
 ---
 <form name="estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data" class="card">
   <input type="hidden" name="form-name" value="estimate" />
   <p class="hidden"><label>Leave blank <input name="company" /></label></p>
+  <!-- Deck Planner fields; every copy of this form carries them so Netlify registers them. -->
+  <input type="hidden" name="design" />
+  <input type="file" name="design_image" class="hidden" tabindex="-1" aria-hidden="true" />
   <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
   <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required /></div>
   <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" /></div>
@@ -25,26 +32,37 @@ import { cities } from '../data/site';
     </select>
   </div>
   <fieldset class="details">
-    <legend>Project details <span class="opt">(optional, but it helps us quote by phone)</span></legend>
-    <div class="row">
-      <div class="field"><label for="f-size">Approximate size</label><input id="f-size" name="dimensions" placeholder="e.g. 16 x 20 ft" /></div>
-      <div class="field"><label for="f-height">Height off the ground</label><input id="f-height" name="height" placeholder="e.g. ground level, 3 ft, second story" /></div>
-    </div>
-    <div class="row">
-      <div class="field"><label for="f-steps">Stairs / steps</label><input id="f-steps" name="steps" placeholder="e.g. one set, about 8 steps" /></div>
-      <div class="field"><label for="f-material">Material or color you like</label><input id="f-material" name="material" placeholder="e.g. TimberTech, gray, not sure" /></div>
-    </div>
-    <div class="field"><label for="f-msg">Description</label><textarea id="f-msg" name="message" placeholder="What you want to build, railing, roof or pergola, lighting, hot tub, timing…"></textarea></div>
+    <legend>{planner ? 'Notes' : 'Project details'} <span class="opt">(optional{planner ? '' : ', but it helps us quote by phone'})</span></legend>
+    {planner ? (
+      <>
+        <input type="hidden" name="dimensions" />
+        <input type="hidden" name="height" />
+        <input type="hidden" name="steps" />
+        <input type="hidden" name="material" />
+      </>
+    ) : (
+      <>
+        <div class="row">
+          <div class="field"><label for="f-size">Approximate size</label><input id="f-size" name="dimensions" placeholder="e.g. 16 x 20 ft" /></div>
+          <div class="field"><label for="f-height">Height off the ground</label><input id="f-height" name="height" placeholder="e.g. ground level, 3 ft, second story" /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-steps">Stairs / steps</label><input id="f-steps" name="steps" placeholder="e.g. one set, about 8 steps" /></div>
+          <div class="field"><label for="f-material">Material or color you like</label><input id="f-material" name="material" placeholder="e.g. TimberTech, gray, not sure" /></div>
+        </div>
+      </>
+    )}
+    <div class="field"><label for="f-msg">{planner ? 'Anything else we should know?' : 'Description'}</label><textarea id="f-msg" name="message" placeholder={planner ? 'Timing, slope of the yard, what the deck is for, questions…' : 'What you want to build, railing, roof or pergola, lighting, hot tub, timing…'}></textarea></div>
   </fieldset>
   <fieldset class="details">
-    <legend>Photos or plans <span class="opt">(optional)</span></legend>
+    <legend>{planner ? 'Photos of your yard' : 'Photos or plans'} <span class="opt">(optional)</span></legend>
     <p class="small">Add photos of your yard or existing deck, or a drawing or plan. Up to 3 files, 8 MB total.</p>
     <div class="field"><input name="photo1" type="file" accept="image/*,.pdf" aria-label="Photo or plan 1" /></div>
     <div class="field"><input name="photo2" type="file" accept="image/*,.pdf" aria-label="Photo or plan 2" /></div>
     <div class="field"><input name="photo3" type="file" accept="image/*,.pdf" aria-label="Photo or plan 3" /></div>
     <p class="small file-warn" hidden>Those files are over 8 MB together. Try smaller photos, or text them to us after you submit.</p>
   </fieldset>
-  <button class="btn btn-primary" type="submit">Request My Free Estimate</button>
+  <button class="btn btn-primary" type="submit">{planner ? 'Send My Design for a Free Estimate' : 'Request My Free Estimate'}</button>
 </form>
 
 <style>

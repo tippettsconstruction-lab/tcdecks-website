@@ -1,3 +1,10 @@
+# Other hostnames -> primary domain
+http://utahdeckbuilders.com/*  https://www.tcdecksutah.com/:splat  301!
+https://utahdeckbuilders.com/*  https://www.tcdecksutah.com/:splat  301!
+http://www.utahdeckbuilders.com/*  https://www.tcdecksutah.com/:splat  301!
+https://www.utahdeckbuilders.com/*  https://www.tcdecksutah.com/:splat  301!
+https://brilliant-heliotrope-ee7437.netlify.app/*  https://www.tcdecksutah.com/:splat  301!
+
 # Old site pages
 /sitemap.xml  /sitemap-0.xml  200
 /home/highland  /service-areas/highland  301

@@ -1,7 +1,7 @@
 ---
 title: "Under-Deck Storage Ideas for Saratoga Springs Homes"
 metaTitle: "Under-Deck Storage Ideas in Saratoga Springs | TC Decks"
-description: "How to turn the space under a raised deck into useful storage in Saratoga Springs and Utah County: skirting, doors, drainage, ground cover and planning tips."
+description: "How to turn the space under a raised deck into useful storage in Saratoga Springs and Utah County: skirting, doors, drainage, ground cover and planning."
 date: 2026-10-09
 image: "/images/projects/back-porch-storage/under-deck-storage-cabinet-doors-1600.webp"
 ---
