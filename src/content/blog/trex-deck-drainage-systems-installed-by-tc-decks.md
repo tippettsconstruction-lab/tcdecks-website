@@ -1,5 +1,6 @@
 ---
 title: "Trex RainEscape: Keeping the Space Under Your Deck Dry"
+metaTitle: "Trex RainEscape Under-Deck Drainage | TC Decks"
 description: "How a Trex RainEscape under-deck drainage system turns the space below a second-story Utah deck into a dry patio or storage area, and what to plan for."
 date: 2026-09-15
 image: "/images/projects/pleasant-grove-foothills-french-white-oak/under-deck-patio-stairs-mountain-view-1600.webp"

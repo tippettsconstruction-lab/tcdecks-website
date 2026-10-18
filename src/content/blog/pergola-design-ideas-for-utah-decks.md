@@ -1,6 +1,6 @@
 ---
 title: "Pergola Design Ideas for Utah Decks"
-description: "Pergola and shade ideas for Utah backyards from TC Decks: cedar and timber pergolas, louvered roofs, polycarbonate covers and shade sails, and how to pick the right one."
+description: "Pergola and shade ideas for Utah backyards: cedar and timber pergolas, louvered roofs, polycarbonate covers and shade sails, and how to choose."
 date: 2026-10-13
 image: "/images/projects/santaquin-pecan-pergola/santaquin-timbertech-pecan-deck-cedar-pergola-1600.webp"
 ---

@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '../../lib/schema';
 const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base
-  title="Deck Building Tips & Guides for Utah Homeowners | TC Decks Blog"
+  title="Deck Building Tips & Guides for Utah | TC Decks Blog"
   description="Practical advice on deck materials, costs, design and maintenance for Utah County homeowners, from a local deck builder."
   schema={[breadcrumbSchema([{ name: 'Blog', path: '/blog' }])]}
 >
