@@ -5,12 +5,21 @@ import Reviews from '../components/Reviews.astro';
 import { breadcrumbSchema } from '../lib/schema';
 ---
 <Base
-  title="TC Decks Reviews | 4.9 Stars on Google | Utah County Deck Builder"
+  title="TC Decks Reviews | 4.9 Stars on Google | Utah Deck Builder"
   description="Read reviews from Utah County homeowners who had their decks built by TC Decks. Rated 4.9 stars from 34 Google reviews."
   schema={[breadcrumbSchema([{ name: 'Reviews', path: '/testimonials' }])]}
 >
   <PageHero eyebrow="Reviews" title="What our customers say" lead="We're proud of our 4.9-star rating on Google. Here's what homeowners say about working with TC Decks." crumbs={[{ name: 'Reviews', path: '/testimonials' }]} />
   <section class="section"><div class="wrap"><Reviews />
+    <h2 style="margin-top:40px">Why homeowners choose TC Decks</h2>
+    <ul class="check-list">
+      <li><strong>The owner is on your project.</strong> Levi Tippetts has run TC Decks since 2005 and stays involved from the first phone call to the final walkthrough.</li>
+      <li><strong>Free estimates over the phone.</strong> Tell us what you have in mind and get a ballpark price without waiting for an appointment.</li>
+      <li><strong>See it before it's built.</strong> Every booked project gets a 3D rendering of your deck on your home.</li>
+      <li><strong>Backed by a 7-year workmanship warranty.</strong> As a TimberTech Platinum Pro and certified installer for Trex, Deckorators and Fortress, manufacturer coverage can include labor as well as material.</li>
+      <li><strong>Built to last.</strong> Steel framing, ground screw footings and capped composite decking where they make sense, so your deck holds up to Utah sun and snow.</li>
+    </ul>
+    <p style="margin-top:24px">Ready to start? <a href="/contact">Request a free estimate</a>, browse <a href="/project-showcase">recent projects</a> or see <a href="/service-areas">the cities we serve</a>.</p>
     <p style="margin-top:24px">Worked with us? <a href="https://www.google.com/search?q=TC+Decks+Saratoga+Springs+reviews" rel="noopener">Leave a Google review</a>. It helps a small business a lot.</p>
   </div></section>
 </Base>

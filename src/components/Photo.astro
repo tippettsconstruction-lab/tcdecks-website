@@ -1,11 +1,16 @@
 ---
 // `src` is an image base path without size suffix, e.g. '/images/projects/x/name'
-// (expects name-800.webp and name-1600.webp). Without `src`, shows a labeled placeholder.
-interface Props { src?: string; alt: string; label?: string; eager?: boolean; }
+// (expects name-400.webp, name-800.webp and name-1600.webp). Without `src`, shows a labeled placeholder.
+// Pass `sizes="grid-3"` for photos in a three-column grid so phones and desktops get a smaller file.
+interface Props { src?: string; alt: string; label?: string; eager?: boolean; sizes?: string; }
 const { src, alt, label, eager = false } = Astro.props;
+const presets: Record<string, string> = {
+  'grid-3': '(min-width: 1160px) 370px, (min-width: 780px) 33vw, (min-width: 540px) 50vw, 100vw',
+};
+const sizes = presets[Astro.props.sizes ?? ''] ?? Astro.props.sizes ?? '(min-width: 1160px) 560px, (min-width: 900px) 50vw, 100vw';
 ---
 <div class:list={['photo', { real: !!src }]}>
   {src
-    ? <img src={`${src}-1600.webp`} srcset={`${src}-800.webp 800w, ${src}-1600.webp 1600w`} sizes="(min-width: 900px) 50vw, 100vw" alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    ? <img src={`${src}-1600.webp`} srcset={`${src}-400.webp 400w, ${src}-800.webp 800w, ${src}-1600.webp 1600w`} sizes={sizes} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
     : <span>{label ?? alt}</span>}
 </div>

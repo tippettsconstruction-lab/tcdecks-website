@@ -10,9 +10,10 @@ interface Props {
   image?: string;
   schema?: object[];
   noindex?: boolean;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description, image = '/og-default.jpg', schema = [], noindex = false } = Astro.props;
+const { title, description, image = '/og-default.jpg', schema = [], noindex = false, ogType = 'website' } = Astro.props;
 const canonical = new URL(Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/'), business.url).href;
 
 const localBusiness = {
@@ -50,7 +51,7 @@ const localBusiness = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={business.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -60,6 +61,7 @@ const localBusiness = {
     <link rel="icon" href="/images/brand/icon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/images/brand/icon-180.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <slot name="head" />
     <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
     {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>
