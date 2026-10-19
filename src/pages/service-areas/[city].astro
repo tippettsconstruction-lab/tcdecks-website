@@ -57,7 +57,7 @@ const faqs = [
         <h2>Building decks in {city.name}</h2>
         <ul class="check-list">{city.notes.map((n) => <li>{n}</li>)}</ul>
       </div>
-      <div><Photo src={photoSrc} alt={photoAlt} />{local && <p class="small"><a href={`/project-showcase#${local.project}`}>See this {city.name} project</a></p>}</div>
+      <div><Photo src={photoSrc} alt={photoAlt} eager />{local && <p class="small"><a href={`/project-showcase#${local.project}`}>See this {city.name} project</a></p>}</div>
     </div>
   </section>
   <section class="section alt">

@@ -1,4 +1,4 @@
-"""Resize photos to 800/1600px WebP (metadata stripped) for the site.
+"""Resize photos to 400/800/1600px WebP (metadata stripped) for the site.
 
 Usage: python3 scripts/process-photos.py <out_dir> <src_image>=<name> [...]
 """
@@ -9,7 +9,7 @@ out = sys.argv[1]
 for arg in sys.argv[2:]:
     src, name = arg.rsplit('=', 1)
     im = ImageOps.exif_transpose(Image.open(src)).convert('RGB')  # re-encode drops EXIF/GPS
-    for w in (800, 1600):
+    for w in (400, 800, 1600):
         c = im.copy()
         long_edge = max(c.width, c.height) if c.height > c.width else c.width
         if long_edge > w:
