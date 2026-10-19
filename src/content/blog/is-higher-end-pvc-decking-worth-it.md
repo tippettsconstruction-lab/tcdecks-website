@@ -17,7 +17,7 @@ Every proposal I hand over starts with a low-end board, then shows what it takes
 | Tier | TimberTech lines | Who it fits |
 | --- | --- | --- |
 | Value | Prime, Premier, Terrain (composite) | Tight budgets, rentals, shorter stays |
-| Premier | Mid-range lines | Better look without the top price |
+| Premier | Harvest, Landmark, Reserve | Better look without the top price |
 | Luxury | Vintage, Legacy (Advanced PVC) | Long-term homes where looks matter most |
 
 I bid the value option first on purpose. If I only quoted the top lines, I'd lose a lot of jobs to cheaper bids. Showing all three lets you see exactly what the upgrade buys you.
