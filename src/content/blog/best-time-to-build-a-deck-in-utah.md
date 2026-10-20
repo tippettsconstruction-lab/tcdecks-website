@@ -1,6 +1,7 @@
 ---
 title: "When Is the Best Time to Build a Deck in Utah? Why Winter Works"
-description: "Spring is the busiest season for Utah deck builders. Here's why fall and winter are often the better time to build, and how ground screw footings keep frozen ground from slowing a build down."
+metaTitle: "Best Time to Build a Deck in Utah? Try Winter | TC Decks"
+description: "Spring is the busiest season for Utah deck builders. Here's why fall and winter are often the better time to build, even with frozen ground."
 date: 2026-10-18
 image: "/images/projects/sundance-cabin-english-walnut/waterfall-bench-sauna-deck-snow-1600.webp"
 ---
