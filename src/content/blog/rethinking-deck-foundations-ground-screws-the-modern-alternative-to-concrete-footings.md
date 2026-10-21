@@ -49,6 +49,6 @@ Footings are the first step in building a deck that stays solid for decades. On 
 
 ## Ground screws on a deck rebuild
 
-If your old deck's footings have sunk or heaved, a [full tear-out and rebuild](/deck-replacement) on new ground screw footings is a clean way to start fresh without digging up the yard.
+If your old deck's footings have sunk or heaved, a [full tear-out and rebuild](/deck-replacement) on new ground screw footings is a clean way to start fresh without digging up the yard. Because ground screws go in even when the ground is frozen, they are also why [winter is a good time to build a deck in Utah](/blog/best-time-to-build-a-deck-in-utah).
 
 If you're planning a new deck on a slope, in clay, or in a tight backyard, ask us about ground screw footings. See how we approach a [custom deck build](/custom-deck-design-construction), or [contact us](/contact) for a free estimate over the phone.

@@ -58,4 +58,6 @@ Every deck we build carries our 7-year workmanship warranty. On top of that, bec
 
 TC Decks is Tippetts Construction, owned by Levi Tippetts. We've been building since 2005, we're licensed and insured (Utah license #5899795-5501), and we're a TimberTech Platinum Pro. We serve Utah County and Salt Lake County.
 
+Wondering when to schedule? Here is [why fall and winter are often the best time to build a deck in Utah](/blog/best-time-to-build-a-deck-in-utah).
+
 Ready to start? See our [composite deck options](/composite-decks) or browse the [project showcase](/project-showcase), then [contact us](/contact) for a free estimate over the phone.
