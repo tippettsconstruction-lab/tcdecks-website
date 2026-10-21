@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "name": "TC Decks",
+  "description": "TC Decks (Tippetts Construction) is a family-owned deck builder in Saratoga Springs, Utah, building custom composite decks, covered decks, pergolas, porches, railings and full deck tear-out and rebuilds across Utah County and Salt Lake County since 2005.",
+  "url": "https://www.tcdecksutah.com",
+  "capabilities": ["contact", "estimate-request", "deck-planner"],
+  "contact": "tippettsconstruction@gmail.com",
+  "phone": "+1-801-472-8939",
+  "endpoints": {
+    "estimate_request": "https://www.tcdecksutah.com/contact",
+    "deck_planner": "https://www.tcdecksutah.com/deck-planner",
+    "llms_txt": "https://www.tcdecksutah.com/llms.txt",
+    "sitemap": "https://www.tcdecksutah.com/sitemap-index.xml"
+  }
+}
