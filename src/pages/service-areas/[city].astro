@@ -5,6 +5,8 @@ import Photo from '../../components/Photo.astro';
 import ServiceCards from '../../components/ServiceCards.astro';
 import Reviews from '../../components/Reviews.astro';
 import Faqs from '../../components/Faqs.astro';
+import YouTubeVideo from '../../components/YouTubeVideo.astro';
+import { cityVideos } from '../../data/videos';
 import { cities, business, type City } from '../../data/site';
 import { faqSchema, breadcrumbSchema } from '../../lib/schema';
 
@@ -33,6 +35,7 @@ const localPhotos: Record<string, { src: string; alt: string; project: string }>
   highland: { src: '/images/projects/highland-english-walnut-hideaway/highland-timbertech-vintage-english-walnut-timber-pavilion', alt: 'TimberTech English Walnut hot tub deck and timber pavilion built by TC Decks in Highland', project: 'highland-english-walnut-hideaway' },
 };
 const local = localPhotos[city.slug];
+const video = cityVideos[city.slug];
 const photoSrc = local ? local.src : `/images/ideas/${cityPhotos[cities.indexOf(city) % cityPhotos.length]}`;
 const photoAlt = local ? local.alt : `Deck built by TC Decks in ${county}`;
 const faqs = [
@@ -57,9 +60,17 @@ const faqs = [
         <h2>Building decks in {city.name}</h2>
         <ul class="check-list">{city.notes.map((n) => <li>{n}</li>)}</ul>
       </div>
-      <div><Photo src={photoSrc} alt={photoAlt} />{local && <p class="small"><a href={`/project-showcase#${local.project}`}>See this {city.name} project</a></p>}</div>
+      <div><Photo src={photoSrc} alt={photoAlt} eager />{local && <p class="small"><a href={`/project-showcase#${local.project}`}>See this {city.name} project</a></p>}</div>
     </div>
   </section>
+  {video && (
+    <section class="section">
+      <div class="wrap prose">
+        <h2>Watch a TC Decks build near {city.name}</h2>
+        <YouTubeVideo video={video} />
+      </div>
+    </section>
+  )}
   <section class="section alt">
     <div class="wrap"><h2>Services in {city.name}</h2><ServiceCards /></div>
   </section>

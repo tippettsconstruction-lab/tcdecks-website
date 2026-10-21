@@ -18,9 +18,9 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
   <PageHero eyebrow="Design ideas" title={page.name} lead={page.intro} crumbs={[{ name: 'Design Ideas', path: '/design-ideas' }, { name: page.name, path }]} />
   <section class="section">
     <div class="wrap features">
-      {page.features.filter((f) => f.image).map((f) => (
+      {page.features.filter((f) => f.image).map((f, i) => (
         <article class="feature">
-          <Photo src={f.image} alt={(f.image && photoAlts[f.image]) || f.name} />
+          <Photo sizes="grid-3" eager={i < 3} src={f.image} alt={(f.image && photoAlts[f.image]) || f.name} />
           <div>
             <h2 class="h3">{f.name}</h2>
             <p>{f.text}</p>
@@ -42,7 +42,7 @@ const others = ideaPages.filter((p) => p.slug !== page.slug);
     {page.gallery && (
       <div class="wrap gallery">
         <h2>More {page.name.toLowerCase()} from our projects</h2>
-        <div class="grid grid-3">{page.gallery.map((g) => <Photo src={g} alt={photoAlts[g] ?? page.name} />)}</div>
+        <div class="grid grid-3">{page.gallery.map((g) => <Photo sizes="grid-3" src={g} alt={photoAlts[g] ?? page.name} />)}</div>
       </div>
     )}
     <div class="wrap btn-row">

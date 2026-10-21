@@ -1,6 +1,8 @@
 ---
 import Service from '../layouts/Service.astro';
 import Photo from '../components/Photo.astro';
+import YouTubeVideo from '../components/YouTubeVideo.astro';
+import { videos } from '../data/videos';
 
 const faqs = [
   { q: 'Do you repair decks or replace boards on an existing frame?', a: 'No. We build new decks and do full tear-out and rebuilds. Starting from new footings and framing is the only way we can stand behind the whole deck with our 7-year workmanship warranty.' },
@@ -35,5 +37,9 @@ const faqs = [
     <li>New TimberTech decking, railing and stairs</li>
     <li>Our 7-year workmanship warranty</li>
   </ul>
+
+  <h2>Watch a full tear-out and rebuild</h2>
+  <p>Follow a Lehi deck from demolition to a finished elevated deck with TimberTech Dark Cocoa boards and Fortress railing.</p>
+  <YouTubeVideo video={videos.lehiRebuild} caption="Lehi, Utah deck tear-down and rebuild by TC Decks." />
   <p>A rebuild is also a chance to rethink the layout. See our <a href="/custom-deck-design-construction">custom deck design</a> process or <a href="/composite-decks">composite options</a>.</p>
 </Service>
