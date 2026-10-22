@@ -25,7 +25,6 @@ const localBusiness = {
   description: business.summary,
   url: business.url,
   telephone: `+1-${business.phone}`,
-  email: business.email,
   founder: { '@type': 'Person', name: business.owner },
   foundingDate: String(business.founded),
   openingHours: business.hoursSchema,
