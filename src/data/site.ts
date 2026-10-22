@@ -13,13 +13,39 @@ export const business = {
   region: 'UT',
   hours: 'Mon–Sat, 7am–8pm',
   hoursSchema: ['Mo-Sa 07:00-20:00'],
-  rating: { value: 4.9, count: 34 },
+  rating: { value: 4.9, count: 43 },
   social: {
     instagram: 'https://www.instagram.com/tcdecks/',
     youtube: 'https://www.youtube.com/@TCDecksUtah',
     google: 'https://maps.app.goo.gl/1W1stqWWx51keaLo8',
     facebook: 'https://www.facebook.com/p/Tippetts-Construction-inc-100057218539784/',
   },
+  // One plain, quotable description of the business. Search engines and AI assistants
+  // lift sentences like this verbatim, so keep it factual and in sync with the GBP description.
+  summary:
+    'TC Decks (Tippetts Construction) is a family-owned deck builder based in Saratoga Springs, Utah, founded by Levi Tippetts in 2005. It designs and builds custom composite decks, covered decks, pergolas, porches and railings, and full deck tear-out and rebuilds, across Utah County and Salt Lake County.',
+  credentials: [
+    'TimberTech Platinum Pro',
+    'Trex Pro Installer',
+    'Deckorators Pro Installer',
+    'Fortress Building Products Pro Installer',
+    'Owens Corning OC Lumber Pro Build Team',
+  ],
+  memberships: ['North American Deck and Railing Association (NADRA)', 'National Association of Home Builders (NAHB)'],
+  specialties: [
+    'Composite deck installation',
+    'PVC decking',
+    'TimberTech decks',
+    'Trex decks',
+    'Steel deck framing',
+    'Second-story decks',
+    'Covered decks',
+    'Pergolas',
+    'Deck railing',
+    'Deck tear-out and rebuild',
+    'Under-deck drainage',
+    'Deck lighting',
+  ],
 };
 
 export const yearsInBusiness = new Date().getFullYear() - business.founded;

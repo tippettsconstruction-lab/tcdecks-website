@@ -4,14 +4,41 @@ import PageHero from '../components/PageHero.astro';
 import Photo from '../components/Photo.astro';
 import Reviews from '../components/Reviews.astro';
 import { business, yearsInBusiness } from '../data/site';
-import { breadcrumbSchema } from '../lib/schema';
+import Faqs from '../components/Faqs.astro';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const faqs = [
+  { q: 'Who owns TC Decks?', a: `TC Decks is owned and run by Levi Tippetts, a third-generation Utah builder who founded the company in ${business.founded}. Levi is involved in every project from the first phone call to the final walkthrough.` },
+  { q: 'Where is TC Decks located, and what areas do you serve?', a: 'We are based in Saratoga Springs, Utah, and build decks throughout Utah County and Salt Lake County, from Payson and Spanish Fork up through Lehi, Draper, Sandy, South Jordan and Herriman.' },
+  { q: 'Is TC Decks licensed and insured?', a: `Yes. TC Decks is licensed and insured, Utah contractor license #${business.license}. You can confirm any Utah contractor's license on the Utah Division of Professional Licensing (DOPL) website.` },
+  { q: 'What certifications does TC Decks have?', a: 'TC Decks is a TimberTech Platinum Pro, a certified Pro Installer for Trex, Deckorators and Fortress, and a member of the Owens Corning OC Lumber Pro Build Team. We are also members of NADRA and the NAHB.' },
+  { q: 'What kind of work does TC Decks do?', a: 'We build new decks and do full tear-out and rebuilds of old decks: composite and PVC decking, steel and OC Lumber framing, covered decks, pergolas, porches, railing, stairs, lighting and under-deck drainage. We do not do small deck repairs.' },
+];
 ---
 <Base
   title="About TC Decks | Levi Tippetts, Utah Deck Builder"
   description={`TC Decks is a family-owned deck builder in Saratoga Springs, Utah, run by Levi Tippetts since ${business.founded}. Licensed & insured, Utah contractor license #${business.license}.`}
-  schema={[breadcrumbSchema([{ name: 'About', path: '/about' }])]}
+  schema={[breadcrumbSchema([{ name: 'About', path: '/about' }]), faqSchema(faqs)]}
 >
   <PageHero eyebrow="About us" title="A local, family-owned deck builder" lead={`Levi Tippetts started TC Decks in ${business.founded}. ${yearsInBusiness} years later, we're still a small Saratoga Springs company where the owner designs your deck and stays involved until it's done.`} crumbs={[{ name: 'About', path: '/about' }]} />
+  <section class="section">
+    <div class="wrap">
+      <h2>TC Decks at a glance</h2>
+      <p class="lead">{business.summary}</p>
+      <dl class="facts">
+        <div><dt>Owner</dt><dd>{business.owner}</dd></div>
+        <div><dt>Founded</dt><dd>{business.founded}</dd></div>
+        <div><dt>Based in</dt><dd>Saratoga Springs, Utah</dd></div>
+        <div><dt>Service area</dt><dd>Utah County and Salt Lake County</dd></div>
+        <div><dt>License</dt><dd>Utah contractor #{business.license}, licensed and insured</dd></div>
+        <div><dt>Certifications</dt><dd>TimberTech Platinum Pro; Pro Installer for Trex, Deckorators and Fortress; OC Lumber Pro Build Team</dd></div>
+        <div><dt>Warranty</dt><dd>7-year workmanship warranty, plus manufacturer labor and material coverage</dd></div>
+        <div><dt>Google rating</dt><dd>{business.rating.value} stars from {business.rating.count} reviews</dd></div>
+        <div><dt>Estimates</dt><dd>Free, over the phone</dd></div>
+        <div><dt>Phone</dt><dd><a href={business.phoneHref}>{business.phone}</a></dd></div>
+      </dl>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap grid grid-2">
       <div class="prose">
@@ -63,8 +90,13 @@ import { breadcrumbSchema } from '../lib/schema';
     </div>
   </section>
   <section class="section alt"><div class="wrap"><h2>What customers say about Levi</h2><Reviews /></div></section>
+  <section class="section"><div class="wrap"><Faqs faqs={faqs} heading="About TC Decks: common questions" /></div></section>
 </Base>
 <style>
+  .facts { display: grid; gap: 12px 28px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 24px 0 0; }
+  .facts div { border-top: 1px solid var(--line); padding-top: 10px; }
+  .facts dt { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); }
+  .facts dd { margin: 4px 0 0; }
   .about-side { display: grid; gap: 18px; align-content: start; }
   .about-side :global(.photo:last-child img) { object-position: top; }
   .family-photos { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin: 20px 0 28px; }
