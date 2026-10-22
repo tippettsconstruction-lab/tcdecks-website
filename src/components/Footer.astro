@@ -19,7 +19,7 @@ const year = new Date().getFullYear();
       <p>Custom deck builder serving Utah County and Salt Lake County since {business.founded}. Owned by {business.owner}.</p>
       <p>
         <a href={business.phoneHref}>{business.phone}</a><br />
-        <a href={`mailto:${business.email}`}>{business.email}</a><br />
+        <a href="/contact">Send us a message</a><br />
         {business.hours}
       </p>
       <p class="small">Utah Contractor License #{business.license}<br />Licensed &amp; insured<br />TimberTech Platinum Pro<br />Owens Corning OC Pro Build Team</p>
