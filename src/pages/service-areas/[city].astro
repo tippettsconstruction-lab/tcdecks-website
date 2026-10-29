@@ -59,6 +59,8 @@ const faqs = [
       <div class="prose">
         <h2>Building decks in {city.name}</h2>
         <ul class="check-list">{city.notes.map((n) => <li>{n}</li>)}</ul>
+        <h2>Deck cost estimates in {city.name}</h2>
+        <p>Most {city.name} decks we build run a similar range to the rest of {county}, with the final number driven by size, framing (wood, OC Lumber composite, or Fortress steel), and decking material. We'll walk your property, talk through what you want, and give you a straight estimate, with no obligation. See <a href="/how-much-does-a-deck-cost-in-utah">what a deck costs in Utah</a>, or <a href="/contact">request a free estimate</a>.</p>
       </div>
       <div><Photo src={photoSrc} alt={photoAlt} eager />{local && <p class="small"><a href={`/project-showcase#${local.project}`}>See this {city.name} project</a></p>}</div>
     </div>
