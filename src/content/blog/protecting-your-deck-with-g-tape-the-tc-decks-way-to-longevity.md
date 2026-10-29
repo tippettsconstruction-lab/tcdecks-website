@@ -21,10 +21,10 @@ Utah's climate speeds this up. In winter, snow sits on the deck and melts a litt
 
 ## What G-Tape does
 
-G-Tape is a butyl-based tape made for deck framing. We apply it to the tops of joists and beams, and over the ledger area, before the deck boards go on. It does two jobs:
+G-Tape is a joist tape made for deck framing, and it's the brand we prefer after trying many others (see [Is Flashing Tape Worth It on Wood-Framed Decks?](/blog/is-flashing-tape-worth-it-on-wood-framed-decks) for how the different tapes compare). We apply it to the tops of joists and beams, and over the ledger area, before the deck boards go on. It does two jobs:
 
 1. **It sheds water** off the top edge of the framing, so water doesn't sit on the wood.
-2. **It seals around fasteners.** When a screw goes through the tape into the joist, the butyl closes around the shank, which helps keep water out of the hole.
+2. **It seals around fasteners.** When a screw goes through the tape into the joist, the tape's adhesive closes around the shank, which helps keep water out of the hole.
 
 It adds a little time to the build and almost nothing to the overall project, and it protects the part of the deck that's hardest and most expensive to fix later. It's a standard step on our wood-framed decks.
 
