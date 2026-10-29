@@ -18,7 +18,7 @@ export const business = {
     instagram: 'https://www.instagram.com/tcdecks/',
     youtube: 'https://www.youtube.com/@TCDecksUtah',
     google: 'https://maps.app.goo.gl/1W1stqWWx51keaLo8',
-    facebook: 'https://www.facebook.com/p/Tippetts-Construction-inc-100057218539784/',
+    facebook: 'https://www.facebook.com/p/TC-Decks-Tippetts-Construction-100057218539784/',
   },
 };
 
