@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 import { business } from '../data/site';
 import Faqs from '../components/Faqs.astro';
+import MapEmbed from '../components/MapEmbed.astro';
 import { breadcrumbSchema, faqSchema } from '../lib/schema';
 
 const faqs = [
@@ -29,6 +30,7 @@ const faqs = [
         <p><strong>Based in:</strong> Saratoga Springs, UT, serving Utah County and Salt Lake County along the Wasatch Front. See our <a href="/service-areas">service areas</a>.</p>
         <h2>Want to sketch it first?</h2>
         <p>Use our <a href="/deck-planner">Deck Planner</a> to lay out the size, shape, stairs, decking color and railing, then send the drawing with your request.</p>
+        <MapEmbed />
         <p class="small">Utah Contractor License #{business.license} · Licensed &amp; insured</p>
       </div>
     </div>
