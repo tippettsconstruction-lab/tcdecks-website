@@ -396,3 +396,6 @@ export const reviews = [
 ];
 
 export const brands = ['TimberTech (our top pick)', 'Fortress railing & steel framing', 'Trex', 'Deckorators', 'Fiberon'];
+
+// Meta Pixel ID from Meta Events Manager (digits only). Empty = Pixel off.
+export const metaPixelId = '';
