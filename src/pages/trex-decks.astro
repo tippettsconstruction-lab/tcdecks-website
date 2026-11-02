@@ -1,0 +1,46 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'Are you a certified Trex installer?', a: 'Yes. TC Decks is a certified Trex Pro Installer, so we install Trex to the manufacturer’s requirements and can offer Trex-backed warranty coverage on qualifying projects, plus our own 7-year workmanship warranty.' },
+  { q: 'Trex or TimberTech: which is better?', a: 'Both are excellent. Trex is a great value with a wide color range. TimberTech PVC lines run cooler and lighter at a higher price. We build with both and will help you compare samples side by side.' },
+  { q: 'Can you keep the patio under my Trex deck dry?', a: 'Yes. Trex RainEscape is an under-deck drainage system that channels water away so the space below stays dry. We install it on second-story decks so the patio underneath can be used as an outdoor room.' },
+  { q: 'Can you match an existing Trex deck?', a: 'Often, yes. Trex has kept many colors in its lines for years. Tell us the line and color, or send a photo, and we will check what is available.' },
+];
+---
+<Service
+  slug="trex-decks"
+  name="Trex Decks"
+  title="Trex Deck Builder in Utah County | Pro Installer | TC Decks"
+  description="Certified Trex Pro Installer building Trex composite decks, railing and RainEscape under-deck drainage across Utah County and Salt Lake County."
+  h1="Trex decks from a certified Pro Installer"
+  lead="Trex is the best-known name in composite decking, and for good reason. As a certified Trex Pro Installer, TC Decks builds Trex decks, railing and under-deck drainage to Trex standards, backed by our 7-year workmanship warranty."
+  faqs={faqs}
+>
+  <h2>Why homeowners choose Trex</h2>
+  <ul class="check-list">
+    <li><strong>Great value.</strong> Trex gives you a low-maintenance composite deck at a range of price points.</li>
+    <li><strong>Lots of colors.</strong> From the cool grays of Pebble Grey to warm tones like Spiced Rum and Havana Gold.</li>
+    <li><strong>No staining or sealing.</strong> Wash it a couple of times a year and you're done.</li>
+    <li><strong>A full system.</strong> Trex decking, railing, lighting and RainEscape drainage are designed to work together.</li>
+  </ul>
+
+  <Photo src="/images/projects/pleasant-grove-trex-slide/two-tone-trex-deck-sunset-dining" alt="Two-tone Trex deck at sunset in Pleasant Grove, Utah" />
+
+  <h2>Our Trex deck on a magazine cover</h2>
+  <p>Our <a href="/project-showcase#pleasant-grove-trex-slide">Pleasant Grove Trex deck</a> made the cover of Deck Specialist magazine (Fall 2021). It's a large second-story deck with a two-tone picture-frame border, white posts with black balusters, a long stair run and a twisty tube slide down to the lawn, with a covered patio and hot tub underneath.</p>
+  <p>In Lindon we built a <a href="/project-showcase#lindon-trex-pebble-grey">low, wide Trex Pebble Grey deck</a> with white fascia and risers, Trex composite railing and warm lights on the stairs and under the rail. We've also built Trex Transcend decks in Lava Rock, Spiced Rum and Havana Gold.</p>
+
+  <div class="grid grid-2">
+    <Photo sizes="grid-3" src="/images/projects/lindon-trex-pebble-grey/trex-pebble-grey-deck-valley-view-dusk" alt="Trex Pebble Grey deck overlooking Utah Valley at dusk in Lindon" />
+    <Photo sizes="grid-3" src="/images/projects/pleasant-grove-trex-slide/pleasant-grove-trex-deck-twisty-tube-slide" alt="Trex deck with a twisty tube slide in Pleasant Grove" />
+  </div>
+
+  <h2>Trex RainEscape: a dry patio under your deck</h2>
+  <p>On a second-story deck, the space underneath is prime real estate. Trex RainEscape catches water between the joists and carries it to a gutter, so the patio below stays dry and you can add a ceiling, lights and a fan. Read more in <a href="/blog/trex-deck-drainage-systems-installed-by-tc-decks">our post on Trex drainage systems</a>.</p>
+
+  <h2>Built right underneath</h2>
+  <p>A composite deck is only as good as its frame. We build on <a href="/steel-deck-framing">steel framing</a> or protected wood framing, with solid footings, so the deck stays flat and safe for decades. Compare brands in <a href="/blog/comparing-timbertech-trex-and-deckorators-composite-decking">TimberTech vs Trex vs Deckorators</a>, or see all of our <a href="/certified-pro-installer">manufacturer certifications</a>.</p>
+  <p>Ready to talk about a Trex deck? <a href="/contact">Get a free phone estimate</a>.</p>
+</Service>

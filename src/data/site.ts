@@ -20,6 +20,32 @@ export const business = {
     google: 'https://maps.app.goo.gl/1W1stqWWx51keaLo8',
     facebook: 'https://www.facebook.com/p/TC-Decks-Tippetts-Construction-100057218539784/',
   },
+  // One plain, quotable description of the business. Search engines and AI assistants
+  // lift sentences like this verbatim, so keep it factual and in sync with the GBP description.
+  summary:
+    'TC Decks (Tippetts Construction) is a family-owned deck builder based in Saratoga Springs, Utah, founded by Levi Tippetts in 2005. It designs and builds custom composite decks, covered decks, pergolas, porches and railings, and full deck tear-out and rebuilds, across Utah County and Salt Lake County.',
+  credentials: [
+    'TimberTech Platinum Pro',
+    'Trex Pro Installer',
+    'Deckorators Pro Installer',
+    'Fortress Building Products Pro Installer',
+    'Owens Corning OC Lumber Pro Build Team',
+  ],
+  memberships: ['North American Deck and Railing Association (NADRA)', 'National Association of Home Builders (NAHB)'],
+  specialties: [
+    'Composite deck installation',
+    'PVC decking',
+    'TimberTech decks',
+    'Trex decks',
+    'Steel deck framing',
+    'Second-story decks',
+    'Covered decks',
+    'Pergolas',
+    'Deck railing',
+    'Deck tear-out and rebuild',
+    'Under-deck drainage',
+    'Deck lighting',
+  ],
 };
 
 export const yearsInBusiness = new Date().getFullYear() - business.founded;
@@ -34,6 +60,31 @@ export const services = [
     slug: 'composite-decks',
     name: 'Composite Decks',
     short: 'TimberTech PVC and composite, installed to manufacturer spec so the warranty holds.',
+  },
+  {
+    slug: 'timbertech-decks',
+    name: 'TimberTech Decks',
+    short: 'Built by a TimberTech Platinum Pro, with manufacturer labor and material coverage.',
+  },
+  {
+    slug: 'trex-decks',
+    name: 'Trex Decks',
+    short: 'Certified Trex Pro Installer: decking, railing and RainEscape drainage.',
+  },
+  {
+    slug: 'steel-deck-framing',
+    name: 'Steel Deck Framing',
+    short: 'Fortress steel frames that stay flat and never rot.',
+  },
+  {
+    slug: 'covered-decks',
+    name: 'Covered Decks',
+    short: 'Gable roofs, pavilions and tie-in roofs built with your deck.',
+  },
+  {
+    slug: 'hot-tub-decks',
+    name: 'Hot Tub Decks',
+    short: 'Framed for the weight, with privacy screens and step lights.',
   },
   {
     slug: 'pergolas',

@@ -16,7 +16,15 @@ const faqs = [
 <Base
   title="Deck Builder Utah County | Saratoga Springs | TC Decks"
   description={`Custom composite decks, pergolas and full deck rebuilds across Utah & Salt Lake Counties. Licensed & insured for ${yearsInBusiness}+ years, 7-year workmanship warranty.`}
-  schema={[faqSchema(faqs)]}
+  schema={[faqSchema(faqs), {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${business.url}/#website`,
+    name: 'TC Decks',
+    alternateName: ['TC Decks Utah', 'Tippetts Construction'],
+    url: `${business.url}/`,
+    publisher: { '@id': `${business.url}/#business` },
+  }]}
 >
   <link slot="head" rel="preload" as="image" href="/video/tc-decks-deck-builds-poster.webp" fetchpriority="high" />
   <section class="home-hero">

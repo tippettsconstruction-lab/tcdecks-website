@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
+import MapEmbed from '../../components/MapEmbed.astro';
 import { cities } from '../../data/site';
 import { breadcrumbSchema } from '../../lib/schema';
 const groups = ['Utah County', 'Salt Lake County'].map((county) => ({ county, list: cities.filter((c) => (c.county ?? 'Utah County') === county) }));
@@ -26,6 +27,7 @@ const groups = ['Utah County', 'Salt Lake County'].map((county) => ({ county, li
         </div>
       </div>
     ))}
+    <div class="wrap county"><h2>Find us on Google Maps</h2><MapEmbed /></div>
     <div class="wrap"><p style="margin-top:24px">Outside these cities? <a href="/contact">Ask us</a>, we often build nearby.</p></div>
   </section>
 </Base>
