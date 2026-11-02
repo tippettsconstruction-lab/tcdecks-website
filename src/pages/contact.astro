@@ -3,12 +3,20 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 import { business } from '../data/site';
-import { breadcrumbSchema } from '../lib/schema';
+import Faqs from '../components/Faqs.astro';
+import { breadcrumbSchema, faqSchema } from '../lib/schema';
+
+const faqs = [
+  { q: 'Is the estimate really free?', a: 'Yes. Estimates are free and happen over the phone. Tell us the size, height, materials and features you have in mind and we will give you a ballpark range.' },
+  { q: 'Do you come out to measure?', a: 'Once a project looks like a good fit, we schedule a site visit to measure and finalize the details. That keeps the process quick for you and for us.' },
+  { q: 'When do I get a 3D rendering?', a: 'Every booked project gets a 3D rendering of the deck on your home, so you can see the layout, colors, railing and stairs before we build.' },
+  { q: 'What areas do you serve?', a: 'We are based in Saratoga Springs and build across Utah County and Salt Lake County, from Payson and Santaquin to Draper, Sandy and Herriman.' },
+];
 ---
 <Base
   title="Get a Free Deck Estimate | Contact TC Decks | 801-472-8939"
   description="Request a free deck estimate from TC Decks in Saratoga Springs, Utah. Call 801-472-8939 or send us your project details."
-  schema={[breadcrumbSchema([{ name: 'Contact', path: '/contact' }])]}
+  schema={[breadcrumbSchema([{ name: 'Contact', path: '/contact' }]), faqSchema(faqs)]}
 >
   <PageHero eyebrow="Contact" title="Get a free estimate" lead="Estimates are free and done over the phone. Tell us about your project and we'll give you a ballpark. If it's a good fit, we'll schedule a site visit to measure and finalize the details." crumbs={[{ name: 'Contact', path: '/contact' }]} />
   <section class="section">
@@ -23,6 +31,26 @@ import { breadcrumbSchema } from '../lib/schema';
         <p>Use our <a href="/deck-planner">Deck Planner</a> to lay out the size, shape, stairs, decking color and railing, then send the drawing with your request.</p>
         <p class="small">Utah Contractor License #{business.license} · Licensed &amp; insured</p>
       </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>What happens after you reach out</h2>
+      <ol>
+        <li><strong>Phone estimate.</strong> We call you back, talk through your ideas and give you a ballpark.</li>
+        <li><strong>Site visit.</strong> If it's a good fit, we come out to measure and look at your yard, access and height.</li>
+        <li><strong>Proposal and 3D design.</strong> Once your job is booked, you get a 3D rendering of your new deck on your home.</li>
+        <li><strong>Build.</strong> Levi and the crew build your deck, then walk it with you at the end. Every deck carries our 7-year workmanship warranty.</li>
+      </ol>
+      <h2>Helpful to have ready</h2>
+      <ul class="check-list">
+        <li>Rough size and how high the deck sits off the ground</li>
+        <li>Decking you like (for example <a href="/timbertech-decks">TimberTech</a> or <a href="/trex-decks">Trex</a>) and a railing style</li>
+        <li>Extras such as a <a href="/covered-decks">roof</a>, <a href="/hot-tub-decks">hot tub</a>, lighting or stairs</li>
+        <li>A few photos of the area, if it's easy</li>
+      </ul>
+      <p>Thinking about payments? See <a href="/financing">financing through Wisetack</a>.</p>
+      <Faqs faqs={faqs} />
     </div>
   </section>
 </Base>

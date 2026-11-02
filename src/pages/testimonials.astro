@@ -10,7 +10,7 @@ import { breadcrumbSchema } from '../lib/schema';
   description={`Read reviews from Utah County homeowners who had their decks built by TC Decks. Rated ${business.rating.value} stars from ${business.rating.count} Google reviews.`}
   schema={[breadcrumbSchema([{ name: 'Reviews', path: '/testimonials' }])]}
 >
-  <PageHero eyebrow="Reviews" title="What our customers say" lead="We're proud of our 4.9-star rating on Google. Here's what homeowners say about working with TC Decks." crumbs={[{ name: 'Reviews', path: '/testimonials' }]} />
+  <PageHero eyebrow="Reviews" title="What our customers say" lead={`We're proud of our ${business.rating.value}-star rating from ${business.rating.count} Google reviews. Here's what homeowners say about working with TC Decks.`} crumbs={[{ name: 'Reviews', path: '/testimonials' }]} />
   <section class="section"><div class="wrap"><Reviews />
     <h2 style="margin-top:40px">Why homeowners choose TC Decks</h2>
     <ul class="check-list">
@@ -20,7 +20,11 @@ import { breadcrumbSchema } from '../lib/schema';
       <li><strong>Backed by a 7-year workmanship warranty.</strong> As a TimberTech Platinum Pro and certified installer for Trex, Deckorators and Fortress, manufacturer coverage can include labor as well as material.</li>
       <li><strong>Built to last.</strong> Steel framing, ground screw footings and capped composite decking where they make sense, so your deck holds up to Utah sun and snow.</li>
     </ul>
+    <h2 style="margin-top:40px">What reviewers mention most</h2>
+    <p>Across our Google reviews, homeowners keep coming back to the same things: deck stair and night lighting that makes the deck usable after dark, finishing on schedule, premium materials, fair pricing, quick responses and real pride in the work. Many also mention Levi by name, because the owner is the one designing your deck and checking the build.</p>
+    <h2 style="margin-top:40px">See the work behind the reviews</h2>
+    <p>Most of our reviews come from projects you can see on this site: TimberTech decks in Highland, Saratoga Springs and the Pleasant Grove foothills, Trex decks in Pleasant Grove and Lindon, hot tub and sauna decks in Highland and Sundance, and second-story covered decks across Utah and Salt Lake Counties. Browse them in our <a href="/project-showcase">project showcase</a>, or start with <a href="/timbertech-decks">TimberTech decks</a>, <a href="/trex-decks">Trex decks</a>, <a href="/covered-decks">covered decks</a> and <a href="/hot-tub-decks">hot tub decks</a>.</p>
     <p style="margin-top:24px">Ready to start? <a href="/contact">Request a free estimate</a>, browse <a href="/project-showcase">recent projects</a> or see <a href="/service-areas">the cities we serve</a>.</p>
-    <p style="margin-top:24px">Worked with us? <a href="https://www.google.com/search?q=TC+Decks+Saratoga+Springs+reviews" rel="noopener">Leave a Google review</a>. It helps a small business a lot.</p>
+    <p style="margin-top:24px">Worked with us? <a href="https://g.page/r/CWdqhYzY8qqMEBM/review" target="_blank" rel="noopener">Leave a Google review</a>. It helps a small family business a lot, and mentioning your city and decking (for example, "TimberTech deck in Lehi") helps other Utah homeowners find us.</p>
   </div></section>
 </Base>

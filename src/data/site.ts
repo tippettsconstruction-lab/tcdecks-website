@@ -62,6 +62,31 @@ export const services = [
     short: 'TimberTech PVC and composite, installed to manufacturer spec so the warranty holds.',
   },
   {
+    slug: 'timbertech-decks',
+    name: 'TimberTech Decks',
+    short: 'Built by a TimberTech Platinum Pro, with manufacturer labor and material coverage.',
+  },
+  {
+    slug: 'trex-decks',
+    name: 'Trex Decks',
+    short: 'Certified Trex Pro Installer: decking, railing and RainEscape drainage.',
+  },
+  {
+    slug: 'steel-deck-framing',
+    name: 'Steel Deck Framing',
+    short: 'Fortress steel frames that stay flat and never rot.',
+  },
+  {
+    slug: 'covered-decks',
+    name: 'Covered Decks',
+    short: 'Gable roofs, pavilions and tie-in roofs built with your deck.',
+  },
+  {
+    slug: 'hot-tub-decks',
+    name: 'Hot Tub Decks',
+    short: 'Framed for the weight, with privacy screens and step lights.',
+  },
+  {
     slug: 'pergolas',
     name: 'Pergolas & Covered Patios',
     short: 'Shade that makes your deck usable through July and August.',

@@ -1,0 +1,51 @@
+---
+import Service from '../layouts/Service.astro';
+import Photo from '../components/Photo.astro';
+
+const faqs = [
+  { q: 'Can you add a roof over a new deck?', a: 'Yes. We design and build the roof together with the deck, whether it is a gable roof, a shed roof tied into the house, a timber-frame pavilion or a metal roof. Building them together means the posts, beams and footings are planned for the roof from day one.' },
+  { q: 'What about the patio under a second-story deck?', a: 'We can keep it dry with an under-deck drainage system like Trex RainEscape, then finish the ceiling and add lights so the space below becomes a second outdoor room.' },
+  { q: 'Can I have lights, fans or heaters under the roof?', a: 'Yes. Recessed lights, string lights and other fixtures can be planned into the roof framing. Tell us what you would like during your phone estimate.' },
+  { q: 'Do you build pergolas too?', a: 'Yes. If you want partial shade instead of a full roof, see our pergolas page for cedar, aluminum and composite options.' },
+];
+---
+<Service
+  slug="covered-decks"
+  name="Covered Decks"
+  title="Covered Deck Builder in Utah County | Deck Roofs | TC Decks"
+  description="Covered decks and deck roofs in Utah County and Salt Lake County: gable roofs, timber pavilions and metal roofs built with your new composite deck."
+  h1="Covered decks and deck roofs"
+  lead="A roof turns a deck you use in the morning into an outdoor room you use all day. We design and build the deck and its roof together, so it looks like it was always part of your home."
+  faqs={faqs}
+>
+  <h2>Why cover your deck in Utah</h2>
+  <ul class="check-list">
+    <li><strong>Shade on hot afternoons.</strong> West-facing backyards in Saratoga Springs, Lehi and Eagle Mountain can be too hot to sit in by 3pm. A roof fixes that.</li>
+    <li><strong>Usable in spring and fall rain.</strong> Eat outside even when the weather turns.</li>
+    <li><strong>Less snow to shovel.</strong> A covered deck keeps a clear path to the grill or hot tub in winter.</li>
+    <li><strong>Your boards last longer.</strong> Less sun and snow on the surface means less wear.</li>
+  </ul>
+
+  <Photo src="/images/projects/highland-legacy-pecan-covered/highland-covered-deck-timbertech-legacy-pecan-gable-roof" alt="Covered TimberTech Legacy Pecan deck with a gable roof and stone columns in Highland, Utah" />
+
+  <h2>Roof styles we build</h2>
+  <ul>
+    <li><strong>Gable roofs</strong> with vaulted ceilings, like our <a href="/project-showcase#highland-legacy-pecan-covered">Highland Legacy Pecan deck</a> on rough-sawn cedar beams and stone columns.</li>
+    <li><strong>Shed and tie-in roofs</strong> shingled to match the house, like our <a href="/project-showcase#saratoga-springs-brownstone-covered">Saratoga Springs Brownstone deck</a>.</li>
+    <li><strong>Timber-frame pavilions with metal roofs</strong>, like the <a href="/project-showcase#highland-english-walnut-hideaway">Highland hot tub retreat</a>.</li>
+    <li><strong>Partial covers</strong> over one corner of a larger deck, like the porch-swing corner on our <a href="/project-showcase#saratoga-springs-dark-cocoa">Saratoga Springs Dark Cocoa deck</a>.</li>
+    <li><strong>Covered decks with a fireplace</strong>, like our <a href="/project-showcase#lehi-covered-deck-fireplace">Lehi build</a> with a stone outdoor fireplace.</li>
+  </ul>
+  <p>See more roof and shade options on our <a href="/design-ideas/roofs-shade">roofs &amp; shade design page</a>.</p>
+
+  <div class="grid grid-2">
+    <Photo sizes="grid-3" src="/images/projects/lehi-covered-deck-fireplace/lehi-covered-composite-deck-stone-fireplace" alt="Covered composite deck with a stone fireplace in Lehi, Utah" />
+    <Photo sizes="grid-3" src="/images/projects/saratoga-springs-dark-cocoa/covered-deck-porch-swing-metal-roof-lights" alt="Covered deck corner with a metal roof, porch swing and string lights in Saratoga Springs" />
+  </div>
+
+  <h2>Two outdoor rooms from one deck</h2>
+  <p>On a second-story deck, the patio underneath can be just as useful as the deck itself. With <a href="/blog/trex-deck-drainage-systems-installed-by-tc-decks">under-deck drainage</a>, a finished ceiling and lighting, it becomes a dry, shaded space for a hot tub, a dining table or the kids' play area. Steel framing makes those spaces even more open, with fewer posts. See <a href="/steel-deck-framing">steel deck framing</a>.</p>
+
+  <h2>See it before we build it</h2>
+  <p>Roofs change how a home looks from the yard and the street. Every booked project gets a 3D rendering, so you can see the roof line, posts, stairs and railing before we start. <a href="/contact">Call for a free estimate</a> to start planning your covered deck.</p>
+</Service>
