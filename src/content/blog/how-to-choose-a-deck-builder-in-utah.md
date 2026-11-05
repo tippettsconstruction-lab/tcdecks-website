@@ -1,7 +1,7 @@
 ---
 title: "How to Choose a Deck Builder in Utah: 10 Things to Check"
 metaTitle: "How to Choose a Deck Builder in Utah | TC Decks"
-description: "A checklist for hiring a deck builder in Utah County or Salt Lake County: license, manufacturer certifications, reviews, warranty, framing and who runs the job."
+description: "A checklist for hiring a deck builder in Utah County or Salt Lake County: license, certifications, reviews, warranty, framing and who runs the job."
 date: 2026-10-13
 image: "/images/projects/saratoga-springs-dark-cocoa/aerial-timbertech-dark-cocoa-coconut-husk-deck-saratoga-springs-1600.webp"
 ---

@@ -14,6 +14,8 @@ export const business = {
   hours: 'Mon–Sat, 7am–8pm',
   hoursSchema: ['Mo-Sa 07:00-20:00'],
   rating: { value: 4.9, count: 44 },
+  // Google Analytics 4 measurement ID (G-XXXXXXXXXX). Empty = no analytics tag.
+  gaId: 'G-FDHC2FZT0R',
   social: {
     instagram: 'https://www.instagram.com/tcdecks/',
     youtube: 'https://www.youtube.com/@TCDecksUtah',
