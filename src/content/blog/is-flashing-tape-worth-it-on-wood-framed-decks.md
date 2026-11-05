@@ -74,7 +74,7 @@ The deck screws go right through the tape. That's fine, since the tape seals aro
 
 ## What it costs
 
-On a typical 400 sq ft deck, tape adds about $300 to $400 in material and 3 to 4 hours of labor. Compare that to replacing rotted 20-foot joists, or the whole deck, years early.
+On a typical deck, tape is a small line in the material bill and adds a few hours of labor. Compare that to replacing rotted 20-foot joists, or the whole deck, years early.
 
 We don't list it as a separate line item. It's built into our framing price, and our proposals call it out as included. Most homeowners don't think about it until they see us rolling it on. Several have come out to ask what it is, and more than a few have thanked us for doing it.
 

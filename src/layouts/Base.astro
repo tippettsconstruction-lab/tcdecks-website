@@ -38,7 +38,6 @@ const localBusiness = {
     { '@type': 'AdministrativeArea', name: 'Salt Lake County, UT' },
     ...cities.map((c) => ({ '@type': 'City', name: `${c.name}, UT` })),
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: business.rating.value, reviewCount: business.rating.count },
   sameAs: Object.values(business.social),
   knowsAbout: business.specialties,
   hasCredential: [`Utah Contractor License #${business.license}`, ...business.credentials].map((name) => ({ '@type': 'EducationalOccupationalCredential', name })),
@@ -67,16 +66,52 @@ const localBusiness = {
     <slot name="head" />
     <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
     {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+    {business.gaId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${business.gaId}`}></script>
+        <script is:inline define:vars={{ gaId: business.gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', gaId);
+          // Lead events: phone taps and estimate form submissions.
+          document.addEventListener('click', function (e) {
+            var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+            if (a) gtag('event', 'phone_call_click', { link_url: a.href, page_path: location.pathname });
+          });
+          document.addEventListener('submit', function (e) {
+            var f = e.target;
+            if (f && f.getAttribute('name') === 'estimate') gtag('event', 'generate_lead', { form_name: 'estimate', page_path: location.pathname });
+          });
+        </script>
+      </>
+    )}
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <main id="main"><slot /></main>
     <Footer />
+    <nav class="mobile-cta" aria-label="Contact TC Decks">
+      <a class="btn btn-ghost" href={business.phoneHref}>Call {business.phone}</a>
+      <a class="btn btn-primary" href="/contact">Free Estimate</a>
+    </nav>
   </body>
 </html>
 
 <style is:global>
+  .mobile-cta { display: none; }
+  @media (max-width: 720px) {
+    .mobile-cta {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      background: var(--dark); border-top: 3px solid var(--accent);
+    }
+    .mobile-cta .btn { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0.6rem 8px; min-height: 48px; font-size: 0.95rem; }
+    .mobile-cta .btn-ghost { color: #fff; }
+    body::after { content: ""; display: block; height: calc(68px + env(safe-area-inset-bottom)); background: var(--dark); }
+  }
   .skip { position: absolute; left: -999px; }
   .skip:focus { left: 16px; top: 16px; background: #fff; padding: 8px; z-index: 100; }
 </style>
