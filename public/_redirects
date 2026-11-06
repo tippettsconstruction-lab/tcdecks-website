@@ -20,6 +20,10 @@ https://brilliant-heliotrope-ee7437.netlify.app/*  https://www.tcdecksutah.com/:
 /blog/pagination/*  /blog  301
 /blog/author/*  /blog  301
 /popup-form  /contact  301
+
+# Short links for the Design & Selection Guide
+/guide  /design-ideas  301
+/design-guide  /design-ideas  301
 /blog/discover-the-top-deck-builder-in-st-george-utah  /service-areas  301
 
 # Old blog posts (not migrated) -> closest new page

@@ -5,49 +5,165 @@ import Photo from '../../components/Photo.astro';
 import { ideaPages } from '../../data/designIdeas';
 import { breadcrumbSchema } from '../../lib/schema';
 
-const steps = [
-  { name: 'Layout', text: 'How you’ll use the space, traffic flow, sun, views, size and height.' },
-  { name: 'Materials & color', text: 'Decking, railing, fascia and accent colors.' },
-  { name: 'Features', text: 'Shade, lighting, kitchens, seating, hot tubs and storage.' },
-  { name: 'Build', text: '3D rendering once booked, then construction and final walkthrough.' },
+// Client-facing Design & Selection Guide (replaces the old Google Sites guide).
+// Short links /guide and /design-guide 301 here (see scripts/build-redirects.mjs).
+
+type Link = { href: string; label: string };
+const steps: { name: string; text: string; decide: string[]; links: Link[] }[] = [
+  {
+    name: 'Layout',
+    text: 'Start with how you’ll use the deck. Size and shape follow from that.',
+    decide: ['What it’s for: dining, lounging, a hot tub, kids', 'Traffic flow from the house to the yard', 'Sun, wind and the view you want to face', 'Size, height and where the stairs land'],
+    links: [{ href: '/deck-planner', label: 'Sketch it in the Deck Planner' }, { href: '/blog/building-a-deck-on-a-sloped-lot-or-walkout-basement-in-utah', label: 'Sloped lots & walkouts' }],
+  },
+  {
+    name: 'Materials & color',
+    text: 'Pick the boards, railing and trim. This is where most of the look comes from.',
+    decide: ['Decking line and color', 'Border, breaker or two-tone accents', 'Railing style and color', 'Fascia and stair finish'],
+    links: [{ href: '/design-ideas/composite-decking', label: 'Decking & colors' }, { href: '/design-ideas/railings', label: 'Railings' }, { href: '/design-ideas/design-details', label: 'Design details' }],
+  },
+  {
+    name: 'Features',
+    text: 'Add shade, light and the extras that make it an outdoor room.',
+    decide: ['Roof, pergola or shade', 'Lighting (planned before the boards go down)', 'Hot tub, sauna or cold plunge', 'Kitchen, seating, storage or drainage below'],
+    links: [{ href: '/design-ideas/roofs-shade', label: 'Roofs & shade' }, { href: '/design-ideas/lighting', label: 'Lighting' }, { href: '/design-ideas/add-ons', label: 'Add-ons' }],
+  },
+  {
+    name: 'Build',
+    text: 'Once you’re booked, we lock in the design and build it.',
+    decide: ['3D rendering of your deck', 'Contract and permit', 'Construction', 'Final walkthrough together'],
+    links: [{ href: '/blog/the-process-of-building-a-composite-deck-with-tc-decks', label: 'What the build looks like' }, { href: '/design-ideas/built-to-last', label: 'What goes under the boards' }],
+  },
+];
+
+const tiers = [
+  { tier: 'Good', lines: 'Prime+, Premier, Terrain, Terrain+', look: 'Solid colors and simple wood grain. Best value.', warranty: '25–30 years' },
+  { tier: 'Better', lines: 'Harvest, Harvest+, Landmark, Reserve', look: 'Richer, multi-tone color; reclaimed and hand-scraped looks.', warranty: '50-year limited fade & stain' },
+  { tier: 'Best', lines: 'Legacy, Vintage', look: 'Most natural color variation, coolest surface, top finishes.', warranty: '50-year limited fade & stain' },
+];
+
+const priorities: { name: string; text: string; href: string; label: string }[] = [
+  { name: 'Longevity', text: 'PVC boards, steel or OC framing, and joist tape on every wood frame.', href: '/design-ideas/built-to-last', label: 'Built to last' },
+  { name: 'Durability', text: 'Ground-screw footings, the right hardware and framing sized for snow and hot tubs.', href: '/steel-deck-framing', label: 'Steel framing' },
+  { name: 'Looks', text: 'Picture frames, two-tone borders, hidden fasteners, railing and lighting.', href: '/design-ideas/design-details', label: 'Design details' },
+  { name: 'Budget', text: 'Good, better and best options so you can put money where it matters most.', href: '/how-much-does-a-deck-cost-in-utah', label: 'Deck cost in Utah' },
 ];
 ---
 <Base
-  title="Deck Design Ideas & Selection Guide | TC Decks Utah"
-  description="Deck design ideas from TC Decks: TimberTech colors, railings, roofs and pergolas, lighting, add-ons and the details that make a Utah deck last."
-  schema={[breadcrumbSchema([{ name: 'Design Ideas', path: '/design-ideas' }])]}
+  title="Deck Design & Selection Guide | TC Decks Utah"
+  description="Plan your deck in four steps with TC Decks: layout, TimberTech decking tiers and colors, railing, roofs, lighting and add-ons, with photos from real Utah projects."
+  schema={[breadcrumbSchema([{ name: 'Design Guide', path: '/design-ideas' }])]}
 >
-  <PageHero eyebrow="Design & selection guide" title="Deck design ideas" lead="Browse the options we build so you can picture your deck and tell us what you like. Bring your favorites to your free phone estimate." crumbs={[{ name: 'Design Ideas', path: '/design-ideas' }]} />
-  <section class="section">
+  <PageHero
+    eyebrow="TC Decks Design & Selection Guide"
+    title="Design your deck, step by step"
+    lead="Everything you’ll choose for a new deck, in the order you’ll choose it. Note what you like as you go, then bring it to your free estimate and we’ll help you narrow it down."
+    crumbs={[{ name: 'Design Guide', path: '/design-ideas' }]}
+  >
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#steps">Start with step 1</a>
+      <a class="btn btn-ghost" href="/deck-planner">Sketch your deck</a>
+    </div>
+  </PageHero>
+
+  <nav class="jump" aria-label="On this page">
     <div class="wrap">
-      <p class="lead intro">This guide covers the choices that shape a new deck: the decking itself, railing, shade, lighting, extras like hot tubs and storage, and the framing and footings underneath. Each page shows what we build, with photos from real TC Decks projects around Utah County and Salt Lake County. Save the ideas you like and bring them to your free phone estimate, and we'll help you narrow them down to a design that fits your home, your yard and your budget.</p>
+      <a href="#steps">4 steps</a>
+      <a href="#decking">Decking tiers</a>
+      <a href="#browse">Browse options</a>
+      <a href="#priorities">What matters most</a>
+    </div>
+  </nav>
+
+  <section class="section" id="steps">
+    <div class="wrap">
+      <h2>Plan it in four steps</h2>
+      <ol class="steps">
+        {steps.map((s, i) => (
+          <li class="card step">
+            <span class="num">{i + 1}</span>
+            <h3>{s.name}</h3>
+            <p>{s.text}</p>
+            <ul class="check-list">{s.decide.map((d) => <li>{d}</li>)}</ul>
+            <p class="links">{s.links.map((l) => <a href={l.href}>{l.label} →</a>)}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="decking">
+    <div class="wrap">
+      <h2>Decking: good, better, best</h2>
+      <p class="lead">We recommend TimberTech for most decks. Every tier is low maintenance; moving up buys you a more natural look and a longer fade and stain warranty.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tier</th><th>TimberTech lines</th><th>Look</th><th>Warranty</th></tr></thead>
+          <tbody>
+            {tiers.map((t) => <tr><td><strong>{t.tier}</strong></td><td>{t.lines}</td><td>{t.look}</td><td>{t.warranty}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <p class="after-table">See colors on finished decks in <a href="/design-ideas/composite-decking">Decking &amp; colors</a>, or read <a href="/blog/is-higher-end-pvc-decking-worth-it">whether higher-end PVC is worth it</a>. Prefer real wood? See <a href="/design-ideas/natural-wood">natural wood options</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="browse">
+    <div class="wrap">
+      <h2>Browse the options</h2>
+      <p class="lead">Photos from real TC Decks projects around Utah County and Salt Lake County.</p>
       <div class="grid grid-3">
         {ideaPages.map((p) => (
           <a class="idea card" href={`/design-ideas/${p.slug}`}>
             <Photo sizes="grid-3" src={p.cover} alt={p.name} label={p.name} />
-            <h2 class="h3">{p.name}</h2>
+            <h3>{p.name}</h3>
             <p>{p.intro.split('. ')[0]}.</p>
           </a>
         ))}
       </div>
     </div>
   </section>
-  <section class="section alt">
+
+  <section class="section alt" id="priorities">
     <div class="wrap">
-      <h2>Planning your deck in four steps</h2>
-      <ol class="grid grid-3 steps">
-        {steps.map((s, i) => <li class="card"><span class="num">{i + 1}</span><h3>{s.name}</h3><p>{s.text}</p></li>)}
-      </ol>
+      <h2>What matters most</h2>
+      <div class="grid prio">
+        {priorities.map((p) => (
+          <div class="card">
+            <h3>{p.name}</h3>
+            <p>{p.text}</p>
+            <a class="more" href={p.href}>{p.label} →</a>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
+
 </Base>
 <style>
+  .jump { position: sticky; top: 71px; z-index: 40; background: #fff; border-bottom: 1px solid var(--line); }
+  .jump .wrap { display: flex; gap: 8px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; }
+  .jump a { flex: none; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 600; font-size: 0.92rem; }
+  .jump a:hover { border-color: var(--accent); color: var(--accent); }
+  section[id] { scroll-margin-top: 140px; }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .step { display: flex; flex-direction: column; }
+  .step .check-list { font-size: 0.95rem; }
+  .step .links { margin: auto 0 0; display: flex; flex-direction: column; gap: 4px; }
+  .step .links a { font-weight: 700; text-decoration: none; }
+  .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; margin-bottom: 8px; }
+  .after-table { margin-top: 16px; }
+  td { vertical-align: top; }
   .idea { text-decoration: none; color: inherit; padding: 0; overflow: hidden; }
   .idea :global(.photo) { border-radius: 0; }
-  .idea h2, .idea p { padding: 0 18px; }
-  .idea h2 { margin-top: 14px; font-size: 1.25rem; }
-  .idea:hover h2 { color: var(--accent); }
-  .intro { margin-bottom: 32px; }
-  .steps { list-style: none; padding: 0; }
-  .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; margin-bottom: 8px; }
+  .idea h3, .idea p { padding: 0 18px; }
+  .idea h3 { margin-top: 14px; font-size: 1.2rem; }
+  .idea:hover h3 { color: var(--accent); }
+  .prio { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .prio h3 { color: var(--accent-dark); }
+  .prio p { margin-bottom: 0.6rem; }
+  @media print {
+    .jump, :global(.site-header), :global(.mobile-cta), :global(footer) { display: none !important; }
+    .card { box-shadow: none; break-inside: avoid; }
+  }
 </style>
