@@ -30,7 +30,7 @@ const article = {
   <section class="section">
     <article class="wrap prose">
       {post.data.image && (
-        <img class="post-image" src={post.data.image} alt={post.data.title} width="1600" height="1067" fetchpriority="high" />
+        <img class="post-image" src={post.data.image} srcset={post.data.image.endsWith('-1600.webp') ? [400, 800, 1600].map((w) => `${post.data.image.replace(/-1600\.webp$/, `-${w}.webp`)} ${w}w`).join(', ') : undefined} sizes="(min-width: 800px) 736px, calc(100vw - 32px)" alt={post.data.title} width="1600" height="1067" fetchpriority="high" />
       )}
       <Content />
     </article>
