@@ -1,6 +1,8 @@
 ---
 import Service from '../layouts/Service.astro';
 import Photo from '../components/Photo.astro';
+import YouTubeVideo from '../components/YouTubeVideo.astro';
+import { videos } from '../data/videos';
 
 const faqs = [
   { q: 'Does composite decking get hot in Utah summers?', a: 'All decking gets warm in direct sun, and darker colors get hotter. Lighter colors, capped PVC lines and a pergola or shade sail make a big difference on west-facing decks.' },
@@ -31,6 +33,9 @@ const faqs = [
       </tbody>
     </table>
   </div>
+
+  <h2>Composite decks we've built around Utah County</h2>
+  <YouTubeVideo video={videos.utahCountyTour} caption="A tour of composite decks built by TC Decks across Utah County." />
 
   <h2>Why we recommend TimberTech</h2>
   <p>For most decks we recommend TimberTech. Its fully capped PVC boards absorb almost no water, stay cooler underfoot than traditional composite, and resist fading and staining in Utah's high-altitude sun. The lines are grouped good, better and best:</p>

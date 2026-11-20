@@ -1,6 +1,8 @@
 ---
 import Service from '../layouts/Service.astro';
 import Photo from '../components/Photo.astro';
+import YouTubeVideo from '../components/YouTubeVideo.astro';
+import { videos } from '../data/videos';
 
 const faqs = [
   { q: 'What does TimberTech Platinum Pro mean?', a: 'Platinum Pro is TimberTech’s top contractor level. It means TC Decks is trained and certified on TimberTech products, and it lets us offer TimberTech labor and material warranty coverage on top of our own 7-year workmanship warranty.' },
@@ -61,6 +63,10 @@ const faqs = [
     <Photo sizes="grid-3" src="/images/projects/pleasant-grove-foothills-french-white-oak/french-white-oak-picture-frame-border-detail" alt="TimberTech French White Oak decking with a picture-frame border" />
     <Photo sizes="grid-3" src="/images/projects/highland-legacy-pecan-covered/timbertech-legacy-pecan-board-texture-closeup" alt="Close-up of TimberTech Legacy Pecan deck boards" />
   </div>
+
+  <h2>Watch a TimberTech deck go in</h2>
+  <p>This Lehi rebuild uses TimberTech Dark Cocoa boards with hidden fasteners, Fortress railing and built-in stair lights, from tear-out to the lights coming on at dusk.</p>
+  <YouTubeVideo video={videos.lehiRebuildShort} caption="TimberTech Dark Cocoa deck rebuild in Lehi, Utah by TC Decks." />
 
   <h2>Under the boards</h2>
   <p>Great decking deserves a frame that lasts as long. We often build TimberTech decks on <a href="/steel-deck-framing">Fortress steel framing</a> or <a href="/oc-lumber">OC Lumber</a>, and when a project uses wood we protect the joists with flashing tape. Read the <a href="/design-ideas/built-to-last">built-to-last guide</a> for the details.</p>

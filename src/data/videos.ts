@@ -17,6 +17,20 @@ export const videos = {
     uploadDate: '2026-10-07T13:47:53-07:00',
     duration: 'PT1M41S',
   },
+  lehiRebuildShort: {
+    id: 'Hl7jtWDu5r8',
+    title: 'Lehi, Utah Deck Rebuild in 45 Seconds | TimberTech Dark Cocoa + Fortress Rails',
+    description: 'A full Lehi, Utah deck rebuild in under a minute: a 19 x 12 ft elevated deck with TimberTech Dark Cocoa composite decking and hidden fasteners, Fortress FE26 Black Sand railing, and LED stair and post lights.',
+    uploadDate: '2026-10-07T13:58:08-07:00',
+    duration: 'PT46S',
+  },
+  utahCountyTour: {
+    id: 'sdK-1Z81bpA',
+    title: 'Composite Deck Builds Around Utah County | TC Decks Project Tour',
+    description: 'A tour of composite decks, patios and pergolas TC Decks has built across Utah County and Salt Lake County with Trex, TimberTech and Deckorators decking.',
+    uploadDate: '2023-04-14T11:57:10-07:00',
+    duration: 'PT1M10S',
+  },
 } satisfies Record<string, Video>;
 
 // City pages that have a local project video.
