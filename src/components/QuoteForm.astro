@@ -7,12 +7,14 @@ const { planner = false } = Astro.props;
 ---
 <form name="estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data" class="card">
   <input type="hidden" name="form-name" value="estimate" />
-  <p class="hidden"><label>Leave blank <input name="company" /></label></p>
+  <p class="hidden"><label>Leave blank <input name="company" tabindex="-1" autocomplete="off" /></label></p>
+  <!-- Set by the script below; an empty value means the request did not come from this page. -->
+  <input type="hidden" name="form_seconds" />
   <!-- Deck Planner fields; every copy of this form carries them so Netlify registers them. -->
   <input type="hidden" name="design" />
   <input type="file" name="design_image" class="hidden" tabindex="-1" aria-hidden="true" />
   <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
-  <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required /></div>
+  <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9\(\)\-+. ]{10,}" title="Please enter a 10-digit phone number" required /></div>
   <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" /></div>
   <div class="field">
     <label for="f-city">City</label>
@@ -62,6 +64,7 @@ const { planner = false } = Astro.props;
     <div class="field"><input name="photo3" type="file" accept="image/*,.pdf" aria-label="Photo or plan 3" /></div>
     <p class="small file-warn" hidden>Those files are over 8 MB together. Try smaller photos, or text them to us after you submit.</p>
   </fieldset>
+  <p class="small no-sales">This form is for homeowners planning a deck. We don't reply to sales or marketing offers.</p>
   <button class="btn btn-primary" type="submit">{planner ? 'Send My Design for a Free Estimate' : 'Request My Free Estimate'}</button>
 </form>
 
@@ -72,6 +75,7 @@ const { planner = false } = Astro.props;
   .row { display: grid; gap: 0 14px; }
   @media (min-width: 640px) { .row { grid-template-columns: 1fr 1fr; } }
   input[type='file'] { width: 100%; max-width: 100%; }
+  .no-sales { color: var(--ink-soft); margin: 0 0 12px; }
 </style>
 
 <script>
@@ -81,6 +85,11 @@ const { planner = false } = Astro.props;
     const warn = form.querySelector<HTMLElement>('.file-warn');
     const total = () => [...files].reduce((n, i) => n + (i.files?.[0]?.size ?? 0), 0);
     files.forEach((i) => i.addEventListener('change', () => { if (warn) warn.hidden = total() <= 8 * 1024 * 1024; }));
-    form.addEventListener('submit', (e) => { if (total() > 8 * 1024 * 1024) { e.preventDefault(); if (warn) warn.hidden = false; } });
+    form.addEventListener('submit', (e) => {
+      if (total() > 8 * 1024 * 1024) { e.preventDefault(); if (warn) warn.hidden = false; return; }
+      // Seconds on the page before sending; the spam check treats a missing or tiny value as a bot.
+      const t = form.elements.namedItem('form_seconds') as HTMLInputElement | null;
+      if (t) t.value = String(Math.round(performance.now() / 1000));
+    });
   });
 </script>
